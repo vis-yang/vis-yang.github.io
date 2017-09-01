@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="/**  * Created by mobile on 2017/7/5.  */ //页面加载 $(function () {   /********************顶部开始***********************/   //为关闭按钮添加事件，点击顶部滑入   $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slideUp(200">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/liWeiMin/js/liWeiMin/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/**  * Created by mobile on 2017/7/5.  */ //页面加载 $(function () {   /********************顶部开始***********************/   //为关闭按钮添加事件，点击顶部滑入   $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slideUp(200">
+<meta property="og:updated_time" content="2017-07-13T11:38:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="/**  * Created by mobile on 2017/7/5.  */ //页面加载 $(function () {   /********************顶部开始***********************/   //为关闭按钮添加事件，点击顶部滑入   $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slideUp(200">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,325 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-liWeiMin/js/liWeiMin" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /**
+ * Created by mobile on 2017/7/5.
+ */
+//页面加载
+$(function () {
+  /********************顶部开始***********************/
+  //为关闭按钮添加事件，点击顶部滑入
+  $("#topClose").click(function () {
+    $("#top").slideUp(200);
+  });
+  //为wechat添加鼠标进入移出的事件
+  $("#wechat").mouseenter(function () {
+    $(this).css("background","url(images/wechatsmallhover.png) no-repeat");
+    $("#wechatbig").stop().fadeIn(200);
+  }).mouseleave(function () {
+    $(this).css("background","url(images/wechatsmall.png) no-repeat");
+    $("#wechatbig").stop().fadeOut(200);
+  });
+  /********************顶部结束***********************/
+  /********************导航栏开始***********************/
+  //获取全部hideUl,为父节点添加鼠标进入移出事件，将当前元素下第一个hideUl显示隐藏
+  $(".hideUl").parent().mouseenter(function () {
+    $(this).find(".hideUl:eq(0)").stop().slideDown();
+  }).mouseleave(function () {
+    $(this).find(".hideUl:eq(0)").stop().slideUp();
+  });
+  /********************导航栏结束***********************/
+  /********************banner开始***********************/
+  //获取banner
+  var banner = $("#banner");
+  //获取上下按钮
+  var bannerTop = $("#bannerTop");
+  var bannerBottom = $("#bannerBottom");
+  var flagB = true;
+  //上按钮事件
+  $("#bannerTop").click(function () {
+    if(flagB){
+      flagB = false;
+      $("#banner>ul>li").last().stop().slideUp(1000, function () {
+        $("#banner>ul>li").last().prependTo($("#banner>ul")).end().first().css("display","block");
+        flagB = true;
+      });
+    }
+  });
+  //下按钮事件
+  $("#bannerBottom").click(f1);
+  function f1() {
+    if(flagB){
+      flagB = false;
+      $("#banner>ul>li").first().appendTo($("#banner>ul")).css("display","none").stop().slideDown(1000, function () {
+        flagB = true;
+      });
+    }
+  }
+  //设置定时器
+  var timeId = setInterval(f1,3000)
+  //设置上下按钮显示隐藏
+  banner.mouseenter(function () {
+    bannerTop.show();
+    bannerBottom.show();
+    //关闭轮播定时器
+    clearInterval(timeId);
+  }).mouseleave(function () {
+    bannerTop.hide();
+    bannerBottom.hide();
+    //开启轮播定时器
+    timeId = setInterval(f1,3000)
+  });
+
+  //为按钮设置鼠标移入移出事件
+  bannerTop.mouseenter(function () {
+    $(this).css("backgroundColor","rgba(0,0,0,.3)");
+  }).mouseleave(function () {
+    $(this).css("backgroundColor","rgba(0,0,0,.1)");
+  });
+  bannerBottom.mouseenter(function () {
+    $(this).css("backgroundColor","rgba(0,0,0,.3)");
+  }).mouseleave(function () {
+    $(this).css("backgroundColor","rgba(0,0,0,.1)");
+  });
+  /********************banner结束***********************/
+
+  /********************main开始***********************/
+  //声明ul的marginleft取值
+  var xx = 0;
+  //获取mainMiddle
+  var mainMiddle = $("#mainMiddle");
+  //获取mainMiddleUl
+  var mainMiddleUl = $("#mainMiddleUl");
+  //声明临界值
+  var critical  = mainMiddle.width() - mainMiddleUl.width();
+  //声明开关
+  var flag = true;
+  //鼠标按住事件
+  mainMiddleUl.mousedown(function (e) {
+    //获取鼠标横坐标与ul的位置差
+    var x = e.originalEvent.x - $(this).offset().left;
+    //鼠标在移动时，让ul随着鼠标移动
+    $(document).mousemove(function (e) {
+      //设置鼠标移动的过程中不去选中文字内容
+      window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+      //鼠标当前位置减去位置差再减去本身距离左侧的距离
+      xx = e.originalEvent.x - x -($(this).width()-mainMiddle.width())/2;
+      //xx大于0时
+      xx = xx > 0 ? xx+critical  : xx;
+      //xx小于临界值时
+      xx = xx < critical  ? xx-critical  : xx;
+      //设置ul的marginLeft
+      mainMiddleUl.css("marginLeft",xx+"px");
+    });
+  }).mouseenter(function () {
+    //鼠标变成移动样式
+    $(this).css("cursor","move");
+  }).mouseleave(function () {
+    //鼠标变成移动样式
+    $(this).css("cursor","default");
+  });
+  //鼠标抬起，解绑鼠标移动事件
+  $(document).mouseup(function () {
+    if(flag){
+      //判断如果走了li的一半以上则走到下一张，如果没有到一半走回去
+      var widthLi = $("#mainMiddleUl>li").outerWidth(true);
+      xx = xx%widthLi<-(widthli) 2?parseint(xx="" widthli-1)*widthli:parseint(xx="" widthli)*widthli;="" mainmiddleul.animate({"marginleft":xx+"px"},200);="" $(document).unbind("mousemove");="" }="" });="" 鼠标移到上面的a时，改变遮挡层透明度和位置="" $(".mainlia").mouseenter(function="" ()="" {="" $(this).stop().animate({"backgroundsize":"110%"}).find("em").stop().animate({"opacity":0.4},200).end().find("i").stop().animate({"opacity":="" 1,="" "top":="" "65px"},200);="" }).mouseleave(function="" $(this).stop().animate({"backgroundsize":"100%"}).find("em").stop().animate({"opacity":0},200).end().find("i").stop().animate({"opacity":="" 0,="" 0},200);="" 阻止拖拽a标签被拖拽="" for="" (var="" p="0;p<$("#mainMiddleUl" a").length;p++){="" $("#mainmiddleul="" a")[p].ondragstart="function" return="" false;="" 设置底层按钮箭头鼠标进入离开事件="" $("#arrowsleft").mouseenter(function="" $(this).stop().animate({"backgroundpositiony":="" -75})="" -54})="" $("#arrowsright").mouseenter(function="" $("#iconmore").mouseenter(function="" -53})="" -8})="" 设置左右箭头点击事件="" $("#arrowsright").click(function="" if(flag){="" flag="false;" var="" x="parseInt(mainMiddleUl.css("marginLeft"));" if="" (x="=" critical)="" mainmiddleul.css("marginleft",="" +="" "px");="" -="300;" mainmiddleul.stop().animate({"marginleft":(x+"px")},200,="" function="" $("#arrowsleft").click(function="" 0)="" ********************main结束***********************="" ********************news结束***********************="" $(".newsr="">a").mouseenter(function () {
+    $(this).find("i").animate({"width":"370px"},370);
+  }).mouseleave(function () {
+    $(this).find("i").animate({"width":"20px"},10);
+  });
+  /********************news结束***********************/
+  /********************aboutUs开始***********************/
+  //设置箭头事件
+  $("#arrowsBig").mouseenter(function () {
+    $(this).stop().animate({"backgroundPositionY": "-126px"},200);
+  }).mouseleave(function () {
+    $(this).stop().animate({"backgroundPositionY": "-96px"},200);
+  });
+  /********************aboutUs结束***********************/
+  /********************特殊控制开始***********************/
+  var arr = [0,672,1322,2026];
+  $("#control>ul>li").mouseenter(function () {
+    $(this).find("span").css("display","block");
+  }).mouseleave(function () {
+    $(this).find("span").css("display","none");
+  }).click(function () {
+    if($("#top").css("display")=="none"){
+      arr = [0,622,1272,1976];
+    }
+    $(this).find("i").css({"width":"10px","height":"10px"});
+    $(document).scrollTop(arr[$(this).index()]);
+    //$(document).animate({"scrollTop":arr[$(this).index()]},200);
+  });
+  $(window).scroll(function () {
+    if($("#top").css("display")=="none"){
+      arr = [0,622,1272,1976];
+    };
+    var y = $(document).scrollTop();
+    var i = $("#control>ul>li>i");
+    if(y>=arr[3]){
+      i.eq(3).css({"width":"10px","height":"10px"}).parent().siblings("li").find("i").css({"width":0,"height":0});
+    }else if(y>=arr[2]){
+      i.eq(2).css({"width":"10px","height":"10px"}).parent().siblings("li").find("i").css({"width":0,"height":0});
+    }else if(y>=arr[1]){
+      i.eq(1).css({"width":"10px","height":"10px"}).parent().siblings("li").find("i").css({"width":0,"height":0});
+    }else{
+      i.eq(0).css({"width":"10px","height":"10px"}).parent().siblings("li").find("i").css({"width":0,"height":0});
+    };
+  });
+  /********************特殊控制结束***********************/
+});
+
+</-(widthli)>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/liWeiMin/js/liWeiMin/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/yangXiao/index/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/liWeiMin/js/jquery-1.12.1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +489,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="/**  * Created by kobe.bryant on 2017/7/6.  */ /*--------------common-----------------*/ function my$(id) {     return document.getElementById(id); } function myTag(tag) {     return document.getEleme">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/yangXiao/js/1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/**  * Created by kobe.bryant on 2017/7/6.  */ /*--------------common-----------------*/ function my$(id) {     return document.getElementById(id); } function myTag(tag) {     return document.getEleme">
+<meta property="og:updated_time" content="2017-07-14T13:12:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="/**  * Created by kobe.bryant on 2017/7/6.  */ /*--------------common-----------------*/ function my$(id) {     return document.getElementById(id); } function myTag(tag) {     return document.getEleme">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,341 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-yangXiao/js/1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /**
+ * Created by kobe.bryant on 2017/7/6.
+ */
+/*--------------common-----------------*/
+function my$(id) {
+    return document.getElementById(id);
+}
+function myTag(tag) {
+    return document.getElementsByTagName(tag)
+}
+function myCls(name) {
+    return document.getElementsByClassName(name)
+}
+//设置innerText值
+function setinnerText(element,content) {
+    if(element.innerText){
+        element.innerText=content;
+    }else{
+        element.textContent=content;
+    }
+};
+
+//获取innerText值
+function getinnerText(element){
+    if(typeof element.innerText==="undefined"){
+        //IE浏览器
+        return element.innerText
+    }else{
+        return element.textContent
+    }
+};
+
+//动画函数初级
+function animate1(element,target) {
+    clearInterval(element.timer);
+    element.timer=setInterval(function () {
+        var current=element.offsetLeft;
+        var step=10;
+        step=target-current<0?-step:step; current+="step;" if(math.abs(target-current)="">Math.abs(step)){
+            element.style.left=current+"px";
+        }else{
+            clearInterval(element.timer)
+            element.style.left=target+"px";
+        }
+    },30)
+}
+function getStyle(element,attr) {
+    return window.getComputedStyle?window.getComputedStyle(element,null)[attr]:element.currentStyle[attr]
+}
+//缓动动画函数
+function animateF(element,json,fn) {
+    clearInterval(element.timer);
+    element.timer=setInterval(function () {
+        var flag = true;  //设置标识判断是否所有属性都达到目标
+        for(var attr in json){//遍历对象
+            if(attr=="opacity"){             //透明度
+                var current=getStyle(element,attr)*100;
+                var target=json[attr]*100;
+                var step = (target-current)/10;
+                step=step<0?math.floor(step):math.ceil(step); current+="step;" element.style[attr]="current/100;" }else="" if(attr="="zIndex"){" 层级="" }else{="" 除层级透明度外的其他属性="" var="" current="parseInt(getStyle(element,attr));" target="json[attr];" step="(target-current)/10" }="" if(target!="current){" flag="false;" if(flag){="" clearinterval(element.timer)="" if(fn){="" 判断回调函数是否存在="" 存在即执行="" fn()="" console.log("目标位置："+target+"当前位置："+current+"实际走的步数："+step)="" },20)="" 轮播图="" function="" animatelb(element,target)="" {="" clearinterval(element.timer);="" element.timer="setInterval(function" ()="" if(math.abs(target-current)="">Math.abs(step)){
+            element.style.top=current+"px";
+        }else{
+            clearInterval(element.timer)
+            element.style.top=target+"px";
+        }
+    },30)
+}
+/*--------------common-----------------*/
+/*--------------------顶部返回主页----------------*/
+$("#weChat").mouseenter(function () {
+    $("#turn-in-img").css("display","block");
+}).mouseleave(function () {
+    $("#turn-in-img").css("display","none");
+});
+$("#cha").click(function () {
+    $("#turn-fixed").stop().slideUp();
+});
+/*--------------------顶部返回主页----------------*/
+/*---------------顶部导航栏开始----------------*/
+//顶部nav下a标签
+var u1liA=myCls("u1liA");
+//向左滑动的span标签
+var u1liBox=myCls("u1liBox")
+//向下滑动的span标签
+var u1liBoxCon=myCls("u1liBoxCon")
+//nav下第一个li标签（首页）
+my$("u1li1").onmouseover=function () {
+    setinnerText(u1liBox[0],"HOME")
+    animate1(u1liA[0],-120)
+
+}
+my$("u1li1").onmouseout=function () {
+    animate1(u1liA[0],0)
+}
+//nav下第二个li标签（动态）
+my$("u1li2").onmouseover=function () {
+    var json={
+        "top":100,
+        "left":0,
+        "opacity":1
+    }
+    animateF(u1liBoxCon[0],json)
+    animateF(u1liA[1],{"left":-120});
+}
+my$("u1li2").onmouseout=function () {
+    animateF(u1liBoxCon[0],{"top":0,"opacity":0})
+    animateF(u1liA[1],{"left":0});
+}
+//nav下第三个li标签（项目介绍）
+my$("u1li3").onmouseover=function () {
+    var json={
+        "top":100,
+        "left":0,
+        "opacity":1
+    }
+    animateF(u1liBoxCon[1],json)
+    animateF(u1liA[2],{"left":-120});
+}
+my$("u1li3").onmouseout=function () {
+    animateF(u1liBoxCon[1],{"top":0,"opacity":0})
+    animateF(u1liA[2],{"left":0});
+}
+//第四个li（剧照）
+my$("u1li4").onmouseover=function () {
+    var json={
+        "top":100,
+        "left":0,
+        "opacity":1
+    }
+    animateF(u1liBoxCon[2],json)
+    animateF(u1liA[3],{"left":-120});
+}
+my$("u1li4").onmouseout=function () {
+    animateF(u1liBoxCon[2],{"top":0,"opacity":0})
+    animateF(u1liA[3],{"left":0});
+}
+//第五个li视频
+my$("u1li5").onmouseover=function () {
+    animate1(u1liA[4],-120);
+}
+my$("u1li5").onmouseout=function () {
+    animate1(u1liA[4],0);
+}
+//第六个li（关于新可风）
+my$("u1li6").onmouseover=function () {
+    var json={
+        "top":100,
+        "left":0,
+        "opacity":1
+    }
+    animateF(u1liBoxCon[3],json)
+    animateF(u1liA[5],{"left":-120});
+}
+my$("u1li6").onmouseout=function () {
+    animateF(u1liBoxCon[3],{"top":0,"opacity":0})
+    animateF(u1liA[5],{"left":0});
+}
+//右侧语言选择
+my$("lang").onmouseover=function () {
+    my$("box1").style.display="block"
+    my$("sanJ").style.display="block"
+}
+my$("lang").onmouseout=function () {
+    my$("box1").style.display="none"
+    my$("sanJ").style.display="none"
+}
+//右侧搜索框
+my$("search").onmouseover=function () {
+    animateF(this,{"right":150})
+    this.style.width="240px"
+}
+my$("search").onmouseout=function () {
+    animateF(this,{"right":100});
+    this.style.width="70px"
+}
+/*---------------顶部导航栏结束----------------*/
+/*---------------banner部分开始----------------*/
+/*//获取元素
+var banner=my$("banner");
+var lbt=my$("lbt");
+var lbtHeight=lbt.offsetHeight;
+var lbtLiObj=lbt.children;
+var ol=my$("lbPoint");
+
+//为每个ol里面的li注册点击事件
+for(var i =0 ;i</0?math.floor(step):math.ceil(step);></0?-step:step;>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/yangXiao/js/1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/yangXiao/js/metInfo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/yangXiao/js/jquery-1.12.1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +505,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

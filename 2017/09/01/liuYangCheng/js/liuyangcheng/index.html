@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="/*** Created by lyc on 2017/7/11.*/ /*************************************������ʼ************************************/ //Ϊclose��ťע�Ỻ���ر�top�ĳ��� $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slid">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/liuYangCheng/js/liuyangcheng/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/*** Created by lyc on 2017/7/11.*/ /*************************************������ʼ************************************/ //Ϊclose��ťע�Ỻ���ر�top�ĳ��� $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slid">
+<meta property="og:updated_time" content="2017-07-14T08:16:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="/*** Created by lyc on 2017/7/11.*/ /*************************************������ʼ************************************/ //Ϊclose��ťע�Ỻ���ر�top�ĳ��� $(&quot;#topClose&quot;).click(function () {     $(&quot;#top&quot;).slid">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,520 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-liuYangCheng/js/liuyangcheng" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /*** Created by lyc on 2017/7/11.*/
+/*************************************������ʼ************************************/
+//Ϊclose��ťע�Ỻ���ر�top�ĳ���
+$("#topClose").click(function () {
+    $("#top").slideUp(500);
+});
+//Ϊwechat����������Ƴ����¼�
+$("#wechat").mouseenter(function () {
+    $(this).css("background", "url(images/wechatsmallhover.png) no-repeat");
+    $("#wechatbig").css("display", "block");
+}).mouseleave(function () {
+    $(this).css("background", "url(images/wechatsmall.png) no-repeat");
+    $("#wechatbig").css("display", "none");
+});
+/*************************************��������***************************************/
+/*************************************ͷ����ʼ***************************************/
+for (var i = 0; i < $("#header ul>li").length; i++) {
+    //����li,��li���뵽ol��
+    $("<li></li>").appendTo($("#header ol")).mouseenter(function () {
+        //���õ�ǰ�������li�б�����ɫ
+        $(this).addClass("current").siblings("li").removeClass("current");
+        //��ȡÿ��ol�е�li����ֵ
+        pic = $(this).index();
+        //ͼƬ�ƶ�
+        $("#header ul").animate({"left": -pic * $("#header>.screen").width()})
+    });
+}
+//����ol�еĵ�һ��li��ǩ��Ĭ�ϵı�����ɫ
+$("#header ol>li:first").addClass("current");
+//����ul��׷��һ��ͼƬ
+$("#header ul>li:first").clone(true).appendTo($("#header ul"));
+//����ͼƬ���ܱ�ѡ��
+for (var i = 0; i < $("#header ul img").length; i++) {
+    $("#header ul img")[i].ondragstart = function () {
+        return false
+    };
+}
+//ҳ�������Ϻ�ͼƬ�Զ��ƶ�
+var x1 = 0;
+var x2 = 0;
+var timeId = setInterval(f1, 3000);
+$("#header img").mouseenter(function () {
+    //�����룬�����ʱ��
+    $(this).css("cursor", "pointer");
+    clearInterval(timeId);
+}).mouseleave(function () {
+    //����뿪�����ʱ��
+    timeId = setInterval(f1, 3000);
+}).mousedown(function (e) {
+    //��갴�£���ȡ��ǰ���������ĺ�����
+    x1 = e.clientX;
+    //���δ�ƶ�
+    x2 = x1;
+    $("#header ul").mousemove(function (e) {
+        //����ƶ�����ȡ��ǰ���������ĺ�����
+        x2 = e.clientX;
+        //ͼƬ������궯
+        $("#header ul").css("left", -pic * $("#header>.screen").width() + x2 - x1);
+        //�ж���������ĸ������ƶ�
+        if (pic == $("#header ul>li").length - 1 && x2 < x1) {
+            //��������ƶ�����һ��ͼƬʱ���л������һ�ſ�¡ͼ
+            pic = 0;
+            $("#header ul").css("left", -pic * $("#header>.screen").width());
+        }
+        if (pic == 0 && x2 > x1) {
+            //��������ƶ������һ�ſ�¡ͼʱ���л�����һ��ͼƬ
+            pic = $("#header ul>li").length - 1;
+            $("#header ul").css("left", -pic * $("#header>.screen").width());
+        }
+    });
+}).mouseup(function () {
+    //���̧���жϵ�ǰͼƬ���ĸ������ƶ�
+    if ((-pic * $("#header>.screen").width() + x2 - x1) < -pic * $("#header>.screen").width()
+        && x2 != x1) {
+        //ͼƬ�����ƶ����л�����һ��ͼƬ
+        pic++;
+        $("#header ul").stop().animate({"left": -pic * $("#header>.screen").width()});
+        if (pic == $("#header ul>li").length - 1) {
+            //ol�е�һ��li�б�����ɫ
+            $("#header ol>li:first").addClass("current").siblings("li").removeClass("current");
+        } else {
+            //��ǰ��ѡ�е�li����ɫ��������û��
+            $("#header ol>li:eq(" + pic + ")").addClass("current").siblings("li").removeClass("current");
+        }
+    } else if ((-pic * $("#header>.screen").width() + x2 - x1) > -pic * $("#header>.screen").width() && x2 != x1) {
+        //ͼƬ�����ƶ����л�����һ��ͼƬ
+        pic--;
+        $("#header ul").stop().animate({"left": -pic * $("#header>.screen").width()});
+        //��ǰ��ѡ�е�li����ɫ��������û��
+        $("#header ol>li:eq(" + pic + ")").addClass("current").siblings("li").removeClass("current");
+    }
+
+    //ȡ������ƶ��¼�
+    $("#header ul").unbind("mousemove");
+});
+var pic = "";
+function f1() {
+    //�����е����һ�ſ�¡ͼƬʱ���Զ��л�����һ��ͼƬ
+    if (pic == $("#header ul>li").length - 1) {
+        pic = 0;
+        $("#header ul").css("left", -pic * $("#header>.screen").width());
+    }
+    pic++;
+    $("#header ul").animate({"left": -pic * $("#header>.screen").width()});
+    //������е�ol��li�ı�����ɫ
+    $("#header ol>li").removeClass("current");
+    //�ж�pic��ֵ�ǲ�������Ϊ2�����õ�һ��ol��li�ı�����ɫ
+    if (pic == $("#header ul>li").length - 1) {
+        //ol�е�һ��li�б�����ɫ
+        $("#header ol>li:first").addClass("current");
+    } else {
+        $("#header ol>li:eq(" + pic + ")").addClass("current");
+    }
+}
+/***************************************ͷ������******************************************/
+/***************************************������ʼ******************************************/
+var picCase = 0;
+//Ϊ��߰�ťע������¼�
+$("#case .arr>.left").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    picCase--;
+    //��һ��ͼƬ
+    if (picCase == 0) {
+        $("#case .case-cut").stop().animate({"left": 0});
+    }
+    //����ͼƬ
+    if (picCase >= 1) {
+        $("#case .case-cut").stop().animate({"left": -(picCase + 1) * $("#case .case-bin:eq(1)").width()});
+    }
+    if (picCase < 0) {
+        picCase = 0;
+    }
+});
+//Ϊ�ұ߰�ťע������¼�
+$("#case .arr>.right").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    picCase++;
+    //��һ��ͼƬ
+    if (picCase == 1) {
+        $("#case .case-cut").stop().animate({"left": -picCase * 524});
+    }
+    //����ͼƬ
+    if (picCase < $("#case .case-bin").length - 4 && picCase > 1) {
+        $("#case .case-cut").stop().animate({"left": (-picCase - 1 ) * $("#case .case-bin:eq(1)").width()});
+    }
+    if (picCase > $("#case .case-bin").length - 5) {
+        picCase = $("#case .case-bin").length - 5;
+    }
+});
+//ע��ͼƬ��������뿪�¼�
+//��һ��ͼƬ
+$("#case .case-bin:first").mouseenter(function () {
+    //�����룬dl��ʾ
+    $("#case .case-bin:first dl").stop().animate({"height": 200});
+    //ͼƬ���
+    $("#case .bigCaseOne").stop().animate({
+        "width": 554, "marginLeft": -20, "marginTop": -20
+    }, 300);
+}).mouseleave(function () {
+    //����뿪��dl����
+    $("#case .case-bin:first dl").stop().animate({"height": 0});
+    //ͼƬ��С
+    $("#case .bigCaseOne").stop().animate({
+        "width": 524, "marginLeft": 0, "marginTop": 0
+    }, 300);
+}).siblings(".case-bin").mouseenter(function () {
+    //���˵�һ��ͼƬ�⣬���е�ͼƬ����������
+    $(this).find("img").stop().animate({
+        "width": 282, "marginLeft": -10, "marginTop": -10
+    }, 300)
+}).mouseleave(function () {
+    //����뿪��С
+    $(this).find("img").stop().animate({
+        "width": 262, "marginLeft": 0, "marginTop": 0
+    }, 300)
+});
+/*****************************************��������**************************************/
+/*****************************************��Ʒ��ʼ**************************************/
+
+var picProduct = 0;
+//Ϊ��߰�ťע������¼�
+$("#product .arr>.left").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    picProduct--;
+    if (picProduct >= 1) {
+        $("#product .price-cut").animate({"left": -picProduct * ($("#product .price-bin").width() + 28)});
+    }
+    if (picProduct == 0) {
+        $("#product .price-cut").animate({"left": 0});
+    }
+    if (picProduct < 0) {
+        picProduct = 0;
+    }
+});
+//Ϊ�ұ߰�ťע������¼�
+$("#product .arr>.right").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    picProduct++;
+    if (picProduct < $("#product .price-bin").length - 2) {
+        $("#product .price-cut").animate({"left": -picProduct * ($("#product .price-bin").width() + 28)});
+    }
+    if (picProduct > $("#product .price-bin").length - 3) {
+        picProduct = $("#product .price-bin").length - 3;
+    }
+});
+//ΪproductBinע����������뿪�¼�
+$("#product .price-bin").mouseenter(function () {
+    //�����룬���ֱ�����ɫ
+    $(this).find(".bg").stop().animate({"width": 418});
+    //ͼƬ���
+    $(this).find("img").stop().animate({"width": 438, "marginLeft": -10, "marginTop": -10});
+}).mouseleave(function () {
+    //����뿪�����ر�����ɫ
+    $(this).find(".bg").stop().animate({"width": 0});
+    //ͼƬ�ָ�
+    $(this).find("img").stop().animate({"width": 428, "marginLeft": 0, "marginTop": 0});
+});
+/******************************************��Ʒ����******************************************/
+/******************************************���ڿ�ʼ******************************************/
+var picAbout = 0;
+//��¡��һ��ģ��
+$("#about .about-bin:first").clone(true).appendTo($(".about-cut"));
+//Ϊ��߰�ťע������¼�
+$("#about .arr>.left").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    if (picAbout == 0) {
+        //��һ���������һ����¡����л�
+        picAbout = $("#about .about-bin").length - 1;
+        $("#about .about-cut").css("left", -picAbout * $("#about .about-bin").width());
+    }
+    picAbout--;
+    $("#about .about-cut").stop().animate({"left": -picAbout * $("#about .about-bin").width()});
+});
+//Ϊ�ұ߰�ťע������¼�
+$("#about .arr>.right").mouseenter(function () {
+    //�����룬�ı䱳����ɫ
+    $(this).css("backgroundColor", "#00c0ff");
+}).mouseleave(function () {
+    //����뿪��������ɫ��ʧ
+    $(this).css("backgroundColor", "");
+}).click(function () {
+    //�����
+    if (picAbout == $("#about .about-bin").length - 1) {
+        //���һ����¡���͵�һ������л�
+        picAbout = 0;
+        $("#about .about-cut").css("left", -picAbout * $("#about .about-bin").width());
+    }
+    picAbout++;
+    $("#about .about-cut").stop().animate({"left": -picAbout * $("#about .about-bin").width()});
+});
+/********************************************���ڽ���**************************************/
+/********************************************���濪ʼ**************************************/
+var index = "";
+//���õ�һ��СԲ��ΪȦ
+$("#nav>ul>li").first().find("div").css({
+    "width": 15,
+    "height": 15,
+    "marginTop": 0,
+    "marginLeft": 0
+});
+//��ǰ������ĵ���Ȧ
+$("#nav>ul>li").click(function () {
+    //��ʼ�����İ��
+    if (index != 4) {
+        $("#footer>.left>dl").css({"left": "1466px"}).parent().next().css({"right": "1466px"});
+    }
+    index = $(this).index();
+    //���ԲȦ�������ı��С��
+    $(this).find("div").animate({
+        "width": 15,
+        "height": 15,
+        "marginTop": 0,
+        "marginLeft": 0
+    }).end().siblings("li").find("div").animate({"width": 0, "height": 0, "marginTop": 7, "marginLeft": 7});
+    //����ƶ�
+    $("#header").animate({"marginTop": -768 * index});
+    //���İ�����Ч��
+    if (index == 4) {
+        $("#footer>.left>dl").stop().animate({"left": "100px"}, 1500).parent().next().stop().animate({"right": "100px"}, 1500);
+    }
+}).mouseenter(function () {
+    //�����룬������ʾ
+    $(this).find("font").animate({"opacity": 1}, 20);
+}).mouseleave(function () {
+    //����뿪����������
+    $(this).find("font").animate({"opacity": 0}, 20);
+});
+//�����ַ�ҳЧ��
+var flagOne = true;
+document.onmousewheel = function (e) {
+    //��ʼ�����İ��
+    if (index != 4) {
+        $("#footer>.left>dl").css({"left": "1466px"}).parent().next().css({"right": "1466px"});
+    }
+    if (e.wheelDelta <= -120="" &&="" index="" !="4" flagone="=" true="" )="" {="" ���¹���="" index++;="" $("#header").animate({"margintop":="" -768="" *="" index},="" function="" ()="" });="" ���i̇�����ч��="" if="" (index="=" 4)="" $("#footer="">.left>dl").stop().animate({"left": "100px"}, 1500).parent().next().stop().animate({"right": "100px"}, 1500);
+        }
+        //СԲ������
+        $("#nav li:eq(" + index + ")").find("div").animate({
+            "width": 15,
+            "height": 15,
+            "marginTop": 0,
+            "marginLeft": 0
+        }).end().siblings("li").find("div").animate({
+            "width": 0,
+            "height": 0,
+            "marginTop": 7,
+            "marginLeft": 7
+        }, function () {
+            flagOne = true;
+        });
+    }
+    if (e.wheelDelta >= 120 && index != 0 && flagOne == true) {
+        //���¹���
+        flagOne = false;
+        index--;
+        $("#header").animate({"marginTop": -768 * index}, function () {
+        });
+        //СԲ������
+        $("#nav li:eq(" + index + ")").find("div").animate({
+            "width": 15,
+            "height": 15,
+            "marginTop": 0,
+            "marginLeft": 0
+        }).end().siblings("li").find("div").animate({
+            "width": 0,
+            "height": 0,
+            "marginTop": 7,
+            "marginLeft": 7
+        }, function () {
+            flagOne = true;
+        });
+    }
+};
+/******************************************�������**************************************/
+</=>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/liuYangCheng/js/liuyangcheng/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/liuYangCheng/js/jquery-1.12.1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/liuYangCheng/css/css/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +684,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

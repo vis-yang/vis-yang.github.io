@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
@@ -145,232 +145,1889 @@
           <div id="js-content" class="content-ll">
             
   
-  
+    <article id="post-liuPeng/css/base" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        * {
+	margin: 0;
+	padding: 0
+}
+
+em,i {
+	font-style: normal
+}
+
+li {
+	list-style: none
+}
+
+img {
+	border: 0;
+	vertical-align: middle
+}
+
+button {
+	cursor: pointer
+}
+
+a {
+	color: white;
+	text-decoration: none
+}
+
+button, input {
+	font-family: Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+	color: #666;
+	/*min-width: 1280px;*/
+}
+
+.hide, .none {
+	display: none
+}
+
+.clearfix:after {
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0
+}
+
+.clearfix {
+	*zoom: 1
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.w {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/liuPeng/css/base/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-liuPeng/css/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /*------顶部返回栏------*/
+#top-back {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #000000;
+	color: white;
+	font-family: "黑体";
+}
+#top-back .back {
+	margin-left: 30px;
+	font-size: 12px;
+}
+#top-back .close {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-right: 30px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	font-family: "黑体";
+}
+/*------顶部信息栏------*/
+#top-info-bar {
+	height: 40px;
+	line-height: 40px;
+	background-color: #262626;
+}
+#top-info-bar ul {
+	float: left;
+	margin-left: 62px;
+}
+#top-info-bar ul li {
+	float: left;
+	margin-left: 18px;
+}
+#top-info-bar .ul-fl {
+	float: left;
+}
+#top-info-bar .ul-fr {
+	float: right;
+	margin-right: 100px;
+}
+/*------顶部导航栏------*/
+#top-nav {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #000000;
+}
+#top-nav h1 a {
+	width: 197px;
+	height: 60px;
+	text-indent: -200px;
+	overflow: hidden;
+	position: absolute;
+	background: url(../images/logo.png) no-repeat left;
+}
+#top-nav .nav-ul {
+	float: right;
+}
+#top-nav .nav-li {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	float: left;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 14px;
+	margin-right: 33px;
+	padding-bottom: -10px;
+}
+#top-nav .nav-li .jt {
+	border-left: 4px solid #000000;
+    border-right: 4px solid #000000;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #000000;
+    position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	margin-left: 3px;
+}
+/*#top-nav .nav-li:hover {
+	border-bottom: 2px solid #ffffff;
+}*/
+.underLine {
+	width: 40px;
+	height: 2px;
+	background-color: #ffffff;
+	position: absolute;
+	top: 46px;
+	left: 0;
+	z-index: 500;
+	display: none;
+	margin-left: 6px;
+}
+#aboutUs {
+	width: 540px;
+	height: 278px;
+	background-color: #2B2B2B;
+	position: absolute;
+	top: 60px;
+	left: -50px;
+	z-index: 500;
+	display: none;
+}
+#aboutUs .ul-aboutUs {
+	float: left;
+	margin-top: 22px;
+	margin-left: 40px;
+}
+#aboutUs .ul-aboutUs .li-aboutUs {
+	height: 28px;
+	line-height: 28px;
+}
+#aboutUs .ul-aboutUs .li-aboutUs a {
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #A4A4A4;
+	font-family: "黑体";
+}
+#aboutUs .aboutUsxxxx {
+	float: right;
+	width: 310px;
+	margin-top: 22px;
+	margin-right: 30px;
+}
+#aboutUs .aboutUsxxxx img {
+	width: 309px;
+	height: 117px;
+}
+#aboutUs .aboutUsxxxx p {
+	font-size: 14px;
+	line-height: 22px;
+	margin-top: 22px;
+}
+#news {
+	width: 160px;
+	height: 85px;
+	background-color: #2B2B2B;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	z-index: 500;
+	display: none;
+}
+#news .ul-news {
+	margin-left: 16px;
+}
+#news .ul-news .li-news {
+	line-height: 40px;
+}
+#news .ul-news .li-news a {
+	line-height: 40px;
+	font-size: 14px;
+	color: #A4A4A4;
+	font-family: "黑体";
+}
+#cpshow {
+	width: 1045px;
+	height: 320px;
+	background-color: #2B2B2B;
+	position: absolute;
+	top: 60px;
+	left: -750px;
+	z-index: 500;
+	display: none;
+}
+#cpshow dl {
+	margin-left: 36px;
+	margin-top: 25px;
+}
+#cpshow dt {
+	float: left;
+	margin-right: 90px;
+}
+#cpshow dt span {
+	font-size: 16px;
+	color: #FF6701;
+}
+#cpshow dt ul .li-cpshow {
+	height: 28px;
+	line-height: 28px;
+}
+#cpshow dt ul .li-cpshow a {
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #A4A4A4;
+	font-family: "黑体";
+}
+#cpshow .cpshowxxxx {
+	float: right;
+	width: 310px;
+	margin-top: 18px;
+	margin-right: 30px;
+}
+#cpshow .cpshowxxxx img {
+	width: 309px;
+	height: 117px;
+}
+#cpshow .cpshowxxxx p {
+	font-size: 14px;
+	line-height: 22px;
+	margin-top: 22px;
+}
+#userExp {
+	width: 160px;
+	height: 125px;
+	background-color: #2B2B2B;
+	position: absolute;
+	top: 60px;
+	left: -80px;
+	z-index: 500;
+	display: none;
+}
+#userExp ul {
+	margin-left: 16px;
+}
+#userExp ul .li-userExp {
+	line-height: 40px;
+}
+#userExp ul .li-userExp a {
+	line-height: 40px;
+	font-size: 14px;
+	color: #A4A4A4;
+	font-family: "黑体";
+}
+/*------主体轮播图------*/
+.main-lunbotu {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+}
+.main-lunbotu ul {
+	width: 100%;
+	height: 600px;
+}	
+.main-lunbotu ul li {
+	width: 100%;
+	height: 600px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#main-lbt li a {
+	display: block;
+	width: 100%;
+	height: 600px;
+}
+.main-lunbotu .btn-left,.btn-right{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+	color: #FFFFFF;
+	font-family: "黑体";
+	font-size: 18px;
+	cursor: pointer;
+}
+.main-lunbotu .btn-left {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	left: 20px;
+}
+.main-lunbotu .btn-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	right: 20px;
+}
+#main-lbt-radio {
+	width: 84px;
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -42px;
+}
+#main-lbt-radio li {
+	color: black;
+	float: left;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	background-color: rgba(255,255,255,.5);
+	border-radius: 9px;
+	margin-left: 10px;
+	cursor: pointer;
+	position: initial;
+	text-align: center;
+}
+.p1 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	color: #FFFFFF;
+	font-size: 42px;
+}
+.p2 {
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	color: #FFFFFF;
+	font-size: 29px;
+}
+.a1 {
+	display: block;
+	width: 158px;
+	height: 41px;
+	line-height: 41px;
+	border: 2px solid #ffffff;
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-align: center;
+}
+.a1:hover {
+	background-color: #FF6701;
+	border: 2px solid #FF6701;
+}
+/*------中部广告------*/
+#banner-center {
+	width: 1140px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+#banner-center .banner-left,.banner-right {
+	width: 555px;
+	height: 292px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#banner-center .banner-left {
+	float: left;
+	background: url(../images/banner-left.jpg) no-repeat center center;
+}
+#banner-center .banner-right {
+	float: right;
+	background: url(../images/banner-right.jpg) no-repeat center center;
+}
+#banner-center  h2 {
+	color: #FFFFFF;
+	font-size: 33px;
+	text-align: center;
+	margin-top: 40px;
+	font-family: "黑体";
+}
+#banner-center  i {
+	display: block;
+	width: 48px;
+	height: 4px;
+	background-color: #FF6701;
+	margin: 0 auto;
+}
+#banner-center  p {
+	width: 452px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 18px;
+	color: #ffffff;
+	margin-top: 28px;
+}
+#banner-center .look-more {
+	display: block;
+	width: 76px;
+	height: 30px;
+	border: 1px solid #ffffff;
+	font-size: 13px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 auto;
+	color: #ffffff;
+	margin-top: 20px;
+}
+#banner-center #zhegai {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 555px;
+	height: 292px;
+	background: rgba(0,0,0,.5);
+	z-index: 10;
+}
+#banner-center .cengji {
+	position: absolute;
+	width: 555px;
+	height: 292px;
+	z-index: 100;
+}
+.line {
+	display: block;
+	background: #FFFFFF;
+	position: absolute;
+}
+.l-line-top,.r-line-top {
+	width: 0px;
+	height: 2px;
+	left: -100%;
+	top: 20px;
+}
+.l-line-bottom,.r-line-bottom {
+	width: 0px;
+	height: 2px;
+	right: -100%;
+	bottom: 20px;
+}
+.l-line-left,.r-line-left {
+	width: 2px;
+	height: 0px;
+	left: 20px;
+	bottom: -100%;
+}
+.l-line-right,.r-line-right {
+	width: 2px;
+	height: 0px;
+	right: 20px;
+	top: -100%;
+}
+/*------商品列表------*/
+#shop-list {
+	clear: both;
+	margin-top: 400px;
+}
+#shop-list h3 {
+	font-size: 20px;
+	text-align: center;
+}
+#shop-list i {
+	display: block;
+	width: 28px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #FF6701;
+	margin-top: 12px;
+}
+#shop-list span {
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 14px;
+}
+#shop-list #list {
+	position: relative;
+	height: 280px;
+	line-height: 280px;
+	margin-top: 45px;
+}
+#shop-list #list-main {
+	position: absolute;
+	left: 50%;
+	margin-left: -576.5px;
+	float: left;
+	width: 1153px;
+	height: 280px;
+	line-height: 273px;
+	overflow: hidden;
+}
+#shop-list #list-main ul {
+	width: 3456px;
+}
+#shop-list #list-main ul li {
+	float: left;
+	width: 275px;
+	height: 276px;
+	border: 1px solid #ebebeb;
+	margin-left: 11px;
+}
+#shop-list #list-main ul li img {
+	width: 275px;
+	height: 276px;
+}
+#shop-list #list-btn-left {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	left: 18px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #000000;
+	border-radius: 25px;
+	color: #ffffff;
+	text-align: center;
+	font-family: "黑体";
+	cursor: pointer;
+}
+#shop-list #list-btn-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	right: 8px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #000000;
+	border-radius: 25px;
+	color: #ffffff;
+	text-align: center;
+	font-family: "黑体";
+	cursor: pointer;
+}
+/*------品牌展示------*/
+#brand-show {
+	margin-top: 82px;
+}
+#brand-show h3 {
+	font-size: 20px;
+	text-align: center;
+}
+#brand-show i {
+	display: block;
+	width: 28px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #FF6701;
+	margin-top: 12px;
+}
+#brand-show span {
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 14px;
+}
+#brand-show .pp-list {
+	width: 1140px;
+	height: 274px;
+	border-right: 1px solid #EBEBEB;
+	border-bottom: 1px solid #EBEBEB;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+#brand-show ul {
+	width: 1140px;
+	height: 274px;
+}
+#brand-show ul li {
+	position: relative;
+	float: left;
+	width: 284px;
+	height: 135px;
+	border-top: 1px solid #EBEBEB;
+	border-left: 1px solid #EBEBEB;
+	overflow: hidden;
+}
+#brand-show ul li a {
+	position: absolute;
+	display: block;
+	width: 284px;
+	height: 135px;
+	z-index: 150;
+}
+#brand-show ul li img {
+	width: 284px;
+	height: 135px;
+}
+#cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -135px;
+	margin-left: -284px;
+	width: 284px;
+	height: 135px;
+	background: rgba(0,0,0,.1);
+	z-index: 200;
+	pointer-events: none;
+}
+#brand-show #look-more-two{
+	display: block;
+	width: 76px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #666666;
+	font-size: 13px;
+	border: 1px solid #666666;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: rgba(0,0,0,0);
+}
+#brand-show #look-more-two:hover {
+	background: rgba(0,0,0,1);
+	color: #ffffff;
+}
+/*------宣传视频------*/
+#video {
+	width: 1140px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+/*------服务团队------*/
+#team {
+	height: 452px;
+	margin-top: 82px;
+}
+#team>h3 {
+	font-size: 20px;
+	text-align: center;
+}
+#team>i {
+	display: block;
+	width: 28px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #FF6701;
+	margin-top: 12px;
+}
+#team>span {
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 14px;
+}
+#team #team-list {
+	width: 1138px;
+	margin: 0 auto;
+}
+#team #team-list ul {
+	margin-top: 45px;
+}
+#team #team-list ul li {
+	float: left;
+	margin-right: 30px;
+}
+#team #team-list ul li a {
+	display: block;
+	width: 262px;
+	height: 323px;
+}
+#team #team-list ul li a img {
+	width: 262px;
+	height: 263px;
+}
+#team #team-list #teamr-info {
+	width: 262px;
+	height: 60px;
+	background-color: #333333;
+	margin-top: ;
+}
+#team #team-list #teamr-info span {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	color: #ffffff;
+}
+#team #team-list #teamr-info i {
+	display: block;
+	font-size: 13px;
+	text-align: center;
+	color: #AAAAAA;
+}
+/*------用户信息------*/
+#user-info {
+	clear: both;
+	height: 425px;
+	background: url(../images/cases_bg.jpg) no-repeat center center;
+	background-attachment: fixed;
+	margin-top: 52px;
+}
+#user-info #user-lunbo {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#user-info #user-lunbo ul {
+	width: 3000px;
+}
+#user-info #user-lunbo ul li {
+	float: left;
+	width: 1000px;
+}
+#user-info #user-img {
+	width: 102px;
+	height: 102px;
+	border: 1px solid #ffffff;
+	border-radius: 51px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 58px;
+}
+#user-info #user-img a {
+	display: block;
+	width: 102px;
+	height: 102px;
+	background: url(../images/user1.jpg);
+}
+#user-info #user-lunbo ul li h5 {
+	color: #ffffff;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 34px;
+}
+#user-info #user-lunbo ul li p {
+	color: #ffffff;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 16px;
+}
+#user-info #user-lunbo-btn {
+	width: 80px;
+	height: 5px;
+	line-height: 5px;
+	margin: 0 auto;
+}
+#user-info i {
+	display: block;
+	cursor: pointer;
+    width: 20px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 92px;
+    float: left;
+    margin-right: 4px;
+    font-size: 0px;
+}
+/*------新闻中心------*/
+#news-center {
+	margin-top: 52px;
+}
+#news-center h3 {
+	font-size: 20px;
+	text-align: center;
+}
+#news-center .newsi {
+	display: block;
+	width: 28px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #FF6701;
+	margin-top: 14px;
+}
+#news-center .newspan {
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 12px;
+}
+#news-center #new-list {
+	width: 1200px;
+	height: 358px;
+	margin: 0 auto;
+	margin-top: 44px;
+}
+#news-center #new-list ul li {
+	float: left;
+	width: 378px;
+	height: 358px;
+	border: 1px solid #EAEAEA;
+	margin-right: 30px;
+}
+#news-center #new-list ul li .news-img {
+	position: relative;
+	display: block;
+	width: 378px;
+	height: 193px;
+}
+#news-center #new-list ul li a img {
+	width: 378px;
+	height: 193px;
+}
+#news-center #news-date {
+	position: absolute;
+	left: 100%;
+	top: 100%;
+	margin-left: -64px;
+	margin-top: -64px;
+	width: 64px;
+	height: 64px;
+	background-color: #262626;
+}
+#news-date i {
+	display: block;
+	font-size: 20px;
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 8px;
+}
+#news-date span {
+	display: block;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align: center;
+}
+#news-info {
+	width: 320px;
+	margin: 0 auto;
+}
+#news-info .news-title {
+	display: block;
+	width: 318px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #000000;
+	margin-top: 23px;
+	overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#news-info .news-span {
+	display: block;
+	margin-top: 14px;
+	font-size: 13px;
+}
+#news-info .news-p {
+	margin-top: 14px;
+	font-size: 13px;
+}
+
+/*------底部信息------*/
+#footer-info {
+	height: 311px;
+	background-color: #32373C;
+	margin-top: 62px;
+}
+#footer-info .info-list {
+	padding-top: 42px;
+}
+#footer-info .info-list dt {
+	float: left;
+	color: #FFFFFF;
+	font-size: 18px;
+	margin-right: 88px;
+}
+
+#footer-info .info-list dt i {
+	display: block;
+	width: 45px;
+	height: 4px;
+	background-color: #FF6700;
+	margin-top: 15px;
+}
+.u1 p {
+	width: 260px;
+	font-size: 14px;
+	color: #AAAAAA;
+	text-indent: 2em;
+	margin-top: 25px;
+}
+.u1 .list-look {
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-top: 20px;
+}
+.list-icon {
+	margin-top: 24px;
+}
+.list-icon li {
+	float: left;
+	margin-right: 12px;
+}
+.u2  {
+	margin-top: 25px;
+}
+.u2 li p a {
+	display: block;
+	font-size: 14px;
+	color: #AAAAAA;
+	margin-bottom: 15px;
+	font-family: "黑体";
+}
+.u3 {
+	width: 207px;
+	margin-top: 25px;
+	
+}
+.u3 li {
+	float: left;
+	width: 64px;
+	height: 54px;
+	margin: 2.5px;
+}
+.u4 {
+	margin-top: 25px;
+}
+.u4 li a {
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	color: #AAAAAA;
+}
+
+/*------底部------*/
+#footer {
+	height: 137px;
+	background-color: #282D32;
+	padding-top: 26px;
+}
+#footer .link {
+	width: 1110px;
+	margin: 0 auto;
+	text-align: center;
+}
+#footer .link li {
+	display: inline-block;
+	text-align: center;
+	height: 14px;
+	line-height: 14px;
+	margin-right: 10px;
+	border-right: 2px solid #AAAAAA;
+	padding-right: 10px;
+}
+#footer .link li a {
+	font-size: 14px;
+	color: #AAAAAA;
+	font-family: "黑体";
+}
+#footer .copyright,.prowed {
+	text-align: center;
+	font-size: 14px;
+	color: #AAAAAA;
+}
+#footer .copyright {
+	margin-top: 35px;
+}
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/liuPeng/css/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-liuPeng/index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数码科技公司</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script src="js/jquery-1.12.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/new.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--顶部返回-->
+		<div id="top-back">
+			<div class="w">
+				<a class="back fl" href="../yangXiao/metInfo.html">&lt;返回</a>
+				<i id="close" class="close fr">X</i>
+			</div>
+		</div>
+		<!--顶部信息-->
+		<div id="top-info-bar">
+			<div class="w">
+				<ul class="ul-fl">
+					<li><img src="images/qq.png"></li>
+					<li><img src="images/txweibo.png"></li>
+					<li><img src="images/xlweibo.png"></li>
+					<li><img src="images/wx.png"></li>
+				</ul>
+				<ul class="ul-fr">
+					<li><i><img src="images/location.png"></i>&nbsp;广东省广州市天河区</li>
+					<li><i><img src="images/mail.png"></i>&nbsp;123456789@qq.com</li>
+					<li><i><img src="images/phone.png"></i>&nbsp;1234567890</li>
+				</ul>
+			</div>
+		</div>
+		<!--顶部导航-->
+		<div id="top-nav">
+			<div class="w">
+				<h1><a href="#">数码科技公司</a></h1>
+				<ul class="nav-ul">
+					<li class="nav-li">网站首页
+						<div class="underLine"></div>
+					</li>
+					<li id="li-aboutUs" class="nav-li">关于我们<i class="jt"></i>
+						<div class="underLine"></div>
+						<div id="aboutUs">
+							<ul class="ul-aboutUs">
+								<li class="li-aboutUs"><a href="#">&gt;企业简介</a></li>
+								<li class="li-aboutUs"><a href="#">&gt;企业文化</a></li>
+								<li class="li-aboutUs"><a href="#">&gt;企业愿景</a></li>
+								<li class="li-aboutUs"><a href="#">&gt;联系我们</a></li>
+							</ul>
+							<div class="aboutUsxxxx">
+								<img src="images/aboutus.jpg">
+								<p>
+									我公司南京分公司、医疗影像产品事业部的员工志愿者们，著名摄影培训老师及眼科专家一行20多人来到南京市仁恒翠竹园小区活动室，为社区居民举办了以健康为主题的“影像公益社区行”活动。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li id="li-news" class="nav-li">新闻资讯<i class="jt"></i>
+						<div class="underLine"></div>
+						<div id="news">
+							<ul class="ul-news">
+								<li class="li-news"><a href="#">&gt;企业新闻</a></li>
+								<li class="li-news"><a href="#">&gt;行业动态</a></li>
+							</ul>
+						</div>
+					</li>
+					<li id="li-cpshow" class="nav-li">产品展示<i class="jt"></i>
+						<div class="underLine"></div>
+						<div id="cpshow">
+							<dl>
+								<dt>
+									<span>笔记本&amp;平板</span>
+									<ul>
+										<li class="li-cpshow"><a href="#">&gt;笔记本电脑</a></li>
+										<li class="li-cpshow"><a href="#">&gt;平板电脑</a></li>
+										<li class="li-cpshow"><a href="#">&gt;一体机电脑</a></li>
+										<li class="li-cpshow"><a href="#">&gt;台式电脑</a></li>
+										<li class="li-cpshow"><a href="#">&gt;二合一键盘</a></li>
+										<li class="li-cpshow"><a href="#">&gt;触控笔</a></li>
+										<li class="li-cpshow"><a href="#">&gt;MAT系列</a></li>
+									</ul>
+									
+								</dt>
+								<dt>
+									<span>手机</span>
+									<ul>
+										<li class="li-cpshow"><a href="#">&gt;智能手机</a></li>
+										<li class="li-cpshow"><a href="#">&gt;畅玩系列</a></li>
+										<li class="li-cpshow"><a href="#">&gt;畅想系列</a></li>
+										<li class="li-cpshow"><a href="#">&gt;MATE系列</a></li>
+										<li class="li-cpshow"><a href="#">&gt;NOVA系列</a></li>
+									</ul>
+									
+								</dt>
+								<dt>
+									<span>通用配件</span>
+									<ul>
+										<li class="li-cpshow"><a href="#">&gt;耳机</a></li>
+										<li class="li-cpshow"><a href="#">&gt;音响</a></li>
+										<li class="li-cpshow"><a href="#">&gt;移动电源</a></li>
+										<li class="li-cpshow"><a href="#">&gt;智能手表</a></li>
+										<li class="li-cpshow"><a href="#">&gt;手环</a></li>
+										<li class="li-cpshow"><a href="#">&gt;自拍干</a></li>
+										<li class="li-cpshow"><a href="#">&gt;充电线</a></li>
+										<li class="li-cpshow"><a href="#">&gt;保护壳</a></li>
+									</ul>
+								</dt>
+								<dt>
+									<span>智能家居</span>
+									<ul>
+										<li class="li-cpshow"><a href="#">&gt;子目录有</a></li>
+										<li class="li-cpshow"><a href="#">&gt;电视盒子</a></li>
+										<li class="li-cpshow"><a href="#">&gt;路由器</a></li>
+										<li class="li-cpshow"><a href="#">&gt;电力猫</a></li>
+										<li class="li-cpshow"><a href="#">&gt;随身WIFI</a></li>
+										<li class="li-cpshow"><a href="#">&gt;生态产品</a></li>
+									</ul>
+									
+								</dt>
+							</dl>
+							<div class="cpshowxxxx">
+								<img src="images/cpshow.jpg">
+								<p>
+									我公司南京分公司、医疗影像产品事业部的员工志愿者们，著名摄影培训老师及眼科专家一行20多人来到南京市仁恒翠竹园小区活动室，为社区居民举办了以健康为主题的“影像公益社区行”活动。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li id="li-userExp" class="nav-li">客户案例<i class="jt"></i>
+						<div class="underLine"></div>
+						<div id="userExp">
+							<ul>
+								<li class="li-userExp"><a href="#">&gt;品牌案例</a></li>
+								<li class="li-userExp"><a href="#">&gt;行业案例</a></li>
+								<li class="li-userExp"><a href="#">&gt;公司案例</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-li">人才招聘
+						<div class="underLine"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--轮播图-->
+		<div id="lunbotu" class="main-lunbotu">
+			<ul id="main-lbt">
+				<li style="background: url(images/1475549348.jpg) no-repeat;"><a href="#"></a></li>
+				<li style="background: url(images/1475549445.jpg) no-repeat;"><a href="#"></a></li>
+				<li style="background: url(images/1475549653.jpg) no-repeat;"><a href="#"></a></li>
+			</ul>
+			<span id="btn-left" class="btn-left">&lt;</span>
+			<span id="btn-right" class="btn-right">&gt;</span>
+			<ul id="main-lbt-radio">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<!--中间广告-->
+		<div id="banner-center">
+			<div class="banner-left">
+				<div class="cengji">
+					<h2>笔记本&amp;平板</h2>
+					<i></i>
+					<p>为客户提供高端电脑为客户提供高端电脑为客户提供高端电脑为客户</p>
+					<a href="#" class="look-more">查看更多</a>
+				</div>
+				<span class="line l-line-top"></span>
+				<span class="line l-line-bottom"></span>
+				<span class="line l-line-left"></span>
+				<span class="line l-line-right"></span>
+			</div>
+			
+			<div class="banner-right">
+				<div class="cengji">
+					<h2>手机</h2>
+					<i></i>
+					<p>为客户提供高端手机为客户提供高端手机为客户提供高端手机为客户</p>
+					<a href="#" class="look-more">查看更多</a>
+				</div>
+				<span class="line r-line-top"></span>
+				<span class="line r-line-bottom"></span>
+				<span class="line r-line-left"></span>
+				<span class="line r-line-right"></span>
+			</div>
+		</div>
+		<!--商品列表-->
+		<div id="shop-list">
+			<h3>热销产品</h3>
+			<i></i>
+			<span>客户购买最多的产品</span>
+			<div id="list">
+				<div id="list-btn-left">&lt;</div>
+				<div id="list-main">
+					<ul>
+						<li><a href="#"><img src="images/1.jpg"></a></li>
+						<li><a href="#"><img src="images/2.jpg"></a></li>
+						<li><a href="#"><img src="images/3.jpg"></a></li>
+						<li><a href="#"><img src="images/4.jpg"></a></li>
+						<li><a href="#"><img src="images/5.jpg"></a></li>
+						<li><a href="#"><img src="images/6.jpg"></a></li>
+						<li><a href="#"><img src="images/7.jpg"></a></li>
+						<li><a href="#"><img src="images/8.jpg"></a></li>
+						<li><a href="#"><img src="images/9.jpg"></a></li>
+						<li><a href="#"><img src="images/10.jpg"></a></li>
+						<li><a href="#"><img src="images/11.jpg"></a></li>
+						<li><a href="#"><img src="images/12.jpg"></a></li>
+					</ul>
+				</div>
+				<div id="list-btn-right">&gt;</div>
+			</div>
+		</div>
+		<!--品牌展示-->
+		<div id="brand-show">
+			<h3>品牌展示</h3>
+			<i></i>
+			<span>我们公司旗下拥有以下品牌</span>
+			<div class="pp-list">
+				<ul>
+					<li><a href="#"><img src="images/pp1.jpg"></a></li>
+					<li><a href="#"><img src="images/pp2.jpg"></a></li>
+					<li><a href="#"><img src="images/pp3.jpg"></a></li>
+					<li><a href="#"><img src="images/pp4.jpg"></a></li>
+					<li><a href="#"><img src="images/pp5.jpg"></a></li>
+					<li><a href="#"><img src="images/pp6.jpg"></a></li>
+					<li><a href="#"><img src="images/pp7.jpg"></a></li>
+					<li><a href="#"><img src="images/pp8.jpg"></a></li>
+				</ul>
+			</div>
+			<a id="look-more-two" href="#">查看更多</a>
+		</div>
+		<!--宣传视频-->
+		<div id="video">
+			<img src="images/video.png">
+		</div>
+		<!--服务团队-->
+		<div id="team">
+			<h3>服务团队</h3>
+			<i></i>
+			<span>我们有自身团队为您服务</span>
+			<div id="team-list">
+				<ul>
+					<li><a href="#"><img src="images/one.jpg"><div id="teamr-info"><span>刘顾问</span><i>销售经理</i></div></a></li>
+					<li><a href="#"><img src="images/two.jpg"><div id="teamr-info"><span>肖顾问</span><i>前台经理</i></div></a></li>
+					<li><a href="#"><img src="images/three.jpg"><div id="teamr-info"><span>王顾问</span><i>销售顾问</i></div></a></li>
+					<li style="margin-right: 0px;"><a href="#"><img src="images/four.jpg"><div id="teamr-info"><span>陈顾问</span><i>区域经理</i></div></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--用户信息-->
+		<div id="user-info">
+			<div id="user-lunbo">
+				<ul>
+					<li>
+						<div id="user-img">
+							<a href="#"><img src="images/user1.jpg"></a>
+						</div>
+						<h5>刘先生-电脑配件</h5>
+						<p>x电脑用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。手机用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。</p>
+					</li>
+					<li>
+						<div id="user-img">
+							<a href="#"><img src="images/user2.jpg"></a>
+						</div>
+						<h5>王女士-平板电脑</h5>
+						<p>平板电脑用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。手机用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。</p>
+					</li>
+					<li>
+						<div id="user-img">
+							<a href="#"><img src="images/user3.jpg"></a>
+						</div>
+						<h5>陈先生-智能手机</h5>
+						<p>手机用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。手机用起来很好，服务很到位，非常满意的服务质量，品牌值得信赖。</p>
+					</li>
+				</ul>
+			</div>
+			<div id="user-lunbo-btn">
+				<i>0</i>
+				<i>1</i>
+				<i>2</i>
+			</div>
+		</div>
+		<!--新闻中心-->
+		<div id="news-center">
+			<h3>新闻中心</h3>
+			<i class="newsi"></i>
+			<span class="newspan">最新行业新闻资讯</span>
+			<div id="new-list">
+				<ul>
+					<li>
+						<a class="news-img" href="#">
+							<img src="images/news1.jpg">
+							<div id="news-date">
+								<i>30</i><span>Oct</span>
+							</div>
+						</a>
+						<div id="news-info">
+							<a class="news-title" href="#">我司采用RFID技术为消费者构筑“防火墙”</a>
+							<span class="news-span">admin | 117</span>
+							<p class="news-p">8月20日，我公司宣布在上市的新品中级数码单反相机70D的包装箱上启用由无线射频识别技术（RFID）构成的我们正品鉴别系..</p>
+						</div>
+					</li>
+					<li>
+						<a class="news-img" href="#">
+							<img src="images/news2.jpg">
+							<div id="news-date">
+								<i>30</i><span>Oct</span>
+							</div>
+						</a>
+						<div id="news-info">
+							<a class="news-title" href="#">我司采用RFID技术为消费者构筑“防火墙”</a>
+							<span class="news-span">admin | 117</span>
+							<p class="news-p">8月20日，我公司宣布在上市的新品中级数码单反相机70D的包装箱上启用由无线射频识别技术（RFID）构成的我们正品鉴别系..</p>
+						</div>
+					</li>
+					<li style="margin-right: 0;">
+						<a class="news-img" href="#">
+							<img src="images/news3.jpg">
+							<div id="news-date">
+								<i>30</i><span>Oct</span>
+							</div>
+						</a>
+						<div id="news-info">
+							<a class="news-title" href="#">我司采用RFID技术为消费者构筑“防火墙”</a>
+							<span class="news-span">admin | 117</span>
+							<p class="news-p">8月20日，我公司宣布在上市的新品中级数码单反相机70D的包装箱上启用由无线射频识别技术（RFID）构成的我们正品鉴别系..</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--底部信息-->
+		<div id="footer-info">
+			<dl class="info-list w">
+				<dt class="list-title">底部简介<i></i>
+					<ul class="u1">
+						<li><p>公司自2003年创业以来，始终以创造世界一流产品为奋斗目标，积极推动事业向多元化和全球化发展。目前，我们在全球以光学为核心的影像系统产品....</p></li>
+						<li class="list-look"><a href="#">查看更多</a></li>
+						<li>
+							<ul class="list-icon">
+								<li><img src="images/icon1.png"></li>
+								<li><img src="images/icon2.png"></li>
+								<li><img src="images/icon3.png"></li>
+								<li><img src="images/icon4.png"></li>
+								<li><img src="images/icon5.png"></li>
+							</ul>
+						</li>
+					</ul>
+				</dt>
+				<dt class="list-title">底部新闻<i></i>
+					<ul class="u2">
+						<li><p><a href="#">&gt;展示“影像金融”的力</a></p></li>
+						<li><p><a href="#">&gt;“影像公益”深入社区</a></p></li>
+						<li><p><a href="#">&gt;商业模式的变化带给分</a></p></li>
+						<li><p><a href="#">&gt;我司采用RFID技术</a></p></li>
+						<li><p><a href="#">&gt;数码单镜反光照相机构</a></p></li>
+					</ul>
+				</dt>
+				<dt class="list-title">底部图文<i></i>
+					<ul class="u3">
+						<li><a href="#"><img src="images/ppshow1.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow2.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow3.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow4.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow5.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow6.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow7.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow8.jpg"></a></li>
+						<li><a href="#"><img src="images/ppshow9.jpg"></a></li>
+					</ul>
+				</dt>
+				<dt class="list-title" style="margin-right: 0;">联系我们<i></i>
+					<ul class="u4">
+						<li><a href="#"><img src="images/u41.png">&nbsp;&nbsp;广东省广州市天河区276号</a></li>
+						<li><a href="#"><img src="images/u42.png">&nbsp;&nbsp;86-12345678901</a></li>
+						<li><a href="#"><img src="images/u43.png">&nbsp;&nbsp;123456789@qq.com</a></li>
+						<li><a href="#"><img src="images/u44.png">&nbsp;&nbsp;www.spademo.com</a></li>
+					</ul>
+				</dt>
+			</dl>
+		</div>
+		<!--底部-->
+		<div id="footer">
+			<ul class="link">
+				<li><a href="#">友情链接：</a></li>
+				<li><a href="#">佳能官网</a></li>
+				<li><a href="#">尼康官网</a></li>
+				<li><a href="#">天猫商城</a></li>
+				<li><a href="#">京东商城</a></li>
+				<li><a href="#">亚马逊商城</a></li>
+				<li><a href="#">易迅商城</a></li>
+				<li><a href="#">卡西欧数码</a></li>
+				<li><a href="#">宾得数码</a></li>
+				<li><a href="#">1号商城</a></li>
+				<li><a href="#">当当商城</a></li>
+				<li><a href="#">中关村在线</a></li>
+				<li><a href="#">苏宁易购</a></li>
+				<li style="border-right: 0;"><a href="#">国美在线</a></li>
+			</ul>
+			<div class="copyright">
+				版权所有 2008-2012 湘ICP备8888888
+			</div>
+			<div class="prowed">
+				Powered by MetInfo 5.3.15
+			</div>
+		</div>
+		<!--返回顶部-->
+		<div id="backToTop">
+			<a href="#">
+				<img src="images/up.png">
+			</a>
+		</div>
+	</body>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/liuPeng/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-09 3D转换-练习-立方体" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 3D转换</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F7F7F7;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+      margin: 100px auto;
+      position: relative;
+
+      animation: rotate 2s infinite linear;
+      transform: rotateY(30deg) rotateX(-30deg);
+      /*真正的3D的效果*/
+      transform-style: preserve-3d;
+    }
+
+    .front,.back,.left,.right,.top,.bottom{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top:0;
+      left:0;
+      opacity: .8;
+    }
+
+    .left{
+      background-color: red;
+      transform: rotateY(90deg) translateZ(-100px);
+    }
+    .right{
+      background-color: blue;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .top{
+      background-color: yellow;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .bottom{
+      background-color: deeppink;
+      transform: rotateX(90deg) translateZ(-100px);
+    }
+    .front{
+      background-color: orangered;
+      transform: rotateX(0deg) translateZ(100px);
+    }
+    .back{
+      background-color: purple;
+      transform: rotateX(0deg) translateZ(-100px);
+    }
+
+
+
+
+
+    /*.front{*/
+      /*background-color: deeppink;*/
+        /*transform: rotate(0deg) translateZ(100px);*/
+    /*}*/
+    /*.back{*/
+      /*background-color: rebeccapurple;*/
+      /*transform: rotate(0deg) translateZ(-100px);*/
+    /*}*/
+    /*.left{*/
+      /*background-color: red;*/
+      /*transform: rotateY(90deg) translateZ(-100px);*/
+    /*}*/
+    /*.right{*/
+      /*background-color: green;*/
+      /*transform: rotateY(90deg) translateZ(100px);*/
+    /*}*/
+    /*.top{*/
+      /*background-color: blue;*/
+      /*transform: rotateX(90deg) translateZ(100px);*/
+    /*}*/
+    /*.bottom{*/
+      /*background-color: yellow;*/
+      /*transform: rotateX(90deg) translateZ(-100px);*/
+    /*}*/
+
+
+
+    @keyframes rotate {
+      from {
+        transform: rotateX(0deg) rotateY(360deg);
+      }
+
+      to {
+        transform: rotateX(360deg) rotateY(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="front">front</div>
+  <div class="back">back</div>
+  <div class="left">left</div>
+  <div class="right">right</div>
+  <div class="top">top</div>
+  <div class="bottom">bottom</div>
+</div>
+</body>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/09 3D转换-练习-立方体/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/26/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/26/hello-world/" class="archive-article-date">
+  	<time datetime="2017-08-26T15:42:37.661Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/26/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-创建博客方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/29/创建博客方法/">如何创建博客</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/29/创建博客方法/" class="archive-article-date">
+  	<time datetime="2015-08-29T09:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="利用hexo搭建博客"><a href="#利用hexo搭建博客" class="headerlink" title="利用hexo搭建博客"></a>利用hexo搭建博客</h1><p>hexo 是一个静态博客生成器，能帮你命名生成一个网站，下面将介绍安装步骤：</p>
+<p>##1. 安装 node 环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- http://nodejs.cn/</div><div class="line">网站内有 node.js 的下载链接</div><div class="line">- 下载安装即可</div></pre></td></tr></table></figure>
+<p>安装完成后，可以确认机器上是否有 node 环境：</p>
+<p>打开 cmd：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入 node -v</div><div class="line">返回一个版本号，则安装成功</div></pre></td></tr></table></figure>
+<p>##2. 安装 git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://git-for-windows.github.io/</div><div class="line">下载安装</div></pre></td></tr></table></figure>
+<p>##3. 安装 hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div></pre></td></tr></table></figure>
+<p>接下来可以通过 <code>hexo --version</code> 命令查看是否安装成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">返回一下类似内容表示安装成功</div><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
+<p>##4. 生成博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入：hexo init 博客目录名称</div><div class="line"><span class="comment"># hexo 会帮你在执行该命名所处的目录生成一个指定名称的目录文件</span></div></pre></td></tr></table></figure>
+<p>##5. 启动预览博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">在你创建的目录下按住<span class="built_in">shift</span>点击右键运行命令窗口</div><div class="line">键入命令   hexo server</div><div class="line">可在本地预览博客 http://localhost:4000/</div></pre></td></tr></table></figure>
+<p>##6. 注册 github 账号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- https://github.com/</div><div class="line">- 注册页面：https://github.com/join</div><div class="line">- 填入用户名、密码、邮箱</div><div class="line">- 然后在自己的邮箱中收取邮件激活验证</div></pre></td></tr></table></figure>
+<p>##7. 创建一个具名的仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">到这里一定要确保你的邮箱经过验证了。</div><div class="line"></div><div class="line">点击右上角的：+ 选择 -&gt; New repository 创建一个仓库</div><div class="line"></div><div class="line">起名：注册github时候的用户名.github.io</div><div class="line">得到你的仓库地址  例如：  https://github.com/vis-yang/vis-yang.github.io.git</div></pre></td></tr></table></figure>
+<p>##8. 把博客发布托管到 github 上</p>
+<p>本地操作准备：<br>在 <code>_config.yml</code> 文件最后 加入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">以我的为例，我的仓库地址是https://github.com/vis-yang/vis-yang.github.io.git，则</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://你的用户名:你的密码@github.com/vis-yang/vis-yang.github.io.git</div></pre></td></tr></table></figure>
+<p>然后安装一个用来快速发布的工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>然后：在所在目录执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hexo deploy --generate</div><div class="line">同步更新到博客</div></pre></td></tr></table></figure>
+<p>推送成功之后，来到线上github仓库，找到  Pages -&gt; 开启服务</p>
+<p>然后他会告诉你访问地址，以后访问这个地址就可以了。</p>
+<p>接下来你只需要在你写完文章，每次发布的时候敲一个命令就会同步到博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在根目录命令窗口键入：hexo new 文章名称    来创建一篇新文章</div><div class="line">在你创建的本地仓库中的 <span class="built_in">source</span> -&gt; _posts 内就有你创建的文章md文件了，选择编译</div><div class="line">编译完成后在根目录命令窗口键入：</div><div class="line">Hexo deploy --generate</div><div class="line">就会同步到你的博客了</div></pre></td></tr></table></figure>
+<p>###到此为止我们的个人博客就搭建成功了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/29/创建博客方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+  
+  
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </nav>
   
 
@@ -394,9 +2051,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

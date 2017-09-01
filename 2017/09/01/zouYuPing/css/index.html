@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="* {     margin: 0;     padding: 0; } li {     list-style: none; } i{     font-style: normal; } a {     text-decoration: none;     color:#323232; } body  {     background-color: #fff;     font-family:">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/zouYuPing/css/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="* {     margin: 0;     padding: 0; } li {     list-style: none; } i{     font-style: normal; } a {     text-decoration: none;     color:#323232; } body  {     background-color: #fff;     font-family:">
+<meta property="og:updated_time" content="2017-07-15T04:25:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="* {     margin: 0;     padding: 0; } li {     list-style: none; } i{     font-style: normal; } a {     text-decoration: none;     color:#323232; } body  {     background-color: #fff;     font-family:">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,870 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-zouYuPing/css" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        * {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color:#323232;
+}
+body  {
+    background-color: #fff;
+    font-family: "微软雅黑";
+}
+input,textarea,button {
+    outline:none;
+    border:0;
+}
+.bx {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+
+#top {
+    height:50px;
+    line-height: 50px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 4;
+}
+.top-in a{
+    color:#fff;
+    float: left;
+}
+.top-in a i {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.top-in .top-c {
+    float: left;
+    width: 34px;
+    height: 50px;
+    margin-left: 750px;
+    background:url(images/wechatsmall.png) no-repeat;
+}
+
+.top-in .top-c img {
+    margin-top: 50px;
+    margin-left: -80px;
+    display:none;
+    vertical-align:bottom;
+}
+.top-in span{
+    float: right;
+    font-family: "宋体";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#side {
+    width: 607px;
+    position: fixed;
+    left: -547px;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+
+}
+#side #side-in {
+    position: absolute;
+    top: 0;
+    width: 530px;
+    height: 100%;
+    left:0;
+    /*margin-left: 30px;*/
+    overflow-y:auto;
+}
+#side .hide {
+    height:650px;
+    width: 513px;
+    overflow :hidden;
+    left:30px;
+    position: relative;
     
+
+}
+#btn {
+    position: absolute;
+    top: 305px;
+    right:-7px;
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    font-size: 16px;
+    color: #fff;
+    transform: rotate(270deg);
+    letter-spacing: 1px;
+    /*-webkit-writing-mode: horizontal-tb;*/
+}
+#btn2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px;
+    background: #fff;
+    font-family: "宋体";
+    display: none;
+    cursor: pointer;
+}
+#side #side-in input {
+    width: 433px;
+    height: 34px;
+    border: 1px solid #E4EAEC;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border-radius:  5%/60%;
+    padding-left: 20px;
+}
+#side #side-in>span {
+    margin-left: -35px;
+    cursor: pointer;
+}
+#side #side-in ol>li {
+    /*height: 40px;*/
+    line-height: 40px;
+    width: 470px;
+}
+#side #side-in ul {
+    display: none;
+}
+#side #side-in ul li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    width: 492px;
+    padding-left: 15px;
+    /*background-color: red;*/
+}
+#side #side-in ol a:hover {
+    color: #F39C12;
+}
+#side #side-in input:focus{
+    border-color:#F39C12;
+}
+#side #side-in li span {
+    float: right;
+    font-size: 28px;
+    line-height: 40px;
+    /*margin-right: 23px;*/
+    font-family: "宋体";
+    cursor: pointer;
+    position: relative;
+}
+#side p {
+    margin-top: 20px;
+    line-height: 25px;
+    font-size: 14px;
+}
+#side p a {
+    border-bottom: 1px solid #F39C12;
+}
+#side #scroll {
+    width: 2px;
+    /*height: 672px;*/
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 0;
+    right: 70px;
+    display: none;
+}
+#side #scroll #bar {
+    width: 6px;
+    height: 10%;
+    background-color: rgba(0,0,0,.5);
+    /*height: 100px;*/
+    position: absolute;
+    top: 0;
+    left: -2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#sider {
+    width: 50px;
+    position: fixed;
+    top: 40%;
+    right: 10px;
+
+}
+#sider li {
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 5px;
+}
+#sider li a {
+    width: 60px;
+    height: 20px;
+    display:block;
+    color: #C7CDD2;
+    cursor: pointer;
+}
+#sider li div {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    background-color: black;
+    color: #fff;
+    right: 70px;
+    border-radius: 5%/25%;
+    top: 0;
+    display: none;
+    z-index: 1000;
+}
+
+
+
+#nav {
+    height: 70px;
+    background-color:rgba(255,255,255,.85);
+}
+.fixed {
+      position: fixed;
+      top: 0;
+      left: 60px;
+        z-index: 2;
+}
+/*#nav .nav-in {*/
+    /**/
+/*}*/
+
+.nav-in .nav-l {
+    height: 70px;
+    width: 200px;
+    background: url(images/logo.png);
+    margin: 0 auto;
+    /*margin-left: 10px;*/
+    /*float: left;*/
+}
+/*.nav-in .nav-r {*/
+    /*float: right;*/
+    /*margin-right: 20px;*/
+/*}*/
+/*.nav-r li {*/
+    /*height: 70px;*/
+    /*float: left;*/
+    /*line-height: 70px;*/
+    /*margin:0 10px;*/
+    /*font-size:20px;*/
+
+/*}*/
+
+.banner-in {
+    height: 480px;
+}
+#screen {
+    height: 480px;
+    width: 1230px;
+    position: relative;
+    /*overflow:hidden;*/
+}
+#screen ul {
+    /*position: relative;*/
+    /*left: 0;*/
+    /*top:0;*/
+}
+#screen li {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#arr span{
+    width: 60px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top:290px;
+    right:75px;
+    color:#fff;
+    cursor: pointer;
+    line-height: 50px;
+    z-index: 1;
+}
+#arr span i {
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-size: 40px;
+}
+#arr #left{
+    left:75px;
+    /*padding-left: 20px;*/
+}
+#arr #right i {
+    left: -10px;
+
+}
+
+#show {
+    text-align: center;
+    padding-top: 20px;
+    height: 183px;
+}
+#show h2 {
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: normal;
+}
+#show p {
+    color:#686868;
+    line-height: 30px;
+    /*font-size: 14px;*/
+}
+#zuo {
+    height: 394px;
+}
+.zuo-in li img{
+    width: 300px;
+    height: 187px;
+}
+.zuo-in li {
+    width: 300px;
+    height: 187px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.zuo-in li.nm {
+    margin-right: 0;
+}
+.zuo-in li a{
+    width: 275px;
+    height: 157px;
+    color:#323232;
+    background-color:rgba(255,255,255,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 24px;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+#radio {
+    height: 380px;
+    padding-top: 30px;
+}
+.radio-in .radio-l {
+    float: left;
+    width: 555px;
+    height: 340px;
+    background-color: #F4F4F4;
+    position: relative;
+}
+.radio-in .radio-l .play{
+    width: 555px;
+    height: 340px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background: url(images/radio.png);
+}
+.radio-l .play a {
+    width: 124px;
+    height: 39px;
+    font-size: 12px;
+    line-height: 39px;
+    padding-left: 13px;
+    position: absolute;
+    top: 150px;
+    left: 209px;
+    background-color:#fff;
+    color: #323232;  
+}
+.radio-in .radio-r {
+    float: right;
+    width: 630px;
+    text-align: center;
+}
+.radio-in .radio-r h2 {
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.radio-in .radio-r p {
+    width: 470px;
+    text-indent: 2em;
+    line-height: 28px;
+    margin-left: 70px;
+    font-size: 15px;
+    text-align: left;
+    color:#656565;
+    margin-top: 20px;
+}
+#contact{
+    height: 500px;
+    margin-top: 73px;
+    margin-bottom: 10px;
+}
+.contact-in .contact-l {
+    float: left;
+    width: 630px;
+    height: 420px;
+    background-color: #FAFAFA;
+    padding-top: 80px;
+}
+.contact-in .contact-r {
+    float: left;
+    width: 600px;
+    height: 500px;
+    background: url(images/bg.png);
+}
+.contact-l a {
+    display:inline-block;
+    height: 78px;
+    width: 405px;
+    background: url(images/lian.png) no-repeat;
+    margin-left: 40px;
+    padding-left: 108px;
+    margin-bottom: 40px;
+    color:#656565;
+    line-height:20px;
+    font-size: 14px;
+}
+.contact-l a h4 {
+    font-size: 20px;
+    font-weight: normal;
+    color:#323232;
+    margin-bottom: 10px;
+}
+#lian .lian-in {
+    height: 114px;
+    background-color: #212121;
+    text-align: center;
+    color:#fff;
+    padding-top: 50px;
+}
+#lian .lian-in p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#lian .lian-in a {
+    font-size: 12px;
+    color:#fff;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+#number .number-in {
+    height: 300px;
+
+    background: url(images/banner2.jpg) no-repeat fixed center;
+}
+
+.number-in ul {
+    padding-left: 25px;
+    height: 300px;
+    background-color: rgba(255,255,255,.6);
+}
+.number-in li {
+    float: left;
+    width: 295px;
+    height: 300px;
+    text-align: center;
+    color:#656565;
+    font-size: 20px;
+}
+.number-in li span {
+    font-size: 34px;
+    display:block;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color:#323232;
+}
+
+#blog .blog-in {
+    height: 1063px;
+    background-color: #FAFAFA;
+    padding-top: 20px;
+}
+.blog-in .blog-t {
+    height: 183px;
+    text-align: center;
+}
+.blog-in .blog-t h2 {
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.blog-in .blog-t p {
+    color:#686868;
+    margin-top: 20px;
+    line-height: 25px;
+}
+.blog-in .blog-b {
+    height: 880px;
+    padding:0 45px;
+}
+.blog-b .blog-bl,.blog-bc,.blog-br {
+    height: 880px;
+    width: 360px;
+    margin-right: 30px;
+    float: left;
+}
+.blog-b .blog-bl img {
+    width: 100%;
+    height: 100%;
+
+}
+.blog-b .blog-bl .im1 {
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+}
+.blog-b .blog-bl .im2 {
+    width: 360px;
+    height: 270px;
+    overflow: hidden;
+}
+.blog-b .blog-bc .im3 {
+    width: 360px;
+    height: 540px;
+    overflow: hidden;
+}
+.blog-b .blog-br .im4 {
+    width: 360px;
+    height: 204px;
+    overflow: hidden;
+}
+.blog-b .blog-br .im5 {
+    width: 360px;
+    height: 307px;
+    overflow: hidden;
+}
+
+
+.blog-b .blog-br {
+    margin-right: 0;
+}
+.blog-bl .lt {
+    height: 411px;
+}
+.blog-bl .lb {
+    height: 469px;
+}
+.blog-b img {
+    width: 360px;
+}
+
+.blog-b span {
+    color:#999999;
+    font-size: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+}
+.blog-b a {
+    color:#3D3D3D;
+    font-size: 18px;
+}
+.blog-b p {
+    color:#999999;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.blog-br .rt {
+    height: 374px;
+}
+.blog-br .rb {
+    height: 506px;
+}
+#phone .phone-in {
+    height: 323px;
+    padding-top: 20px;
+}
+.phone-in .phone-t {
+    text-align: center;
+    height: 143px;
+}
+.phone-in .phone-t h2 {
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.phone-in .phone-t p {
+    color:#686868;
+    margin-top: 20px;
+}
+.phone-in .phone-b {
+    height: 145px;
+    padding-left: 50px;
+    padding-top: 35px;
+}
+.phone-in .phone-b li {
+    float: left;
+    width: 350px;
+    text-align: center;
+}
+.phone-in .phone-b li.mg {
+    margin:0 35px;
+}
+.phone-in .phone-b li p {
+    line-height: 28px;
+    margin-top: 40px;
+    color: #656565;
+    font-size: 14px;
+}
+
+#map {
+    height: 447px;
+    margin-bottom: 30px;
+}
+.map-in .map-l {
+    width: 615px;
+    height: 400px;
+    background-color:#FAFAFA;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    padding-top: 47px;
+}
+.map-in .map-r {
+    float: right;
+    width: 600px;
+}
+.map-in .map-l>p {
+    margin-top: 20px;
+    color:#696969;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.map-l .msg {
+    text-align: left;
+    padding-left: 70px;
+}
+.msg .nm {
+    height: 37px;
+    width: 450px;
+    margin-top: 15px;
+    border-bottom:1px solid #D1D1D1;
+}
+.msg .nm input {
+    height: 37px;
+    width: 370px;
+    margin-left: 15px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+}
+.msg .text textarea {
+    vertical-align: top;
+    margin-left: 11px;
+    width: 370px;
+    height: 110px;
+    font-size: 16px;
+    background-color: #FAFAFA;
+}
+.msg .text {
+    height: 110px;
+    width: 450px;
+    border-bottom:1px solid #D1D1D1;
+    margin-top: 20px;
+}
+.msg #btn1 {
+    width: 98px;
+    height: 40px;
+    background-color: #202020;
+    color: #fff;
+    margin-top: 22px;
+
+}
+#bottom {
+    height: 360px;
+
+}
+#bottom .bottom-in {
+    height: 360px;
+    background-color: #FAFAFA;
+    text-align: center;
+    padding-top: 60px;
+    background: url(images/me2.jpg) no-repeat -200px -160px;
+}
+.bottom-in .guan {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.bottom-in .bb {
+    line-height: 28px;
+    font-size: 13px;
+}
+
+
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/zouYuPing/css/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/zouYuPing/index/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +1034,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

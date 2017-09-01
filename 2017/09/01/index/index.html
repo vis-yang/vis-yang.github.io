@@ -6,14 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Title        * {       margin:0;       padding:0;     }      em,i {       font-style: normal;     }     input {       outline: none;       border: 0;     }     .w {       width: 1170px;">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/index/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Title        * {       margin:0;       padding:0;     }      em,i {       font-style: normal;     }     input {       outline: none;       border: 0;     }     .w {       width: 1170px;">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/3.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/4.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/5.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/6.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/01/index/images/1.png">
+<meta property="og:updated_time" content="2017-07-15T04:26:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Title        * {       margin:0;       padding:0;     }      em,i {       font-style: normal;     }     input {       outline: none;       border: 0;     }     .w {       width: 1170px;">
+<meta name="twitter:image" content="http://yoursite.com/2017/09/01/index/images/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +155,655 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-index" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin:0;
+      padding:0;
+    }
+
+    em,i {
+      font-style: normal;
+    }
+    input {
+      outline: none;
+      border: 0;
+    }
+    .w {
+      width: 1170px;
+      margin:0 auto;
+    }
+    ul,ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #929299;
+      font-size: 14px;
+      display: block;
+    }
+    a:hover{
+      color: #62a8ea;
+    }
+
+    /*以上为公共部分*/
+    /*----------top 开始---------------*/
+    #top {
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      background-color: #fff;
+    }
+    #top-in {
+      height: 50px;
+      line-height: 50px;
+      position: relative;
+    }
+    #top #top-in #logo {
+      width: 70px;
+      float: left;
+    }
+    #top #top-in #logo #logoA {
+      height: 50px;
+      width: 70px;
+      text-indent: -2000em;
+      background: url("images/logo.png") no-repeat center;
+    }
+    #top #top-in #nav {
+      width: 500px;
+      height: 50px;
+      margin-left: 500px;
+    }
+    #top #top-in #nav li {
+      float: left;
+      height: 50px;
+    }
+    #top #top-in #nav li+li {
+      margin-left: 50px;
+    }
+    #top #top-in #nav #nav-li1 {
+      margin-right: 60px;
+    }
+    #top #top-in #nav li a {
+      display: block;
+      padding-top: 16px;
+      height: 34px;
+      line-height: 50px;
+      text-align: center;
+      font:16px "微软雅黑";
+    }
+    #top #top-in #nav #free {
+      position: absolute;
+      left:610px;
+      top:16px;
+      padding-top: 0;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      line-height:22px;
+      height:22px;
+      width: 38px;
+      border-radius: 10px;
+      background-color: #4bce95;
+    }
+    #top #top-in #nav-btn {
+      height: 36px;
+      width: 150px;
+      position: absolute;
+      top:7px;
+      right:0;
+    }
+    #top #top-in #nav-btn .nav-b {
+      display: block;
+      width: 58px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      border:1px solid #62a8ea;
+      float: left;
+      color: #62a8ea;
+    }
+    #top #top-in #nav-btn .nav-b:hover {
+      background-color: #62a8ea;
+      color: #fff;
+    }
+    #top #top-in #nav-btn #nav-btn2 {
+      margin-left: 10px;
+      color: #fff;
+      background-color: #4bce95;
+      border:1px solid #4bce95;
+    }
+    #top #top-in #nav-btn #nav-btn2:hover {
+      background-color: #64ecb1;
+    }
+    /*----------top 结束---------------*/
+    #banner {
+      width: 100%;
+      height: 740px;
+      background-color: #12B3EC;
+      text-align: center;
+      padding-top: 60px;
+      margin-bottom: 42px;
+    }
+    #content {
+      width: 960px;
+      height: 702px;
+      margin: 0 auto;
+      background: url("images/pc-bg.png") no-repeat;
+      padding-top: 70px;
+
+    }
+    #img {
+      width: 884px;
+      height: 464px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    #img ul {
+      width: 10000px;
+
+    }
+    #img ul li {
+      float: left;
+    }
+    #img ul li img{
+      width: 884px;
+      height: 464px;
+    }
+    #main {
+      height: 377px;
+      background: url("images/logowall.jpg") no-repeat center;
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      padding-top: 120px;
+    }
+    #main p {
+      color: #fff;
+      font-size: 55px;
+      text-align: center;
+    }
+    #main .p2 {
+      font-size: 34px;
+      margin: 0 0 34px;
+    }
+    #main .p3 {
+      font-size: 21px;
+    }
+    /*------------------foottext开始-----------------------*/
+    #footText {
+      height: 210px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    #footText #footText-in {
+      padding-top: 50px;
+    }
+    #footText #footText-in dl {
+      width: 210px;
+      text-align: center;
+      float: left;
+    }
+    #footText #footText-in dl dt {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    #footText #footText-in dl dd a {
+      line-height: 24px;
+    }
+    #footText #footText-in #foorText-right {
+      width: 262px;
+      float: right;
+      margin-right: 64px;
+      position: relative;
+    }
+    #footText #footText-in #foorText-right #number {
+      text-align: center;
+    }
+    #footText #footText-in #foorText-right #number a {
+      font-size: 30px;
+    }
+    #footText #footText-in #foorText-right #number a:hover {
+      color: #4f4e4d;
+    }
+    #footText #footText-in #foorText-right p {
+      font-size: 14px;
+      text-align: center;
+      color: #b7b7b6;
+      line-height: 28px;
+    }
+    #footText #footText-in #foorText-right #weChant {
+      margin-top: 10px;
+      margin-left: 86px;
+      height: 30px;
+      width: 88px;
+    }
+    #footText #footText-in #foorText-right #weChant a {
+      height: 30px;
+      width: 88px;
+      border:1px solid #62a8ea;
+      color: #62a8ea;
+      text-align: center;
+      line-height: 30px;
+    }
+    #footText #footText-in #foorText-right #weChant a:hover {
+      background-color: #62a8ea;
+      color: #fff;
+    }
+    #footText #footText-in #foorText-right #er {
+      position: absolute;
+      left:50px;
+      top:-96px;
+      height: 150px;
+      width: 150px;
+      background: url("images/wechat.jpg");
+      display: none;
+    }
+    #footText #footText-in #foorText-right #sanJ {
+      border:10px solid #fff;
+      border-top:10px solid #eee;
+      position: absolute;
+      left: 116px;
+      top:50px;
+      display: none;
+    }
+    /*------------------foottext结束-----------------------*/
+    /*------------------footer开始-------------------------*/
+    #footer {
+      height: 90px;
+      position: relative;
+    }
+    #footer-in {
+      text-align: center;
+      padding: 20px 0;
+    }
+    #footer-in span {
+      color: #b7b7b6;
+    }
+    #footer-in #sp1 {
+      font-size: 14px;
+    }
+    #footer-in #sp2 {
+      font-size: 12px;
+    }
+    #footer-in #oneB {
+      margin-top: 5px;
+    }
+    #footer-in a {
+      display: inline;
+      color: #62a8ea;
+    }
+    #footer-in a:hover {
+      color: #74b8f7;
+      border-bottom: 1px solid #74b8f7;
+    }
+    /*------------------footer结束-------------------------*/
+    /*------------------start结束-------------------------*/
+    #start {
+      height: 210px;
+      text-align: center;
+      padding-top: 110px;
+    }
+    #freeS {
+      width: 210px;
+      height: 80px;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    #freeS a {
+      width: 210px;
+      height: 80px;
+      background: #46be8a;
+      line-height: 80px;
+      color: #fff;
+      font-size: 24px;
+      display: none;
+    }
+    #freeS ul li {
+      width: 70px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      color: #fff;
+      background-color:#46be8a ;
+      display: none;
+      cursor: pointer;
+    }
+    #start p{
+      font-size: 18px;
+    }
+    /*------------------start结束-------------------------*/
+
+  </style>
+  <script src="liWeiMin/js/jquery-1.12.1.js"></script>
+  <script>
+    $(function () {
+      var n=0
+      //控制轮播图运动的函数
+      function f1(){
+        if(n>=6){
+          n=0;
+          $("#img>ul").css("marginLeft",0);
+        }
+        n++;
+        $("#img>ul").stop().animate({"marginLeft":-n*$("#img img").width()},1000);
+      }
+      //定时器
+      var timeId = setInterval(f1,2500);
+      //鼠标进入停止定时器，鼠标移出开启定时器
+      $("#img").mouseenter(function () {
+        clearInterval(timeId);
+      }).mouseleave(function () {
+        timeId = setInterval(f1,2500);
+      });
+      //为开始部分的li设置动画，获取li
+      $("#start").mouseenter(function () {
+        var list = $("#freeS>ul>li");
+        //var arr1 = [{"left":"-640px","top":"0px"},{"left":"70px","top":"-700px"},{"left":"640px","top":"0px"},{"left":"-640px","top":"40px"},{"left":"70px","top":"-660px"},{"left":"640px","top":"40px"}];
+        var arr2 = [{"left":"-70px","top":"0px"},{"left":"70px","top":"-80px"},{"left":"210px","top":"0px"},{"left":"-70px","top":"40px"},{"left":"70px","top":"-40px"},{"left":"210px","top":"40px"}];
+        var arr3 = [{"left":"0px","top":"0px"},{"left":"70px","top":"0px"},{"left":"140px","top":"0px"},{"left":"0px","top":"40px"},{"left":"70px","top":"40px"},{"left":"140px","top":"40px"}];
+
+        list.each(function (x,y) {
+          $(y).css("display","none").css(arr2[x]).stop().slideDown(200, function () {
+            $(y).stop().animate(arr3[x],800);
+          })
+        }).click(function () {
+          list.each(function (x,y) {
+            $(y).stop().animate(arr2[x],800, function () {
+              list.stop().slideUp();
+            });
+          }).parent().siblings().css("display","block").parent().next().text(" 企业官网「轻松搭建」");
+        }).parent().siblings().css("display","none").parent().next().text("↑ 点击 ↑");
+      });
+      
+    });
+
+  </script>
+</head>
+<body>
+<!--顶部开始-->
+<div id="top">
+  <div id="top-in" class="w">
+    <div id="logo">
+      <h1>
+        <a href="#" title="米拓模板网站" id="logoA">米拓</a>
+      </h1>
+    </div>
+    <ul id="nav">
+      <li id="nav-li1">
+        <a href="#">
+          下载 MetInfo
+        </a>
+        <a href="#" id="free">免费</a>
+      </li>
+      <li>
+        <a href="yangXiao/metInfo.html">模板</a>
+      </li>
+      <li>
+        <a href="#">案例</a>
+      </li>
+      <li>
+        <a href="#">帮助</a>
+      </li>
+      <li>
+        <a href="#">社区</a>
+      </li>
+    </ul>
+    <div id="nav-btn">
+      <a href="#" id="nav-btn1" class="nav-b">登录</a>
+      <a href="#" id="nav-btn2" class="nav-b">注册</a>
+    </div>
+  </div>
+</div>
+<!--顶部结束-->
+<div id="banner">
+  <!--content开始-->
+  <div id="content">
+    <div id="img">
+      <ul>
+        <li><img src="images/1.png" alt=""></li>
+        <li><img src="images/2.png" alt=""></li>
+        <li><img src="images/3.png" alt=""></li>
+        <li><img src="images/4.png" alt=""></li>
+        <li><img src="images/5.png" alt=""></li>
+        <li><img src="images/6.png" alt=""></li>
+        <li><img src="images/1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="main">
+<p class="p1">MetInfo</p>
+<p class="p2">最好用的企业建站系统</p>
+<p class="p3">新创乃至上市公司、政府、外贸企业都有 MetInfo 的用户<br>MetInfo 的用户遍布全国各地（包括台湾、香港）以及海外华人</p>
+
+</div>
+<!--content结束-->
+<!--main开始-->
+<div id="start">
+  <div id="freeS">
+    <a href="yangXiao/metInfo.html">立即体验</a>
+    <ul>
+      <li>杨萧</li>
+      <li>邹玉平</li>
+      <li>李伟民</li>
+      <li>刘鹏</li>
+      <li>刘杨诚</li>
+      <li>杨振杰</li>
+    </ul>
+  </div>
+  <p>↑ 点击 ↑</p>
+</div>
+<!--foottext开始-->
+<div id="footText">
+  <div id="footText-in" class="w">
+    <div id="foorText-left">
+      <dl>
+        <dt>产品</dt>
+        <dd><a href="#">MetInfo 是什么？</a></dd>
+        <dd><a href="#">功能全览</a></dd>
+        <dd><a href="#">免费下载</a></dd>
+        <dd><a href="#">使用协议</a></dd>
+      </dl>
+      <dl>
+        <dt>服务</dt>
+        <dd><a href="#">商业授权</a></dd>
+        <dd><a href="#">推荐主机</a></dd>
+        <dd><a href="#">建站套餐</a></dd>
+        <dd><a href="#">网站定制</a></dd>
+      </dl>
+      <dl>
+        <dt>支持</dt>
+        <dd><a href="#">帮助中心</a></dd>
+        <dd><a href="#">交流社区</a></dd>
+        <dd><a href="#">模板制作教程</a></dd>
+        <dd><a href="#">二次开发教程</a></dd>
+      </dl>
+      <dl>
+        <dt>关于</dt>
+        <dd><a href="#">了解米拓</a></dd>
+        <dd><a href="#">联系我们</a></dd>
+        <dd><a href="#">资讯动态</a></dd>
+        <dd><a href="#">建站知识</a></dd>
+      </dl>
+    </div>
+    <div id="foorText-right">
+      <div id="number">
+        <a href="#">400 0021 031</a>
+      </div>
+      <p>周一至周六 09:00 - 18:00</p>
+      <div id="weChant">
+        <a href="#">关注微信</a>
+      </div>
+      <div id="er"></div>
+      <div id="sanJ"></div>
+    </div>
+  </div>
+</div>
+<!--foottext结束-->
+<!--footer开始-->
+<div id="footer">
+  <div id="footer-in" class="w">
+    <div id="oneT">
+      <span id="sp1">&copy; 湘 ICP 备</span>
+      <a href="#">07500799 号 - 5</a>
+    </div>
+    <div id="oneB">
+      <span id="sp2">Powered by</span>
+      <a href="#">MetInfo</a>
+    </div>
+  </div>
+</div>
+<!--footer结束-->
+</body>
+</html>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/index/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/01/zouYuPing/jquery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +827,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

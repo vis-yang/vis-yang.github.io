@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="/**************************顶部开始*********************************/ #top {     height:50px;     line-height: 50px;     background-color: #000;     color: #fff;     /*overflow: hidden;*/     position: fi">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/yangZhenJie/css/index/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/**************************顶部开始*********************************/ #top {     height:50px;     line-height: 50px;     background-color: #000;     color: #fff;     /*overflow: hidden;*/     position: fi">
+<meta property="og:updated_time" content="2017-07-15T04:07:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="/**************************顶部开始*********************************/ #top {     height:50px;     line-height: 50px;     background-color: #000;     color: #fff;     /*overflow: hidden;*/     position: fi">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,821 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-yangZhenJie/css/index" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /**************************顶部开始*********************************/
+#top {
+    height:50px;
+    line-height: 50px;
+    background-color: #000;
+    color: #fff;
+    /*overflow: hidden;*/
+    position: fixed;
+    z-index:1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#top a{
+    margin-left: 31px;
+    color: #fff;
+    font-size: 14px;
+}
+#top a:hover{
+    color: #EFD360;
+}
+#top a i {
+    margin-right:6px;
+    font-family: '黑体';
+}
+#top span{
+    font-size: 22px;
+    cursor: pointer;
+    font-family: '黑体';
+    margin-right: 28px;
+}
+#top span:hover{
+    color: #EFD360;
+}
+#wechat {
+    display: inline-block;
+    width: 34px;
+    height: 50px;
+    background: url("../images/wechatsmall.png") no-repeat;
+    margin-left: 800px;
+}
+#wechatbig {
+    position: absolute;
+    top:50px;
+    left: 790px;
+    display: none;
+    z-index: 2000;
+}
+/**************************顶部结束*********************************/
+
+
+/*导航部分 start-------------------------*/
+#nav{
+    /*margin: 0 auto;*/
+    height:60px;
+    line-height:60px;
+    border-bottom:1px solid #ccc;
+    position: fixed;
+    z-index: 999;
+    width:100%;
+    top: 50px;
+    left: 0;
+    background: #fff;
+}
+#nav .left{
+    margin-left: 50px;
+}
+#nav .right>ul>li{
+    float: left;
+    /*width: 88px;*/
+    /*text-align: center;*/
+    margin:0 30px;
+    position: relative;
+}
+#nav .right>ul>li>i{
+    border-top: 1px solid #aaa;
+    position: absolute;
+    bottom: 0px;
+    left: -30px;
+}
+/*子导航*/
+#nav .right ul .re{
+    position: relative;
+}
+#nav .right ul .re li ,#nav .right ul .re div{
+    border:1px solid #ccc;
+    border-top:0;
+}
+#nav .right ul .re div{
+    border-top: 1px solid #ccc;
+}
+#nav .right ul li div {
+    position: absolute;
+    /*padding-left: 20px;*/
+    top:60px;
+    left:-20px;
+    margin-left:-20px;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    border-top:1px solid #999;
+    text-align: center;
+}
+#nav .right ul li a{
+    display: block;
+    font-size:14px;
+    font-weight: 700;
+    /*width: 88px;*/
+    /*height: 60px;*/
+}
+#nav .right ul li a.wrong{
+    height:90px;
+}
+#nav .right #nav-ul .first{
+    width:88px;
+}
+
+#nav .right ul>li>ul{
+    position: absolute;
+    /*padding-left: 20px;*/
+    /*top:60px;*/
+    left:0px;
+    margin-left:-40px;
+    width: 160px;
+    line-height: 40px;
+    background: #fff;
+    border-top:1px solid #999;
+    width: 160px;
+    text-align: center;
+}
+#nav .right ul>li>ul>li{
+    height: 40px;
+    display: block;
+}
+#nav .right ul>li>ul>li{
+    border-top: 1px solid #eee;
+}
+    /*导航部分 end-------------------------*/
+
+/*最右侧的小圆点 start-------------------------------*/
+#dot ul{
+    width: 12px;
+    text-align: center;
+    position: absolute;
+    z-index:999;
+    top:50%;
+    margin-top:-70px;
+    right: 20px;
+}
+
+#dot ul li{
+    margin:10px 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+#dot ul li i{
+    border:2px solid #999;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+#dot ul li span {
+    /*margin-left: -20px;*/
+    position: absolute;
+    width: 40px;
+    top: 4px;
+    right: 20px;
+
+}
+
+/*最右侧的小圆点 end-------------------------------*/
+
+/*banner部分 start-------------------------*/
+#banner1 {
+    /*margin-top: 100px;*/
+    position: relative;
+    width: 1366px;
+    height:768px;
+    overflow: hidden;
+    /*margin-top: -768px;*/
+    margin: 0 auto;
+}
+#banner1 img{
+    float: left;
+}
+#banner1 #bannerImg{
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+    /*小圆点*/
+#banner1 .dotNav{
+    position: absolute;
+    bottom:20%;
+    left:50%;
+    margin-left:-28px;
+    z-index:999;
+}
+
+#banner1 .dotNav>ul>li{
+    float: left;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 5px;;
+    cursor: pointer;
+    background: #000;
+
+}
+/*左右箭头*/
+#banner1 .btn-both i{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    line-height: 50px;
+    font:700 30px "黑体";
+    top:50%;
+    /*margin-top:-60px;*/
+    cursor: pointer;
+}
+#banner1 .btn-both i.btn-left{
+    left:100px;
+}
+#banner1 .btn-both i.btn-right{
+    right:100px;
+}
+/*banner部分 end-------------------------*/
+
+/*底部部分 start-------------------------*/
+#footer{
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    z-index:999;
+    width:100%;
+    bottom: 0;
+    left: 0;
+    background: #eee;
+}
+#footer .left {
+    margin-left: 10px;
+}
+#footer .left ul>li{
+    float: left;
+}
+
+/*底部部分 end-------------------------*/
+
+/*banner2部分 start-------------------------*/
+#banner2{
+    width: 1366px;
+    height: 768px;
+    position: relative;
+    margin: 0 auto;
+}
+#banner2 .nav {
+    height:80px;
+    padding-top: 180px;
+}
+/*左边部分*/
+#banner2 .nav .left h2{
+    font-size:22px;
+    line-height:30px;
+}
+#banner2 .nav .left p{
+    font-size: 14px;
+}
+#banner2 .nav .right ul li{
+    float: left;
+    /*font-size: 16px;*/
+    /*line-height: 18px;*/
+}
+#banner2 .nav .right ul li a{
+    font-size:16px;
+    line-height: 18px;
+}
+/*图片部分*/
+#banner2 .pro{
+    /*position: relative;*/
+}
+#banner2 .pro .con ul li{
+    /*position: absolute;*/
+    width: 295px;
+    height: 230px;
+    font-size:14px;
+    margin-left: 10px;
+    margin-right:10px;
+    /*margin-top: 200px;*/
+    overflow: hidden;
+}
+#banner2 .pro .con ul li>div{
+    width: 295px;
+    height:185px;
+    overflow: hidden;
+}
+#banner2 .pro .con ul li img {
+    width: 295px;
+    height:185px;
+}
+#banner2 .pro .con ul li p,#banner2 .pro .con ul li img{
+    float: left;
+}
+#banner2 .pro .con{
+    width:1260px;
+    height:230px;
+    overflow: hidden;
+    position: absolute;
+}
+#banner2 .pro .con ul{
+    width: 1000%;
+    position: absolute;
+    left: 0;
+}
+#banner2 .pro .con ul li{
+    position: relative;
+    cursor: pointer;
+}
+
+#banner2 .pro .con ul li p{
+    margin:16px 0 16px 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+#banner2 .pro .con ul li span{
+    border-left:1px solid #eee;
+    float: right;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left: 10px;
+    height:26px;
+    line-height:26px;;
+    font-size:16px;
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+}
+#banner2 .pro .con ul li i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top:1px solid #eee;
+}
+/*左右按钮*/
+#banner2 .pro .btn {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    margin-left:-50px;
+
+}
+#banner2 .pro .btn ul{
+    /*position: absolute;*/
+    width: 100px;
+    /*left: 50%;*/
+    /*top:80%;*/
+}
+#banner2 .pro .btn ul li{
+    float: left;
+    font-size:26px;
+    margin: 10px;
+    height:30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+#banner2 .pro .btn ul li.line{
+    border-left: 1px solid #eee;
+    height:30px;
+}
+/*banner2部分 end-------------------------*/
+
+/*banner第三部分 start----------------------*/
+#banner3 {
+    width: 1366px;
+    /*position: absolute;*/
+    position: relative;
+    margin: 0 auto;
+    height: 768px;
+    background: url("../imgs/3.jpg");
+}
+#banner3 .title{
+    position: absolute;
+    top: 200px;
+    left:100px;
+}
+#banner3 .title h2{
+    font-size:22px;
+    line-height:30px;
+    color: #888;
+}
+#banner3 .title p{
+    color:#eee;
+    font-size: 14px;
+}
+/*内容部分*/
+
+#banner3 .con{
+    position: relative;
+    margin-left: 200px;
+    width: 900px;
+    height: 768px;
+    overflow: hidden;
+}
+#banner3 .con >ul{
+    position: absolute;
+    width: 1000%;
+    z-index:998;
+}
+#banner3 .con >ul li{
+    width: 277px;
+    float: left;
+    margin:0 10px;
+    position: relative;
+    /*position: absolute;*/
+    height: 658px;
+    cursor: pointer;
+}
+#banner3 .con>div#zd>ul>li{
+    position: absolute;
+    width: 277px;
+    height: 768px;
+    background: #fff;
+    top: 0;
+    opacity:0;
+    /*display: none;*/
+}
+
+#banner3 .con>div#zd>ul>li.zd2{
+    left:307px;
+}#banner3 .con>div#zd>ul>li.zd1{
+     left: 10px;
+ }
+#banner3 .con>div#zd>ul>li.zd3{
+    left:604px;
+}
+#banner3 .con >ul li>span{
+    position: absolute;
+    top: 50%;
+    margin-top:-30px;
+    left: 100px;
+    font-size:60px;
+    color: #ccc;
+}
+
+#banner3 .con> ul li img{
+    width: 277px;
+    height: 173px;
+    margin-top: 150px;
+    opacity:0;
+}
+#banner3 .con>ul li h3{
+    color:#444;
+    line-height: 70px;
+    font-size:22px;
+    text-align: center;
+}
+#banner3 .con> ul li p{
+    color: #888;
+    overflow: hidden;
+    font-size:18px;
+    line-height: 26px;
+    height: 52px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+#banner3 .con> ul li .more{
+    text-align: center;
+    margin-top: 20px;
+}
+/*小箭头*/
+#banner3  .btn li{
+    position: absolute;
+    z-index:999;
+    top: 50%;
+    font:700 40px "黑体";
+    color: #888;
+}
+#banner3 .btn ul li.left{
+    left:0px;
+    cursor: pointer;
+    left:10%;
+}
+#banner3  .btn ul li.right{
+    right:0px;
+    cursor: pointer;
+    right:10%;
+}
+/*banner第三部分 end----------------------*/
+
+/*banner第四部分 start----------------------*/
+#banner4{
+    position: relative;
+    width: 1366px;
+    height:768px;
+    margin: 0 auto;
+}
+#banner4 .con-l{
+    width: 50%;
+    height: 768px;
+    position: relative;
+    overflow: hidden;
+    background: rgb(247,247,247);
+}
+#banner4 .con-l>ul{
+    position: absolute;
+    width: 1000%;
+}
+#banner4 .con-l>ul>li{
+    float: left;
+}
+#banner4 .con-l>ul li img{
+    padding-top: 130px;
+    margin-left: -130px;
+}
+#banner4 .con-l .btn ul li{
+    font-size: 30px;
+    height: 20px;
+    position: absolute;
+    font-weight:700;
+    font-family:"黑体";
+    color: #aaa;
+    cursor: pointer;
+    top: 50%;
+}
+#banner4 .con-l .btn ul li.left{
+     left:50px;
+ }
+#banner4 .con-l .btn ul li.right{
+    right:50px;
+}
+/*右边文字部分*/
+#banner4 .con-r{
+    width: 500px;
+    margin: 700px 80px 0;
+}
+#banner4 .con-r h2{
+    font-size:26px;
+    line-height:30px;
+    color: #444;
+}
+#banner4 .con-r .first{
+    position: absolute;
+    right: 40%;
+    top: 20%;
+
+}
+#banner4 .con-r p+p{
+    margin-top: 10px;
+}
+#banner4 .con-r div+div{
+    width: 500px;
+}
+#banner4 .con-r .min p{
+    width: 500px;
+}
+#banner4 .con-r p{
+    color:#888;
+    font-size: 16px;
+    line-height: 22px;
+
+}
+#banner4 .con-r span{
+    display: inline-block;
+    margin-top: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    width: 220px;
+    height: 40px;
+    background: #222;
+    color:#fff;
+}
+#banner4 .con-r span b{
+    opacity:0;
+}
+/*banner第四部分 end----------------------*/
+
+/*banner第五部分 start--------------------*/
+
+#banner5 {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    background: url("../imgs/19.png") 0px -250px;
+    /*margin: 0 auto;*/
+    /*margin-top: 50px;*/
+    margin: 0 auto;
+}
+
+#banner5 .left dl {
+    position: absolute;
+    width: 290px;
+    height: 196px;
+    float: left;
+    line-height: 32px;
+    left:130px;
+    top:350px;
+}
+
+#banner5 .left dl dt {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+#banner5 .left dl dd a {
+    font-size: 16px;
+    color: #7f7f7f;
+}
+
+#banner5 .right {
+    height: 200px;
+    width: 572px;
+    position: absolute;
+    right:10%;
+    bottom:30%;
+    /*float: right;*/
+    /*margin-top: 350px;*/
+    /*margin-right: 170px;*/
+}
+
+#banner5 .right input {
+    width: 174px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+    border-bottom: 1px solid #b8c1c7;
+    color: black;
+    padding-left: 10px;
+}
+
+#banner5 .right input.no {
+    margin-right: 0;
+}
+
+#banner5 .right textarea {
+    height: 90px;
+    width: 540px;
+    border-bottom: 1px solid #b8c1c7;
+    padding: 24px 16px 0;
+    color: black;
+    resize:none;
+}
+
+#banner5 .right input#btn {
+    height: 36px;
+    width: 100px;
+    background-color: #383838;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+#banner5 #btn {
+    color: #b8c1c7;
+}
+
+/******************底部结束**********************/
+/*banner第五部分 end--------------------*/
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/yangZhenJie/css/index/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/yangZhenJie/js/index/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/yangZhenJie/css/base/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +985,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

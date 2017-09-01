@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="$(function(){ 	 	//------固定导航栏------ 	$(window).scroll(function(){ 		if($(document).scrollTop()&amp;gt;=($(&quot;#top-info-bar&quot;).height()+$(&quot;#top-back&quot;).height())){ 			$(&quot;#top-nav&quot;).css(&quot;position&quot;,&quot;fixed&quot;).css(&quot;t">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/liuPeng/js/new/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="$(function(){ 	 	//------固定导航栏------ 	$(window).scroll(function(){ 		if($(document).scrollTop()&amp;gt;=($(&quot;#top-info-bar&quot;).height()+$(&quot;#top-back&quot;).height())){ 			$(&quot;#top-nav&quot;).css(&quot;position&quot;,&quot;fixed&quot;).css(&quot;t">
+<meta property="og:updated_time" content="2017-07-14T12:20:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="$(function(){ 	 	//------固定导航栏------ 	$(window).scroll(function(){ 		if($(document).scrollTop()&amp;gt;=($(&quot;#top-info-bar&quot;).height()+$(&quot;#top-back&quot;).height())){ 			$(&quot;#top-nav&quot;).css(&quot;position&quot;,&quot;fixed&quot;).css(&quot;t">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,235 +147,355 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-liuPeng/js/new" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        $(function(){
+	
+	//------固定导航栏------
+	$(window).scroll(function(){
+		if($(document).scrollTop()>=($("#top-info-bar").height()+$("#top-back").height())){
+			$("#top-nav").css("position","fixed").css("top",0).css("z-index",1000);
+        }else{
+            $("#top-nav").css("position","static");
+        }
+        if($(document).scrollTop()>=$(window).height()){
+			$("#backToTop").show();
+		}else{
+			$("#backToTop").hide();
+		}
+	});
+	$(".nav-li").mouseenter(function(){
+		$(this).find(".underLine").show();
+	}).mouseleave(function(){
+		$(".underLine").hide();
+	});
+	$("#backToTop").css("width","36px").css("height","36px").css("background-color","#FF6701").css("position","fixed").css("bottom","10px").css("right","10px").css("z-index",2000);
+	$("#backToTop>a").css("width","36px").css("height","36px").css("background-color","#FF6701").css("line-height","36px").css("display","block").css("margin","0 auto").css("text-align","center");
+	//------关闭顶部返回栏------
+	$("#close").click(function(){
+		$("#top-back").slideUp(500);
+	});
+	//------导航栏弹窗------
+	$("#li-aboutUs").mouseenter(function(){
+		$("#aboutUs").stop().fadeIn(500);
+	}).mouseleave(function(){
+		$("#aboutUs").stop().fadeOut(500);
+	});
+	$("#li-news").mouseenter(function(){
+		$("#news").stop().fadeIn(500);
+	}).mouseleave(function(){
+		$("#news").stop().fadeOut(500);
+	});
+	$("#li-cpshow").mouseenter(function(){
+		$("#cpshow").stop().fadeIn(500);
+	}).mouseleave(function(){
+		$("#cpshow").stop().fadeOut(500);
+	});
+	$("#li-userExp").mouseenter(function(){
+		$("#userExp").stop().fadeIn(500);
+	}).mouseleave(function(){
+		$("#userExp").stop().fadeOut(500);
+	});
+	//------主体轮播图------
+	//初始化
+	$("#main-lbt>li").css("opacity",0).first().css("opacity",1);
+	$("#main-lbt-radio li").css("opacity",0.5).first().css("opacity",1);
+	//文字动画
+	wenzidonghua();
+	var count = 0;
+	var flag = true;
+	//轮播图左边按钮
+	$("#btn-left").click(function(){
+		if(flag){
+			flag = false;
+			count--;
+			if(count<0){ count="2;" setlunbo(count)="" }else{="" }="" });="" 轮播图右边按钮="" $("#btn-right").click(function(){="" if(flag){="" flag="false;" count++;="" if(count="">2){
+				count = 0;
+				setLunbo(count)
+			}else{
+				setLunbo(count);
+			}
+		}
+	});
+	//轮播图下方圆形按钮
+	$("#main-lbt-radio li").click(function(){
+		if(flag){
+			flag = false;
+			count = $(this).index();
+			setLunbo(count);
+		}
+	});
+	//移除文字
+	function removeText(){
+		for(var i = 0;i<arguments.length;i++){ arguments[i].remove();="" }="" 设置轮播="" function="" setlunbo(count){="" removetext($(".p1"),$(".p2"),$(".a1"));="" $("#main-lbt-radio="">li").css("opacity",0.5);
+		$("#main-lbt-radio>li:eq(" + count +")").animate({"opacity":1});
+		$("#main-lbt>li").css("opacity",0);
+		$("#main-lbt>li:eq("+ count +")").animate({"opacity":1},1000,wenzidonghua);
+	}
+	//文字动画
+	function wenzidonghua(){
+		var p1 = $("<p>我们可以提供</p>");
+		p1.attr("class","p1");
+		$("#lunbotu").append(p1);
+		p1.animate({"top":100,"left":100},500,function(){
+			var p2 = $("<p>更优质的服务</p>");
+			p2.attr("class","p2");
+			$("#lunbotu").append(p2);
+			p2.animate({"top":200,"left":100},500,function(){
+				var a1 = $("<a href="#">查看更多</a>");
+				a1.attr("class","a1");
+				$("#lunbotu").append(a1);
+				a1.animate({"top":300,"left":100},500,function(){
+					flag = true;
+				});
+			});
+		});
+	}
+	//------中部广告------
+	//左边按钮鼠标进入
+	$(".banner-left").mouseenter(function(){
+		removeZhegai();
+		var zhegai = $("<div id="zhegai"></div>");
+		$(this).append(zhegai);
+		$(".l-line-top").animate({"left": 20,"width":$(this).width()});
+		$(".l-line-bottom").animate({"right":20,"width":$(this).width()});
+		$(".l-line-left").animate({"bottom":20,"height":$(this).height()});
+		$(".l-line-right").animate({"top": 20,"height":$(this).height()});
+	});
+	//左边按钮鼠标离开
+	$(".banner-left").mouseleave(function(){
+		removeZhegai();
+		$(".l-line-top").animate({"left": -$(this).height(),"width":0});
+		$(".l-line-bottom").animate({"right": -$(this).height(),"width":0});
+		$(".l-line-left").animate({"bottom": -$(this).width(),"height":0});
+		$(".l-line-right").animate({"top": -$(this).width(),"height":0});
+	});
+	//右边按钮鼠标进入
+	$(".banner-right").mouseenter(function(){
+		removeZhegai();
+		var zhegai = $("<div id="zhegai"></div>");
+		$(this).append(zhegai);
+		$(".r-line-top").animate({"left": 20,"width":$(this).width()});
+		$(".r-line-bottom").animate({"right":20,"width":$(this).width()});
+		$(".r-line-left").animate({"bottom":20,"height":$(this).height()});
+		$(".r-line-right").animate({"top": 20,"height":$(this).height()});
+	});
+	//右边按钮鼠标离开
+	$(".banner-right").mouseleave(function(){
+		removeZhegai();
+		$(".r-line-top").animate({"left": -$(this).height(),"width":0});
+		$(".r-line-bottom").animate({"right": -$(this).height(),"width":0});
+		$(".r-line-left").animate({"bottom": -$(this).width(),"height":0});
+		$(".r-line-right").animate({"top": -$(this).width(),"height":0});
+	});
+	$(".look-more").mouseenter(function(){
+		$(this).css("background-color","#FF6701");
+	}).mouseleave(function(){
+		$(this).css("background-color","");
+	});
+	//移除遮盖层
+	function removeZhegai(){
+		if($("#zhegai")){
+			$("#zhegai").remove();
+		}
+	}
+	//移除遮盖层
+	function removeCover(){
+		if($("#cover")){
+			$("#cover").remove();
+		}
+	}
+	//------商品列表------
+	var ulList = $("#list-main>ul");
+	var liList = $("#list-main>ul li");
+	var pic = 0;
+	//左边按钮
+	$("#list-btn-left").click(function(){
+		if(pic==0){
+			pic = liList.length-3;
+			ulList.css("margin-left",-pic*(liList.width()+11)+"px");
+		}
+		pic--;
+		ulList.animate({"marginLeft":-pic*(liList.width()+11)});
+	});
+	//右边按钮
+	$("#list-btn-right").click(function(){
+		if(pic==liList.length-4){
+			pic=0;
+			ulList.css("margin-left",-pic*(liList.width()+11)+"px");
+		}else{
+			pic++;
+			ulList.animate({"marginLeft":-pic*(liList.width()+11)});
+		}
+	});
+	//------品牌列表------
+	var ppList = $(".pp-list>ul li");
+	ppList.append($("<div id="cover"></div>"));
+	//鼠标进入
+	ppList.mouseenter(function(){
+		$(this).find("#cover").stop().animate({"marginTop":0,"marginLeft":0});
+	});
+	//鼠标离开
+	ppList.mouseleave(function(){
+		$(this).find("#cover").stop().animate({"marginTop":-$(this).height(),"marginLeft":-$(this).width()});
+	});
+	//------用户信息------
+	var iObj = $("#user-lunbo-btn>i");
+	iObj.first().css("background-color","#FF6701");
+	iObj.click(function(){
+		iObj.css("background-color","");
+		$("#user-lunbo>ul").animate({"marginLeft":-$(this).index()*$("#user-lunbo>ul li").width()});
+		$(this).css("background-color","#FF6701");
+	});
+	
+});</arguments.length;i++){></0){>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我红烧肉<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfbewm.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxewm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.908Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/liuPeng/js/new/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1.min/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2017/09/01/liuPeng/js/jquery-1.12.1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/01/liuPeng/js/jquery-1.12.1.min/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/zouYuPing/css/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/jquery-1.12.1/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/js/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.292Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/index/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/01/yangZhenJie/css/base/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:52:54.138Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -395,8 +519,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
