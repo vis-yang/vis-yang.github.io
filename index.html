@@ -167,14 +167,13 @@
       
         <p>#构造函数、原型对象、对象实例三者之间的关系 &amp; 原型链</p>
 <p>##构造函数、原型对象、对象实例三者之间的关系<br>  构造函数有一个属性是prototype,prototype是原形对象-是一个对象它里面有一个constructor属性指向构造函数，prototype上所有成员都可以被实例对象所访问到，实例对象由构造函数产生，当你访问实例对象上的某个成员的时候，会先在自己身上找，若自己身上没有则（沿着<em>proto</em>）在原型对象prototype上查找；</p>
-<p><img src="imgs\prototype1.png" alt="clipboard"></p>
-<p>  costructor是系统默认为构造函数提供的一个属性，它等价于构造函数本身，要注意的是–&gt;如果重新赋值prototype则需要手动添加constructor:构造函数,否则，constructor属性就丢失了，为了程序的严谨性constructor最好补上，例子：</p>
+<p><img src="/imgs/prototype1.png" alt="prototype1"><br>  costructor是系统默认为构造函数提供的一个属性，它等价于构造函数本身，要注意的是–&gt;如果重新赋值prototype则需要手动添加constructor:构造函数,否则，constructor属性就丢失了，为了程序的严谨性constructor最好补上，例子：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Person.prototype=&#123;</div><div class="line">constructor:Person,</div><div class="line">f1:function()&#123;</div><div class="line">console.log(&apos;f1&apos;)</div><div class="line">&#125;,</div><div class="line">f2:function()&#123;做事情&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p> 构造函数：把普通数据定义到构造函数上</p>
 <p> 原型对象：把公用方法定义到原型对象上</p>
 <p> 实例对象：每一个实例对象都有一个指向构造函数.prototype的指向；</p>
 <p>  instanceof操作符用来判断实例对象是否是哪个构造函数产生的:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(new Person() instanceof Person);</div></pre></td></tr></table></figure></p>
-<p>##原型链<br>  原型链就是对象属性的搜索访问机制<br>  当你访问对象的某个成员的时候：<br>    先在自己身上找，找到即返回使用，找不到，则沿着原型链向上查找，如果在上一个原型对象中找到，则返回使用，如果找不到，则继续沿着原型链查找，直到 Object.prototype 如果还找不到，则继续找 Object.prototype.<strong>proto</strong> ，这个时候发现 Object.prototype.<strong>proto</strong> 是 null，则停止查找，返回 undefined<br><img src="imgs\prototype2.png" alt="clipboard"></p>
+<p>##原型链<br>  原型链就是对象属性的搜索访问机制<br>  当你访问对象的某个成员的时候：<br>    先在自己身上找，找到即返回使用，找不到，则沿着原型链向上查找，如果在上一个原型对象中找到，则返回使用，如果找不到，则继续沿着原型链查找，直到 Object.prototype 如果还找不到，则继续找 Object.prototype.<strong>proto</strong> ，这个时候发现 Object.prototype.<strong>proto</strong> 是 null，则停止查找，返回 undefined<br><img src="/imgs/prototype2.png" alt="prototype2"></p>
 
       
 
