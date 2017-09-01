@@ -145,6 +145,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-构造函数、原型对象、对象实例三者之间的关系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/11/构造函数、原型对象、对象实例三者之间的关系/">构造函数、原型对象、对象实例三者之间的关系 &amp; 原型链</a>
+    </h1>
+  
+
+        
+        <a href="/2015/11/11/构造函数、原型对象、对象实例三者之间的关系/" class="archive-article-date">
+  	<time datetime="2015-11-11T04:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#构造函数、原型对象、对象实例三者之间的关系 &amp; 原型链</p>
+<p>##构造函数、原型对象、对象实例三者之间的关系<br>  构造函数有一个属性是prototype,prototype是原形对象-是一个对象它里面有一个constructor属性指向构造函数，prototype上所有成员都可以被实例对象所访问到，实例对象由构造函数产生，当你访问实例对象上的某个成员的时候，会先在自己身上找，若自己身上没有则（沿着<em>proto</em>）在原型对象prototype上查找；</p>
+<p><img src="imgs\prototype1.png" alt="clipboard"></p>
+<p>  costructor是系统默认为构造函数提供的一个属性，它等价于构造函数本身，要注意的是–&gt;如果重新赋值prototype则需要手动添加constructor:构造函数,否则，constructor属性就丢失了，为了程序的严谨性constructor最好补上，例子：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Person.prototype=&#123;</div><div class="line">constructor:Person,</div><div class="line">f1:function()&#123;</div><div class="line">console.log(&apos;f1&apos;)</div><div class="line">&#125;,</div><div class="line">f2:function()&#123;做事情&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 构造函数：把普通数据定义到构造函数上</p>
+<p> 原型对象：把公用方法定义到原型对象上</p>
+<p> 实例对象：每一个实例对象都有一个指向构造函数.prototype的指向；</p>
+<p>  instanceof操作符用来判断实例对象是否是哪个构造函数产生的:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(new Person() instanceof Person);</div></pre></td></tr></table></figure></p>
+<p>##原型链<br>  原型链就是对象属性的搜索访问机制<br>  当你访问对象的某个成员的时候：<br>    先在自己身上找，找到即返回使用，找不到，则沿着原型链向上查找，如果在上一个原型对象中找到，则返回使用，如果找不到，则继续沿着原型链查找，直到 Object.prototype 如果还找不到，则继续找 Object.prototype.<strong>proto</strong> ，这个时候发现 Object.prototype.<strong>proto</strong> 是 null，则停止查找，返回 undefined<br><img src="imgs\prototype2.png" alt="clipboard"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/11/11/构造函数、原型对象、对象实例三者之间的关系/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-函数内部this指向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -158,7 +230,7 @@
 
         
         <a href="/2015/09/20/函数内部this指向/" class="archive-article-date">
-  	<time datetime="2015-09-20T09:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
+  	<time datetime="2015-09-20T02:15:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
 </a>
         
       </header>
@@ -248,9 +320,7 @@
 <p>##2. 安装 git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://git-for-windows.github.io/</div><div class="line">下载安装</div></pre></td></tr></table></figure>
 <p>##3. 安装 hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div></pre></td></tr></table></figure>
-<p>接下来可以通过 <code>hexo --version</code> 命令查看是否安装成功：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">返回一下类似内容表示安装成功</div><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div><div class="line"></div><div class="line">接下来可以通过 `hexo --version` 命令查看是否安装成功：</div><div class="line"></div><div class="line">返回一下类似内容表示安装成功</div><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
 <p>##4. 生成博客</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入：hexo init 博客目录名称</div><div class="line"><span class="comment"># hexo 会帮你在执行该命名所处的目录生成一个指定名称的目录文件</span></div></pre></td></tr></table></figure>
 <p>##5. 启动预览博客</p>
@@ -270,7 +340,7 @@
 <p>然后他会告诉你访问地址，以后访问这个地址就可以了。</p>
 <p>接下来你只需要在你写完文章，每次发布的时候敲一个命令就会同步到博客：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在根目录命令窗口键入：hexo new 文章名称    来创建一篇新文章</div><div class="line">在你创建的本地仓库中的 <span class="built_in">source</span> -&gt; _posts 内就有你创建的文章md文件了，选择编译</div><div class="line">编译完成后在根目录命令窗口键入：</div><div class="line">Hexo deploy --generate</div><div class="line">就会同步到你的博客了</div></pre></td></tr></table></figure>
-<p>###到此为止我们的个人博客就搭建成功了</p>
+<p>到此为止我们的个人博客就搭建成功了</p>
 
       
 

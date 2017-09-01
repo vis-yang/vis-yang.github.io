@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/08/29/创建博客方法/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="利用hexo搭建博客hexo 是一个静态博客生成器，能帮你命名生成一个网站，下面将介绍安装步骤： ##1. 安装 node 环境 123- http://nodejs.cn/网站内有 node.js 的下载链接- 下载安装即可 安装完成后，可以确认机器上是否有 node 环境： 打开 cmd： 12键入 node -v返回一个版本号，则安装成功 ##2. 安装 git 12https://git-">
-<meta property="og:updated_time" content="2017-09-01T00:37:26.225Z">
+<meta property="og:updated_time" content="2017-09-01T10:24:52.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何创建博客">
 <meta name="twitter:description" content="利用hexo搭建博客hexo 是一个静态博客生成器，能帮你命名生成一个网站，下面将介绍安装步骤： ##1. 安装 node 环境 123- http://nodejs.cn/网站内有 node.js 的下载链接- 下载安装即可 安装完成后，可以确认机器上是否有 node 环境： 打开 cmd： 12键入 node -v返回一个版本号，则安装成功 ##2. 安装 git 12https://git-">
@@ -176,9 +176,7 @@
 <p>##2. 安装 git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://git-for-windows.github.io/</div><div class="line">下载安装</div></pre></td></tr></table></figure>
 <p>##3. 安装 hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div></pre></td></tr></table></figure>
-<p>接下来可以通过 <code>hexo --version</code> 命令查看是否安装成功：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">返回一下类似内容表示安装成功</div><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div><div class="line"></div><div class="line">接下来可以通过 `hexo --version` 命令查看是否安装成功：</div><div class="line"></div><div class="line">返回一下类似内容表示安装成功</div><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
 <p>##4. 生成博客</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入：hexo init 博客目录名称</div><div class="line"><span class="comment"># hexo 会帮你在执行该命名所处的目录生成一个指定名称的目录文件</span></div></pre></td></tr></table></figure>
 <p>##5. 启动预览博客</p>
@@ -198,7 +196,7 @@
 <p>然后他会告诉你访问地址，以后访问这个地址就可以了。</p>
 <p>接下来你只需要在你写完文章，每次发布的时候敲一个命令就会同步到博客：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在根目录命令窗口键入：hexo new 文章名称    来创建一篇新文章</div><div class="line">在你创建的本地仓库中的 <span class="built_in">source</span> -&gt; _posts 内就有你创建的文章md文件了，选择编译</div><div class="line">编译完成后在根目录命令窗口键入：</div><div class="line">Hexo deploy --generate</div><div class="line">就会同步到你的博客了</div></pre></td></tr></table></figure>
-<p>###到此为止我们的个人博客就搭建成功了</p>
+<p>到此为止我们的个人博客就搭建成功了</p>
 
       
 
