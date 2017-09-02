@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>函数内部 this 指向 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数内部this指向问题this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(fun">
+  <meta name="description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(function (li) &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数内部 this 指向">
 <meta property="og:url" content="http://yoursite.com/2015/09/20/函数内部this指向/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="函数内部this指向问题this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(fun">
-<meta property="og:updated_time" content="2017-09-01T13:10:58.334Z">
+<meta property="og:description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(function (li) &amp;">
+<meta property="og:updated_time" content="2017-09-02T09:51:29.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数内部 this 指向">
-<meta name="twitter:description" content="函数内部this指向问题this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(fun">
+<meta name="twitter:description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。 事件处理函数内部的 this123456789101112var lis = document.querySelectorAll(&amp;apos;li&amp;apos;);//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(function (li) &amp;">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -167,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数内部this指向问题"><a href="#函数内部this指向问题" class="headerlink" title="函数内部this指向问题"></a>函数内部this指向问题</h1><pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
+        <pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
 </code></pre><h3 id="事件处理函数内部的-this"><a href="#事件处理函数内部的-this" class="headerlink" title="事件处理函数内部的 this"></a>事件处理函数内部的 this</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var lis = document.querySelectorAll(&apos;li&apos;);</div><div class="line">//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象</div><div class="line">lis.forEach(function (li) &#123;</div><div class="line">  li.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(this);        // 事件源 DOM 对象</div><div class="line">    var that = this;</div><div class="line"></div><div class="line">    setTimeout(function () &#123;</div><div class="line">      console.log(this, that); // this--Window</div><div class="line">    &#125;, 1000)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h3 id="定时器函数内部的-this-amp-普通函数内部的-this"><a href="#定时器函数内部的-this-amp-普通函数内部的-this" class="headerlink" title="定时器函数内部的 this &amp; 普通函数内部的 this"></a>定时器函数内部的 this &amp; 普通函数内部的 this</h3><pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 定时器函数内部的 this 都是 window</div><div class="line"> setTimeout(function () &#123;</div><div class="line">   console.log(this);   //window</div><div class="line"> &#125;, 1000)</div><div class="line"></div><div class="line">function fn () &#123;</div><div class="line">  // 如果在函数内部调用一个普通函数，该函数内部的 this 指向的是 window</div><div class="line">  console.log(this);  // 指向 window</div><div class="line">  var handle = function (item, index) &#123;</div><div class="line">    console.log(this);  // window</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  // 数组遍历方法内部的 this 都指向 window</div><div class="line">  ;[1, 2, 3].forEach(handle);</div><div class="line">&#125;</div><div class="line">fn();</div><div class="line">​</div></pre></td></tr></table></figure>
 </code></pre><h3 id="构造函数中-this"><a href="#构造函数中-this" class="headerlink" title="构造函数中 this"></a>构造函数中 this</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;&#125;;</div><div class="line"> fn.prototype.sayHello = function () &#123;</div><div class="line">     console.log(this);</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> //谁来点儿这个 sayHello 则内部 this 就指向谁</div><div class="line"> fn.prototype.sayHello(); //指向原形对象</div><div class="line"></div><div class="line"> var instance = new fn();</div><div class="line"> instance.sayHello();     // 指向实例对象</div></pre></td></tr></table></figure>
@@ -289,7 +289,7 @@
   
   
     <a href="/2015/08/29/创建博客方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">如何创建博客</div>
+      <div class="article-nav-title">利用hexo搭建博客</div>
       <i class="icon-circle-right"></i>
     </a>
   

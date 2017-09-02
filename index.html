@@ -165,7 +165,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="构造函数、原型对象、对象实例三者之间的关系-amp-原型链"><a href="#构造函数、原型对象、对象实例三者之间的关系-amp-原型链" class="headerlink" title="构造函数、原型对象、对象实例三者之间的关系 &amp; 原型链"></a>构造函数、原型对象、对象实例三者之间的关系 &amp; 原型链</h1><h2 id="构造函数、原型对象、对象实例三者之间的关系"><a href="#构造函数、原型对象、对象实例三者之间的关系" class="headerlink" title="构造函数、原型对象、对象实例三者之间的关系"></a>构造函数、原型对象、对象实例三者之间的关系</h2><p>  构造函数有一个属性是prototype,prototype是原形对象-是一个对象它里面有一个constructor属性指向构造函数，prototype上所有成员都可以被实例对象所访问到，实例对象由构造函数产生，当你访问实例对象上的某个成员的时候，会先在自己身上找，若自己身上没有则（沿着<em>proto</em>）在原型对象prototype上查找；</p>
+        <h2 id="构造函数、原型对象、对象实例三者之间的关系"><a href="#构造函数、原型对象、对象实例三者之间的关系" class="headerlink" title="构造函数、原型对象、对象实例三者之间的关系"></a>构造函数、原型对象、对象实例三者之间的关系</h2><p>  构造函数有一个属性是prototype,prototype是原形对象-是一个对象它里面有一个constructor属性指向构造函数，prototype上所有成员都可以被实例对象所访问到，实例对象由构造函数产生，当你访问实例对象上的某个成员的时候，会先在自己身上找，若自己身上没有则（沿着<em>proto</em>）在原型对象prototype上查找；</p>
 <p><img src="/imgs/prototype1.png" alt="prototype1"><br>  costructor是系统默认为构造函数提供的一个属性，它等价于构造函数本身，要注意的是–&gt;如果重新赋值prototype则需要手动添加constructor:构造函数,否则，constructor属性就丢失了，为了程序的严谨性constructor最好补上，例子：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Person.prototype=&#123;</div><div class="line">constructor:Person,</div><div class="line">f1:function()&#123;</div><div class="line">console.log(&apos;f1&apos;)</div><div class="line">&#125;,</div><div class="line">f2:function()&#123;做事情&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p> 构造函数：把普通数据定义到构造函数上</p>
@@ -235,7 +235,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数内部this指向问题"><a href="#函数内部this指向问题" class="headerlink" title="函数内部this指向问题"></a>函数内部this指向问题</h1><pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
+        <pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
 </code></pre><h3 id="事件处理函数内部的-this"><a href="#事件处理函数内部的-this" class="headerlink" title="事件处理函数内部的 this"></a>事件处理函数内部的 this</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var lis = document.querySelectorAll(&apos;li&apos;);</div><div class="line">//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象</div><div class="line">lis.forEach(function (li) &#123;</div><div class="line">  li.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(this);        // 事件源 DOM 对象</div><div class="line">    var that = this;</div><div class="line"></div><div class="line">    setTimeout(function () &#123;</div><div class="line">      console.log(this, that); // this--Window</div><div class="line">    &#125;, 1000)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h3 id="定时器函数内部的-this-amp-普通函数内部的-this"><a href="#定时器函数内部的-this-amp-普通函数内部的-this" class="headerlink" title="定时器函数内部的 this &amp; 普通函数内部的 this"></a>定时器函数内部的 this &amp; 普通函数内部的 this</h3><pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 定时器函数内部的 this 都是 window</div><div class="line"> setTimeout(function () &#123;</div><div class="line">   console.log(this);   //window</div><div class="line"> &#125;, 1000)</div><div class="line"></div><div class="line">function fn () &#123;</div><div class="line">  // 如果在函数内部调用一个普通函数，该函数内部的 this 指向的是 window</div><div class="line">  console.log(this);  // 指向 window</div><div class="line">  var handle = function (item, index) &#123;</div><div class="line">    console.log(this);  // window</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  // 数组遍历方法内部的 this 都指向 window</div><div class="line">  ;[1, 2, 3].forEach(handle);</div><div class="line">&#125;</div><div class="line">fn();</div><div class="line">​</div></pre></td></tr></table></figure>
 </code></pre><h3 id="构造函数中-this"><a href="#构造函数中-this" class="headerlink" title="构造函数中 this"></a>构造函数中 this</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;&#125;;</div><div class="line"> fn.prototype.sayHello = function () &#123;</div><div class="line">     console.log(this);</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> //谁来点儿这个 sayHello 则内部 this 就指向谁</div><div class="line"> fn.prototype.sayHello(); //指向原形对象</div><div class="line"></div><div class="line"> var instance = new fn();</div><div class="line"> instance.sayHello();     // 指向实例对象</div></pre></td></tr></table></figure>
@@ -292,7 +292,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/29/创建博客方法/">如何创建博客</a>
+      <a class="article-title" href="/2015/08/29/创建博客方法/">利用hexo搭建博客</a>
     </h1>
   
 
@@ -305,7 +305,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="利用hexo搭建博客"><a href="#利用hexo搭建博客" class="headerlink" title="利用hexo搭建博客"></a>利用hexo搭建博客</h1><p>hexo 是一个静态博客生成器，能帮你命名生成一个网站，下面将介绍安装步骤：</p>
+        <p>hexo 是一个静态博客生成器，能帮你命名生成一个网站，下面将介绍安装步骤：</p>
 <h2 id="1-安装-node-环境"><a href="#1-安装-node-环境" class="headerlink" title="1. 安装 node 环境"></a>1. 安装 node 环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- http://nodejs.cn/</div><div class="line">网站内有 node.js 的下载链接</div><div class="line">- 下载安装即可</div></pre></td></tr></table></figure>
 <p>安装完成后，可以确认机器上是否有 node 环境：</p>
 <p>打开 cmd：</p>
