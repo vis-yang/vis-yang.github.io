@@ -145,55 +145,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-requestAnimationFrame三者的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*1. setTimeout*/</span> </div><div class="line"><span class="comment">//setTimeout--&gt;一次性定时器，想要控制动画则需要递归，每次运行完毕一次定时器后，再次运行</span></div><div class="line">    <span class="keyword">var</span> box1 = <span class="built_in">document</span>.querySelector(<span class="string">'.box1'</span>);</div><div class="line">    <span class="keyword">var</span> index1 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> animate = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            index1 ++;</div><div class="line">            box1.style.left = index1 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">            animate();</div><div class="line">        &#125;,<span class="number">10</span>);</div><div class="line">    &#125;</div><div class="line">    animate();</div><div class="line"></div><div class="line"><span class="comment">/*2. setInterval*/</span></div><div class="line"><span class="comment">//setinterval--&gt;定时器，每次到达指定时间再次执行，不管本次动画是否执行完毕</span></div><div class="line">    <span class="keyword">var</span> box2 = <span class="built_in">document</span>.querySelector(<span class="string">'.box2'</span>);</div><div class="line">    <span class="keyword">var</span> index2 = <span class="number">0</span>;</div><div class="line">    setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index2 ++;</div><div class="line">        box2.style.left = index2 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">    &#125;,<span class="number">10</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*3. requestAnimationFrame*/</span></div><div class="line"><span class="comment">// requestAnimationFrame 根据浏览器每次渲染页面时间自动渲染</span></div><div class="line">    <span class="keyword">var</span> box3 = <span class="built_in">document</span>.querySelector(<span class="string">'.box3'</span>);</div><div class="line">    <span class="keyword">var</span> index3 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> action = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index3 ++;</div><div class="line">        box3.style.left = index3 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">        <span class="comment">/*浏览器有自己的绘制频率  到了渲染时间就通知来执行 action */</span></div><div class="line">        requestAnimationFrame(action);</div><div class="line">    &#125;</div><div class="line">    action();</div><div class="line">    <span class="comment">//详见下图</span></div></pre></td></tr></table></figure>
-<p><img src="/imgs/timer.gif" alt="prototype1"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/03/requestAnimationFrame三者的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-canvas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -437,6 +388,70 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/11/11/构造函数、原型对象、对象实例三者之间的关系/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-requestAnimationFrame三者的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/11/requestAnimationFrame三者的区别/">requestAnimationFrame 三者的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2015/11/11/requestAnimationFrame三者的区别/" class="archive-article-date">
+  	<time datetime="2015-11-11T04:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*1. setTimeout*/</span> </div><div class="line"><span class="comment">//setTimeout--&gt;一次性定时器，想要控制动画则需要递归，每次运行完毕一次定时器后，再次运行</span></div><div class="line">    <span class="keyword">var</span> box1 = <span class="built_in">document</span>.querySelector(<span class="string">'.box1'</span>);</div><div class="line">    <span class="keyword">var</span> index1 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> animate = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            index1 ++;</div><div class="line">            box1.style.left = index1 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">            animate();</div><div class="line">        &#125;,<span class="number">10</span>);</div><div class="line">    &#125;</div><div class="line">    animate();</div><div class="line"></div><div class="line"><span class="comment">/*2. setInterval*/</span></div><div class="line"><span class="comment">//setinterval--&gt;定时器，每次到达指定时间再次执行，不管本次动画是否执行完毕</span></div><div class="line">    <span class="keyword">var</span> box2 = <span class="built_in">document</span>.querySelector(<span class="string">'.box2'</span>);</div><div class="line">    <span class="keyword">var</span> index2 = <span class="number">0</span>;</div><div class="line">    setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index2 ++;</div><div class="line">        box2.style.left = index2 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">    &#125;,<span class="number">10</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*3. requestAnimationFrame*/</span></div><div class="line"><span class="comment">// requestAnimationFrame 根据浏览器每次渲染页面时间自动渲染</span></div><div class="line">    <span class="keyword">var</span> box3 = <span class="built_in">document</span>.querySelector(<span class="string">'.box3'</span>);</div><div class="line">    <span class="keyword">var</span> index3 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> action = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index3 ++;</div><div class="line">        box3.style.left = index3 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">        <span class="comment">/*浏览器有自己的绘制频率  到了渲染时间就通知来执行 action */</span></div><div class="line">        requestAnimationFrame(action);</div><div class="line">    &#125;</div><div class="line">    action();</div><div class="line">    <span class="comment">//详见下图</span></div></pre></td></tr></table></figure>
+<p><img src="/imgs/timer.gif" alt="prototype1"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/11/11/requestAnimationFrame三者的区别/">展开全文 >></a>
         </p>
       
 
