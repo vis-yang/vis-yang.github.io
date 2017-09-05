@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			ul{
+				list-style:none;
+			}
+			.box{
+				width:300px;
+				height:300px;
+				margin:150px auto;
+				transform-style:preserve-3d;
+				transform:rotateX(-10deg) rotateY(-20deg);
+				position:relative;
+				animation:updown 3s linear 3s infinite alternate;
+			}
+			@keyframes updown{
+				0%{
+					transform:rotateX(-10deg) rotateY(-20deg);
+				}
+				100%{
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			}
+			.box>div{
+				width:100%;
+				height:100%;
+				opacity:0.5;
+				position:absolute;
+			}
+			.box .top{
+				/* background:pink; */
+				transform:translateY(-150px) rotateX(90deg);
+			}
+			.box .down{
+			/* 	background:deeppink; */
+				transform:translateY(150px) rotateX(-90deg);
+			}
+			.box .left{
+				/* background:green; */
+				transform:translateX(-150px) rotateY(-90deg);
+			}
+			.box .right{
+			/* 	background:yellowgreen; */
+				transform:translateX(150px) rotateY(90deg);
+			}
+			.box  .front{
+			/* 	background:blue; */
+				transform:translateZ(150px);
+			}
+			.box .behind{
+				/* background:skyblue; */
+				transform:translateZ(-150px);
+			}
+			.box ul li{
+				float:left;
+				width:100px;
+				height:100px;
+				border:1px solid #fff;
+				box-sizing:border-box;
+				position:relative;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="box">
+			<div class="top"></div>
+			<div class="down"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="front"></div>
+			<div class="behind"></div>
+		</div>
+		<script src="jquery.js"></script>
+		<script>
+			
+			var box = $(".box");
+			var divs = box.children();
+			var arrColor=['pink',"deeppink","yellow","greenyellow","blue","red"];
+			//遍历每一个DIV  然后再里面先创建一个UL,然后再创建9个LI
+			divs.each(function(index,el){
+				var ul = $("<ul></ul>");
+				for(var i=0;i<9;i++){
+					var li = $("<li></li>");
+					li.css("backgroundColor",arrColor[index]);
+					ul.append(li);   //把9个LI分别追加到UL里
+				}
+				$(el).append(ul);  //把ul追加到每一个DIV里
+			})
+
+		    var arrPostion=[];
+		    for(var i=0;i<54;i++){
+		    	arrPostion.push(parseInt(Math.random()*300));
+		    }
+		    console.log(arrPostion);
+		    $("li").each(function(index,el){
+		    	$(el).css({"left":arrPostion[index],"top":arrPostion[index]});
+		    });
+		    $("li").each(function(index, el) {
+		    	$(el).animate({"left": 0, "top": 0}, 3000);
+		    });
+			
+		
+		</script>
+    </body>
+</html>
