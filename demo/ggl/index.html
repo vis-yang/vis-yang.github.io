@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>canvas</title>
+        <style>
+            canvas {
+                border: 1px solid #ccc;
+                background: #ccc;
+            }
+        </style>
+    </head>
+<body>
+<canvas width="600" height="400"></canvas>
+<!--通过键盘上的方向键控制人物的移动-->
+<!--
+1.加载图片
+2.监听方向键
+3.绘制人物
+-->
+<script>
+    //初始化数据
+    var Per = function () {
+        this.ctx = document.querySelector('canvas').getContext('2d');
+        this.width = this.ctx.canvas.width;
+        this.height = this.ctx.canvas.height;
+        //每一步多大
+        this.stepSize = 10;
+        //控制图片
+        this.index = 0;
+        this.perImg = 'kn.jpg';
+    }
+    //初始化方法
+    Per.prototype.init = function () {
+        var perImg = 'kn.jpg';
+        var that = this;
+        that.loadImage(function (img) {
+            that.perWidth = img.width/4;
+            that.perHeight = img.height/4;
+            that.startX = that.width/2-that.perWidth/2;
+            that.startY = that.height/2-that.perHeight/2;
+            //在原点绘制人物
+            that.drawPer(img, 0, 0, 0);
+            //绑定事件
+            that.bindEvent(img);
+        },perImg)
+    }
+    //图片加载
+    Per.prototype.loadImage = function (callback,image) {
+        var img = new Image;
+        img.onload = function () {
+            //其他业务
+            callback && callback(img);
+        }
+        img.src = image;
+    }
+    //绑定移动事件
+    Per.prototype.bindEvent = function (img) {
+        var that = this;
+        //控制图片
+        var direction = 0;
+        //移动方向
+        var stepX = 0;
+        var stepY = 0;
+        document.addEventListener('keydown', function (e) {
+            switch (e.keyCode) {
+                case 37:
+                    /*左*/
+                    stepX--;
+                    direction = 1;
+                    break;
+                case 38:
+                    /*上*/
+                    stepY--;
+                    direction = 3;
+                    break;
+                case 39:
+                    /*右*/
+                    stepX++;
+                    direction = 2;
+                    break;
+                case 40:
+                    /*下*/
+                    stepY++;
+                    direction = 0;
+                    break;
+            }
+            //只能按下上下左右才可以让人物移动
+            if(e.keyCode==37||e.keyCode==38||e.keyCode==39||e.keyCode==40){
+                that.index++;
+                //刮刮乐
+                that.clearImage( stepX, stepY);
+                //绘制人物
+                that.drawPer(img, stepX, stepY, direction);
+            }
+        })
+    }
+    //绘制人物
+    Per.prototype.drawPer = function (img, stepX, stepY, direction) {
+        //每次绘制都清空canvas
+        this.ctx.clearRect(0, 0, this.width, this.height);
+        //控制走路图片
+        if (this.index > 3) {
+            this.index = 0;
+        }
+        //绘制
+        this.ctx.drawImage(img, this.perWidth * this.index, this.perHeight * direction, this.perWidth, this.perHeight, this.startX + (stepX * this.stepSize), this.startY + (stepY * this.stepSize), this.perWidth, this.perHeight);
+        //提高人物画层高度
+        this.ctx.globalCompositeOperation="destination-over";
+    }
+    //刮奖
+    Per.prototype.clearImage = function(stepX,stepY){
+        var cImage = '05.jpg';
+        var that = this;
+        that.loadImage(function (img) {
+            /*填充方案*/
+            var pat = that.ctx.createPattern(img,'no-repeat');
+            /*图片描边*/
+            that.ctx.strokeStyle = pat;
+            /*设置线的样式*/
+            that.ctx.lineWidth = 40;
+            that.ctx.lineCap = 'round';
+            that.ctx.lineJoin = 'round';
+            //设置线的起始点
+            that.ctx.moveTo(that.width/2+ (stepX * that.stepSize),that.height/2+ (stepY * that.stepSize));
+            //设置移动点
+            that.ctx.lineTo(that.width/2 + (stepX * that.stepSize),that.height/2 + (stepY * that.stepSize));
+            that.ctx.stroke();
+        },cImage)
+    }
+    new Per().init();
+</script>
+</body>
+</html>
