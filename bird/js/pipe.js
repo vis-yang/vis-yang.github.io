@@ -35,4 +35,11 @@
     this.x -= this.speed;
 
     //判断管道出去移到最后，重新生成新管道
-    if (this.x 
+    if (this.x <= -this.topImg.width) {
+      this.x += 6 * 3 * this.topImg.width;
+      //重新生成管道坐标
+      this.initHeight();
+    };
+  };
+  fb.Pipe = Pipe;
+})(fb);

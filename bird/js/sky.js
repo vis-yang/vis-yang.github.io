@@ -14,4 +14,9 @@
     //动起来
     this.x -= this.speed;
     //如果离开画布，添加到最后
-    if (this.x 
+    if (this.x <= -this.ctx.canvas.width ) {
+      this.x += 2 * this.ctx.canvas.width;
+    };
+  };
+  fb.Sky = Sky;
+})(fb);
