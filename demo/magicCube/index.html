@@ -78,32 +78,35 @@
 		</div>
 		<script src="jquery.js"></script>
 		<script>
-			
-			var box = $(".box");
-			var divs = box.children();
-			var arrColor=['pink',"deeppink","yellow","greenyellow","blue","red"];
-			//遍历每一个DIV  然后再里面先创建一个UL,然后再创建9个LI
-			divs.each(function(index,el){
-				var ul = $("<ul></ul>");
-				for(var i=0;i<9;i++){
-					var li = $("<li></li>");
-					li.css("backgroundColor",arrColor[index]);
-					ul.append(li);   //把9个LI分别追加到UL里
+			$(function () {
+				var box = $(".box");
+				var divs = box.children();
+				var arrColor=['pink',"deeppink","yellow","greenyellow","blue","red"];
+				//遍历每一个DIV  然后再里面先创建一个UL,然后再创建9个LI
+				divs.each(function(index,el){
+					var ul = $("<ul></ul>");
+					for(var i=0;i<9;i++){
+						var li = $("<li></li>");
+						li.css("backgroundColor",arrColor[index]);
+						ul.append(li);   //把9个LI分别追加到UL里
+					}
+					$(el).append(ul);  //把ul追加到每一个DIV里
+				});
+				var arrPostion=[];
+				for(var i=0;i<54;i++){
+					arrPostion.push(parseInt(Math.random()*300));
 				}
-				$(el).append(ul);  //把ul追加到每一个DIV里
-			})
-
-		    var arrPostion=[];
-		    for(var i=0;i<54;i++){
-		    	arrPostion.push(parseInt(Math.random()*300));
-		    }
-		    console.log(arrPostion);
-		    $("li").each(function(index,el){
-		    	$(el).css({"left":arrPostion[index],"top":arrPostion[index]});
-		    });
-		    $("li").each(function(index, el) {
-		    	$(el).animate({"left": 0, "top": 0}, 3000);
-		    });
+				console.log(arrPostion);
+				$("li").each(function(index,el){
+					$(el).css({"left":arrPostion[index],"top":arrPostion[index]});
+				});
+				$("li").each(function(index, el) {
+					$(el).animate({"left": 0, "top": 0}, 3000);
+				});	
+			});
+			
+			
+		
 			
 		
 		</script>
