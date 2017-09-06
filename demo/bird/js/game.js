@@ -1,6 +1,6 @@
 (function (fb) {
-  var life = 5;
-  var invincible = false;
+  
+  // var invincible = false;
   var Game = function () {
     this.ctx = document.querySelector('canvas').getContext('2d');
     //游戏执行的命令
@@ -34,7 +34,8 @@
         initList.push(land);
       };
       //初始化鸟
-      var bird = new fb.Bird(that.ctx, imgList['birds']);
+      var life = 5;
+      var bird = new fb.Bird(that.ctx, imgList['birds'], life);
       initList.push(bird);
       //初始化分数
       var score = new fb.Score(that.ctx);
@@ -59,20 +60,21 @@
           that.running = false;
         }
         //3.碰到管道,降低生命值，当生命为0 gameover 
-        if (invincible == false){
-          clearInterval(timer);
+        // if (invincible == false){
+        //   clearInterval(timer);
           if (that.ctx.isPointInPath(bird.x, bird.y)) {
-            life --;
-            console.log(life)
-            invincible = true;
-            var timer = setInterval(function(){
-              invincible = false;
-            },1500);
-            if (life < 1) {
+            // console.log(怎么能拿到bird)
+            // life --;
+
+            // invincible = true;
+            // var timer = setInterval(function(){
+            //   invincible = false;
+            // },1500);
+            // if (life < 1) {
               that.running = false;
             }
-          }
-        }
+        //   }
+        // }
         
         if (that.running) {
           requestAnimationFrame(animation);

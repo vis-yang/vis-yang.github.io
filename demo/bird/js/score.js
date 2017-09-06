@@ -10,7 +10,7 @@
     this.score += this.addScore;
     var str = '飞行距离:'+this.score;
     this.ctx.font = '20px 仿宋';
-    this.ctx.fillText(str, 20, 50);
+    this.ctx.fillText(str, 20, 20);
   }
   fb.Score = Score;
 })(fb);

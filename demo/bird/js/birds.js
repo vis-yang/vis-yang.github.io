@@ -1,5 +1,5 @@
 (function (fb) {
-  var Bird = function (ctx, birdImg) {
+  var Bird = function (ctx, birdImg, life) {
     this.ctx = ctx;
     this.birdImg = birdImg;
     //默认的绘制坐标
@@ -8,6 +8,8 @@
     //鸟的尺寸
     this.birdWidth = this.birdImg.width / 3;
     this.birdHeight = this.birdImg.height;
+    //鸟的生命值
+    this.life = life;
     //图片索引
     this.index = 0;
     //声明一些运动参数
@@ -20,7 +22,14 @@
     this.maxAngle = Math.PI / 4;
     //初始化飞行的事件
     this. initFly();
+
   };
+
+  Bird.prototype.life = function (life) {
+        var str = '生命:'+this.life;
+    this.ctx.font = '20px 仿宋';
+    this.ctx.fillText(str, 20, 40);
+  }
   Bird.prototype.draw = function () {
     //保存正常坐标
     this.ctx.save();
