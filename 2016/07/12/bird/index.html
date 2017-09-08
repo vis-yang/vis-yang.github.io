@@ -6,27 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Canvas 简单介绍和小案例 | Hexo</title>
+  <title>小鸟游戏 demo | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    体验Canvas">
+  <meta name="description" content="点我看效果–&amp;gt;点击鼠标">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Canvas 简单介绍和小案例">
-<meta property="og:url" content="http://yoursite.com/2016/05/23/canvas/index.html">
+<meta property="og:title" content="小鸟游戏 demo">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/bird/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    体验Canvas">
-<meta property="og:image" content="http://yoursite.com/imgs/location.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/path.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/lineTo.png">
-<meta property="og:image" content="http://yoursite.com/imgs/zero.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/lineCap.png">
-<meta property="og:image" content="http://yoursite.com/imgs/lineJoin.png">
-<meta property="og:image" content="http://yoursite.com/imgs/arc.png">
-<meta property="og:image" content="http://yoursite.com/imgs/scratch.gif">
-<meta property="og:updated_time" content="2017-09-05T14:07:10.156Z">
+<meta property="og:description" content="点我看效果–&amp;gt;点击鼠标">
+<meta property="og:image" content="http://yoursite.com/imgs/bird.png">
+<meta property="og:updated_time" content="2017-09-08T07:44:57.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Canvas 简单介绍和小案例">
-<meta name="twitter:description" content="Canvas canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。&amp;lt;canvas&amp;gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。    体验Canvas">
-<meta name="twitter:image" content="http://yoursite.com/imgs/location.jpg">
+<meta name="twitter:title" content="小鸟游戏 demo">
+<meta name="twitter:description" content="点我看效果–&amp;gt;点击鼠标">
+<meta name="twitter:image" content="http://yoursite.com/imgs/bird.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -156,166 +149,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-canvas" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-bird" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Canvas 简单介绍和小案例
+      小鸟游戏 demo
     </h1>
   
 
         
-        <a href="/2016/05/23/canvas/" class="archive-article-date">
-  	<time datetime="2016-05-23T02:22:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-23</time>
+        <a href="/2016/07/12/bird/" class="archive-article-date">
+  	<time datetime="2016-07-12T05:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><blockquote>
-<p>canvas 最早由Apple引入WebKit,用于Mac OS X 的 Dashboard,后来又在Safari和Google Chrome被实现。<br>基于 Gecko 1.8的浏览器,比如 Firefox 1.5, 同样支持这个元素。<br>&lt;canvas&gt; 元素是WhatWG Web applications 1.0规范的一部分,也包含于HTML 5中。  </p>
-</blockquote>
-<h3 id="体验Canvas"><a href="#体验Canvas" class="headerlink" title="体验Canvas"></a>体验Canvas</h3><h4 id="什么是Canvas？"><a href="#什么是Canvas？" class="headerlink" title="什么是Canvas？"></a>什么是Canvas？</h4><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，您可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
-<h4 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h4><p>向 HTML5 页面添加 canvas 元素。<br>规定元素的 id、宽度和高度：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="Canvas坐标系"><a href="#Canvas坐标系" class="headerlink" title="Canvas坐标系"></a>Canvas坐标系</h4><p><img src="/imgs/location.jpg" alt=""></p>
-<h4 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*获取元素*/</span></div><div class="line"><span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#myCanvas'</span>);</div><div class="line"><span class="comment">/*获取绘图工具*/</span></div><div class="line"><span class="keyword">var</span> context = myCanvas.getContext(<span class="string">'2d'</span>);</div><div class="line"><span class="comment">/*设置绘图的起始位置*/</span></div><div class="line">context.moveTo(<span class="number">100</span>,<span class="number">100</span>);</div><div class="line"><span class="comment">/*绘制路径*/</span></div><div class="line">context.lineTo(<span class="number">200</span>,<span class="number">200</span>);</div><div class="line"><span class="comment">/*描边*/</span></div><div class="line">context.stroke();</div></pre></td></tr></table></figure>
-<h3 id="Canvas的基本使用"><a href="#Canvas的基本使用" class="headerlink" title="Canvas的基本使用"></a>Canvas的基本使用</h3><h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>需要理解些概念：  </p>
-<ul>
-<li>路径的概念</li>
-<li>路径的绘制<ul>
-<li>描边 stroke()  </li>
-<li>填充 fill()<br><img src="/imgs/path.jpg" alt="">  </li>
-</ul>
-</li>
-<li>闭合路径<ul>
-<li>手动闭合<ul>
-<li>要注意的是：因为线是在两个像素中间绘制的，所以奇数像素的线会模糊，偶数则没事，所以当lineWidth数值比较大时，手动绘制回到原点位置的线时，会发生下图的情况，自动闭合则不会，所以推荐绘制回到原点的线用自动闭合来完成。<br><img src="/imgs/lineTo.png" alt=""> </li>
-</ul>
-</li>
-<li>程序闭合 closePath()</li>
-</ul>
-</li>
-<li>填充规则(非零环绕)<br>  <img src="/imgs/zero.jpg" alt=""></li>
-<li>开启新的路径 beginPath()</li>
-</ul>
-<h4 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h4><ul>
-<li><p>画笔的状态</p>
-<ul>
-<li>lineWidth 线宽，默认1px</li>
-<li>lineCap 线末端类型：(butt默认)、round、square<br><img src="/imgs/lineCap.png" alt=""></li>
-<li>lineJoin 相交线的拐点 miter(默认)、round、bevel<br><img src="/imgs/lineJoin.png" alt=""></li>
-<li>strokeStyle 线的颜色</li>
-<li>fillStyle 填充颜色</li>
-<li>setLineDash() 设置虚线</li>
-<li><p>getLineDash() 获取虚线宽度集合</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">设置虚线属性，传入一个数组，数组内第一个数代表实线，第二个数代表虚线以此类推，当数组内为偶数则正常虚实交替，当为奇数则虚实交替为偶数时循环：5，10，15,5，10，15为一次循环</div></pre></td></tr></table></figure>
-</li>
-<li><p>lineDashOffset 设置虚线偏移量（负值向右偏移）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><ul>
-<li><a href="http://www.w3school.com.cn/tags/html_ref_canvas.asp" target="_blank" rel="external">w3school</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial" target="_blank" rel="external">Canvas_API</a></li>
-</ul>
-<h3 id="Canvas图形绘制"><a href="#Canvas图形绘制" class="headerlink" title="Canvas图形绘制"></a>Canvas图形绘制</h3><h4 id="矩形绘制"><a href="#矩形绘制" class="headerlink" title="矩形绘制"></a>矩形绘制</h4><ul>
-<li>rect(x,y,w,h) 没有独立路径</li>
-<li>strokeRect(x,y,w,h) 有独立路径，不影响别的绘制</li>
-<li>fillRect(x,y,w,h) 有独立路径，不影响别的绘制</li>
-<li>clearRect(x,y,w,h) 擦除矩形区域</li>
-</ul>
-<h4 id="圆弧绘制"><a href="#圆弧绘制" class="headerlink" title="圆弧绘制"></a>圆弧绘制</h4><ul>
-<li>弧度概念</li>
-<li>arc()<ul>
-<li>x 圆心横坐标</li>
-<li>y 圆心纵坐标</li>
-<li>r 半径</li>
-<li>startAngle 开始角度</li>
-<li>endAngle 结束角度</li>
-<li>anticlockwise 是否逆时针方向绘制（默认false表示顺时针；true表示逆时针）<br><img src="/imgs/arc.png" alt=""></li>
-</ul>
-</li>
-</ul>
-<h4 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h4><ul>
-<li>ctx.font = ‘微软雅黑’ 设置字体</li>
-<li>strokeText()</li>
-<li>fillText(text,x,y,maxWidth)<ul>
-<li>text 要绘制的文本</li>
-<li>x,y 文本绘制的坐标（文本左下角）</li>
-<li>maxWidth 设置文本最大宽度，可选参数</li>
-</ul>
-</li>
-<li>ctx.textAlign文本水平对齐方式，相对绘制坐标来说的<ul>
-<li>left</li>
-<li>center</li>
-<li>right</li>
-<li>start 默认</li>
-<li>end</li>
-<li>direction属性css(rtl ltr) start和end于此相关<ul>
-<li>如果是ltr,start和left表现一致</li>
-<li>如果是rtl,start和right表现一致</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>ctx.textBaseline 设置基线（垂直对齐方式  ）<ul>
-<li>top 文本的基线处于文本的正上方，并且有一段距离</li>
-<li>middle 文本的基线处于文本的正中间</li>
-<li>bottom 文本的基线处于文本的证下方，并且有一段距离</li>
-<li>hanging 文本的基线处于文本的正上方，并且和文本粘合</li>
-<li>alphabetic 默认值，基线处于文本的下方，并且穿过文字</li>
-<li>ideographic 和bottom相似，但是不一样</li>
-</ul>
-</li>
-<li>measureText() 获取文本宽度obj.width</li>
-</ul>
-<h3 id="做动画"><a href="#做动画" class="headerlink" title="做动画"></a>做动画</h3><h4 id="绘制图片"><a href="#绘制图片" class="headerlink" title="绘制图片"></a>绘制图片</h4><ul>
-<li>drawImage()<ul>
-<li>三个参数drawImage(img,x,y)<ul>
-<li>img 图片对象、canvas对象、video对象</li>
-<li>x,y 图片绘制的左上角</li>
-</ul>
-</li>
-<li>五个参数drawImage(img,x,y,w,h)<ul>
-<li>img 图片对象、canvas对象、video对象</li>
-<li>x,y 图片绘制的左上角</li>
-<li>w,h 图片绘制尺寸设置(图片缩放，不是截取)</li>
-</ul>
-</li>
-<li>九个参数drawImage(img,x,y,w,h,x1,y1,w1,h1)<ul>
-<li>img 图片对象、canvas对象、video对象</li>
-<li>x,y,w,h 图片中的一个矩形区域</li>
-<li>x1,y1,w1,h1 画布中的一个矩形区域</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h4><p>要注意的是：平移、缩放、旋转都是坐标轴在变化。</p>
-<ul>
-<li>平移 移动画布的原点<ul>
-<li>translate(x,y) 参数表示移动目标点的坐标</li>
-</ul>
-</li>
-<li>缩放<ul>
-<li>scale(x,y) 参数表示宽高的缩放比例</li>
-</ul>
-</li>
-<li>旋转<ul>
-<li>rotate(angle) 参数表示旋转角度</li>
-</ul>
-</li>
-</ul>
-<h4 id="路径判断"><a href="#路径判断" class="headerlink" title="路径判断"></a>路径判断</h4><ul>
-<li>isPointInPath()</li>
-<li>isPointInStroke()</li>
-</ul>
-<h4 id="小案例：键盘控制小人刮刮乐"><a href="#小案例：键盘控制小人刮刮乐" class="headerlink" title="小案例：键盘控制小人刮刮乐"></a>小案例：键盘控制小人刮刮乐</h4><p><img src="/imgs/scratch.gif" alt=""><br><a href="/demo/ggl/index.html">点我看效果–&gt;键盘上下左右移动</a><br>下面是实现代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>canvas<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">            canvas &#123;</span></div><div class="line"><span class="undefined">                border: 1px solid #ccc;</span></div><div class="line"><span class="undefined">                background: #ccc;</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"400"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--通过键盘上的方向键控制人物的移动--&gt;</span></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line"><span class="comment">1.加载图片</span></div><div class="line"><span class="comment">2.监听方向键</span></div><div class="line"><span class="comment">3.绘制人物</span></div><div class="line"><span class="comment">4.绘制刮奖</span></div><div class="line"><span class="comment">--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="comment">//初始化数据</span></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> Per = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.ctx = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>).getContext(<span class="string">'2d'</span>);</span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.width = <span class="keyword">this</span>.ctx.canvas.width;</span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.height = <span class="keyword">this</span>.ctx.canvas.height;</span></div><div class="line"><span class="javascript">        <span class="comment">//每一步多大</span></span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.stepSize = <span class="number">10</span>;</span></div><div class="line"><span class="javascript">        <span class="comment">//控制图片</span></span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.index = <span class="number">0</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.perImg = <span class="string">'kn.jpg'</span>;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="comment">//初始化方法</span></span></div><div class="line"><span class="javascript">    Per.prototype.init = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> perImg = <span class="string">'kn.jpg'</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> that = <span class="keyword">this</span>;</span></div><div class="line"><span class="javascript">        that.loadImage(<span class="function"><span class="keyword">function</span> (<span class="params">img</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            that.perWidth = img.width/4;</span></div><div class="line"><span class="undefined">            that.perHeight = img.height/4;</span></div><div class="line"><span class="undefined">            that.startX = that.width/2-that.perWidth/2;</span></div><div class="line"><span class="undefined">            that.startY = that.height/2-that.perHeight/2;</span></div><div class="line"><span class="javascript">            <span class="comment">//在原点绘制人物</span></span></div><div class="line"><span class="undefined">            that.drawPer(img, 0, 0, 0);</span></div><div class="line"><span class="javascript">            <span class="comment">//绑定事件</span></span></div><div class="line"><span class="undefined">            that.bindEvent(img);</span></div><div class="line"><span class="undefined">        &#125;,perImg)</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="comment">//图片加载</span></span></div><div class="line"><span class="javascript">    Per.prototype.loadImage = <span class="function"><span class="keyword">function</span> (<span class="params">callback,image</span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> img = <span class="keyword">new</span> Image;</span></div><div class="line"><span class="javascript">        img.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></div><div class="line"><span class="javascript">            <span class="comment">//其他业务</span></span></div><div class="line"><span class="undefined">            callback &amp;&amp; callback(img);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">        img.src = image;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="comment">//绑定移动事件</span></span></div><div class="line"><span class="javascript">    Per.prototype.bindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">img</span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> that = <span class="keyword">this</span>;</span></div><div class="line"><span class="javascript">        <span class="comment">//控制图片</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> direction = <span class="number">0</span>;</span></div><div class="line"><span class="javascript">        <span class="comment">//移动方向</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> stepX = <span class="number">0</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> stepY = <span class="number">0</span>;</span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.addEventListener(<span class="string">'keydown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">switch</span> (e.keyCode) &#123;</span></div><div class="line"><span class="javascript">                <span class="keyword">case</span> <span class="number">37</span>:</span></div><div class="line"><span class="javascript">                    <span class="comment">/*左*/</span></span></div><div class="line"><span class="undefined">                    stepX--;</span></div><div class="line"><span class="undefined">                    direction = 1;</span></div><div class="line"><span class="javascript">                    <span class="keyword">break</span>;</span></div><div class="line"><span class="javascript">                <span class="keyword">case</span> <span class="number">38</span>:</span></div><div class="line"><span class="javascript">                    <span class="comment">/*上*/</span></span></div><div class="line"><span class="undefined">                    stepY--;</span></div><div class="line"><span class="undefined">                    direction = 3;</span></div><div class="line"><span class="javascript">                    <span class="keyword">break</span>;</span></div><div class="line"><span class="javascript">                <span class="keyword">case</span> <span class="number">39</span>:</span></div><div class="line"><span class="javascript">                    <span class="comment">/*右*/</span></span></div><div class="line"><span class="undefined">                    stepX++;</span></div><div class="line"><span class="undefined">                    direction = 2;</span></div><div class="line"><span class="javascript">                    <span class="keyword">break</span>;</span></div><div class="line"><span class="javascript">                <span class="keyword">case</span> <span class="number">40</span>:</span></div><div class="line"><span class="javascript">                    <span class="comment">/*下*/</span></span></div><div class="line"><span class="undefined">                    stepY++;</span></div><div class="line"><span class="undefined">                    direction = 0;</span></div><div class="line"><span class="javascript">                    <span class="keyword">break</span>;</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="javascript">            <span class="comment">//只能按下上下左右才可以让人物移动</span></span></div><div class="line"><span class="javascript">            <span class="keyword">if</span>(e.keyCode==<span class="number">37</span>||e.keyCode==<span class="number">38</span>||e.keyCode==<span class="number">39</span>||e.keyCode==<span class="number">40</span>)&#123;</span></div><div class="line"><span class="undefined">                that.index++;</span></div><div class="line"><span class="javascript">                <span class="comment">//刮刮乐</span></span></div><div class="line"><span class="undefined">                that.clearImage( stepX, stepY);</span></div><div class="line"><span class="javascript">                <span class="comment">//绘制人物</span></span></div><div class="line"><span class="undefined">                that.drawPer(img, stepX, stepY, direction);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;)</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="comment">//绘制人物</span></span></div><div class="line"><span class="javascript">    Per.prototype.drawPer = <span class="function"><span class="keyword">function</span> (<span class="params">img, stepX, stepY, direction</span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="comment">//每次绘制都清空canvas</span></span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, <span class="keyword">this</span>.width, <span class="keyword">this</span>.height);</span></div><div class="line"><span class="javascript">        <span class="comment">//控制走路图片</span></span></div><div class="line"><span class="javascript">        <span class="keyword">if</span> (<span class="keyword">this</span>.index &gt; <span class="number">3</span>) &#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">this</span>.index = <span class="number">0</span>;</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="javascript">        <span class="comment">//绘制</span></span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.ctx.drawImage(img, <span class="keyword">this</span>.perWidth * <span class="keyword">this</span>.index, <span class="keyword">this</span>.perHeight * direction, <span class="keyword">this</span>.perWidth, <span class="keyword">this</span>.perHeight, <span class="keyword">this</span>.startX + (stepX * <span class="keyword">this</span>.stepSize), <span class="keyword">this</span>.startY + (stepY * <span class="keyword">this</span>.stepSize), <span class="keyword">this</span>.perWidth, <span class="keyword">this</span>.perHeight);</span></div><div class="line"><span class="javascript">        <span class="comment">//提高人物画层高度</span></span></div><div class="line"><span class="javascript">        <span class="keyword">this</span>.ctx.globalCompositeOperation=<span class="string">"destination-over"</span>;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="comment">//刮奖</span></span></div><div class="line"><span class="javascript">    Per.prototype.clearImage = <span class="function"><span class="keyword">function</span>(<span class="params">stepX,stepY</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> cImage = <span class="string">'05.jpg'</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> that = <span class="keyword">this</span>;</span></div><div class="line"><span class="javascript">        that.loadImage(<span class="function"><span class="keyword">function</span> (<span class="params">img</span>) </span>&#123;</span></div><div class="line"><span class="javascript">            <span class="comment">/*填充方案*/</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> pat = that.ctx.createPattern(img,<span class="string">'no-repeat'</span>);</span></div><div class="line"><span class="javascript">            <span class="comment">/*图片描边*/</span></span></div><div class="line"><span class="undefined">            that.ctx.strokeStyle = pat;</span></div><div class="line"><span class="javascript">            <span class="comment">/*设置线的样式*/</span></span></div><div class="line"><span class="undefined">            that.ctx.lineWidth = 40;</span></div><div class="line"><span class="javascript">            that.ctx.lineCap = <span class="string">'round'</span>;</span></div><div class="line"><span class="javascript">            that.ctx.lineJoin = <span class="string">'round'</span>;</span></div><div class="line"><span class="javascript">            <span class="comment">//设置线的起始点</span></span></div><div class="line"><span class="undefined">            that.ctx.moveTo(that.width/2+ (stepX * that.stepSize),that.height/2+ (stepY * that.stepSize));</span></div><div class="line"><span class="javascript">            <span class="comment">//设置移动点</span></span></div><div class="line"><span class="undefined">            that.ctx.lineTo(that.width/2 + (stepX * that.stepSize),that.height/2 + (stepY * that.stepSize));</span></div><div class="line"><span class="undefined">            that.ctx.stroke();</span></div><div class="line"><span class="undefined">        &#125;,cImage)</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="javascript">    <span class="keyword">new</span> Per().init();</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+        <p><img src="/imgs/bird.png" alt="prototype1"><br><a href="/demo/bird/index.html">点我看效果–&gt;点击鼠标</a></p>
 
       
 
@@ -405,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/23/canvas/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/07/12/bird/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -419,18 +273,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/07/12/bird/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          小鸟游戏 demo
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/04/29/魔方/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">魔方 demo</div>
+    <a href="/2016/05/23/canvas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Canvas 简单介绍和小案例</div>
       <i class="icon-circle-right"></i>
     </a>
   
