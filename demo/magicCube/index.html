@@ -17,7 +17,7 @@
 				transform-style:preserve-3d;
 				transform:rotateX(-10deg) rotateY(-20deg);
 				position:relative;
-				animation:updown 3s linear 3s infinite alternate;
+				/*animation:updown 3s linear 3s infinite alternate;*/
 			}
 			@keyframes updown{
 				0%{
@@ -34,27 +34,21 @@
 				position:absolute;
 			}
 			.box .top{
-				/* background:pink; */
 				transform:translateY(-150px) rotateX(90deg);
 			}
 			.box .down{
-			/* 	background:deeppink; */
 				transform:translateY(150px) rotateX(-90deg);
 			}
 			.box .left{
-				/* background:green; */
 				transform:translateX(-150px) rotateY(-90deg);
 			}
 			.box .right{
-			/* 	background:yellowgreen; */
 				transform:translateX(150px) rotateY(90deg);
 			}
 			.box  .front{
-			/* 	background:blue; */
 				transform:translateZ(150px);
 			}
 			.box .behind{
-				/* background:skyblue; */
 				transform:translateZ(-150px);
 			}
 			.box ul li{
@@ -79,6 +73,8 @@
 		<script src="jquery.js"></script>
 		<script>
 			$(function () {
+				//页面加载完毕后，再执行动画，否则魔方还没拼好就旋转了
+				$('.box').css('animation','updown 3s linear 3s infinite alternate');
 				var box = $(".box");
 				var divs = box.children();
 				var arrColor=['pink',"deeppink","yellow","greenyellow","blue","red"];
@@ -96,7 +92,6 @@
 				for(var i=0;i<54;i++){
 					arrPostion.push(parseInt(Math.random()*300));
 				}
-				console.log(arrPostion);
 				$("li").each(function(index,el){
 					$(el).css({"left":arrPostion[index],"top":arrPostion[index]});
 				});
@@ -104,11 +99,6 @@
 					$(el).animate({"left": 0, "top": 0}, 3000);
 				});	
 			});
-			
-			
-		
-			
-		
 		</script>
     </body>
 </html>

@@ -12,10 +12,10 @@
     this.index = 0;
     //声明一些运动参数
     this.v0 = 0;
-    this.acc = 0.0005;
+    this.acc = 0.0007;
     this.startTime = Date.now();
     //定义最大速度
-    this.maxSpeed = 0.3;
+    this.maxSpeed = 0.6;
     //定义最大角度
     this.maxAngle = Math.PI / 4;
     //初始化飞行的事件
