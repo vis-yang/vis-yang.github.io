@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>VisYang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="VisYang">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="VisYang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="VisYang">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="VisYang" type="application/atom+xml">
   
   
-    <link rel="icon" href="/assets/img/favicon.png">
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.266c1c.css">
   <style type="text/css">
@@ -876,26 +876,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="原生-js-相关"><a href="#原生-js-相关" class="headerlink" title="原生 js 相关"></a>原生 js 相关</h2><h3 id="js-选择器"><a href="#js-选择器" class="headerlink" title="js 选择器"></a>js 选择器</h3><ul>
-<li>document.getElementById(“#id名”); //id选择器</li>
-<li>document.getElementsByTagName(“标签名”); //返回一个包含所有这个标签名的一个伪数组</li>
-<li>document.getElementsByName(“name字”); //返回一个特定name值的伪数组</li>
-<li>document.createElement(“标签名字”); //在页面创建一个标签</li>
-<li>parent.appendChild(“子级元素”);   //将元素添加到父级元素中</li>
-<li>element.parentNode    获取父级节点</li>
-<li>element.parentElement   获取父级元素</li>
-<li>element.childNodes    元素中所有子级节点</li>
-<li>element.children    元素中所有子级元素</li>
-<li>兼容问题element.firstChild    元素中第一个子级节点<br>兼容问题element.firstElementChild 元素中所有子级元素<br>兼容问题element.lastChild   元素中最有一个子级节点<br>兼容问题element.lastEleemntChild  元素中最后一个子级元素<br>兼容问题element.previousSibling   元素的前一个兄弟节点<br>兼容问题element.previousEleemntSibling  元素的前一个兄弟元素<br>兼容问题element.nextSibling   元素的后一个兄弟节点<br>兼容问题element.nextElementSibling  元素的后一个兄弟元素<br>兼容问题element.lastEleemntChild  获取某个元素中最后一个子元素</li>
+<li>document.getElementById(“#id”); //id选择器</li>
+<li>document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组</li>
+<li>document.getElementsByName(“name”); //返回一个特定name值的伪数组</li>
+<li>document.createElement(“name”); //在页面创建一个标签</li>
+<li>parent.appendChild(“ChildEle”);   //将元素添加到父级元素中</li>
+<li>element.parentNode;    //获取父级节点</li>
+<li>element.parentElement;   //获取父级元素</li>
+<li>element.childNodes;    //元素中所有子级节点</li>
+<li>element.children;    //元素中所有子级元素</li>
+<li>兼容问题element.firstChild;    //元素中第一个子级节点<br>兼容问题element.firstElementChild; //元素中所有子级元素<br>兼容问题element.lastChild;   //元素中最有一个子级节点<br>兼容问题element.lastEleemntChild;  //元素中最后一个子级元素<br>兼容问题element.previousSibling;   //元素的前一个兄弟节点<br>兼容问题element.previousEleemntSibling; //元素的前一个兄弟元素<br>兼容问题element.nextSibling;   //元素的后一个兄弟节点<br>兼容问题element.nextElementSibling;  //元素的后一个兄弟元素<br>兼容问题element.lastEleemntChild;  //获取某个元素中最后一个子元素</li>
 </ul>
 <h3 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h3><ul>
-<li>element.getAttribute(“属性名”);    //返回该属性的值</li>
-<li>element.setAttribute(“属性名”,值）;  //设置自定义属性名和值</li>
-<li>element.removeAttribute(“属性名”); //移除特定属性名的属性</li>
-<li>element.属性名(“属性值”);     //设置属性的值</li>
-<li>element.nodeType    //检测元素是什么，如果是标签–&gt;(1),如果是属性–&gt;(2),如果是文本–&gt;(3)</li>
-<li>element.nodeName    //检测元素，如果是标签–&gt;(标签的名字,大写的),如果是属性–&gt;(属性的名字,小写的),如果是文本–&gt;(#text)</li>
-<li>element.nodeValue   //检测元素，标签–&gt;null,属性–&gt;属性的值,文本–&gt;文本内容</li>
-<li>element.innerText=’’    //修改元素的文本内容</li>
+<li>element.getAttribute(“attributename”);    //返回该属性的值</li>
+<li>element.setAttribute(“attributename”,attributevalue);  //设置自定义属性名和值</li>
+<li>element.removeAttribute(“attributename”); //移除特定属性名的属性</li>
+<li>element.属性名(“attributevalue”);     //设置属性的值</li>
+<li>element.nodeType;    //检测元素是什么，如果是标签–&gt;(1),如果是属性–&gt;(2),如果是文本–&gt;(3)</li>
+<li>element.nodeName;    //检测元素，如果是标签–&gt;(标签的名字,大写的),如果是属性–&gt;(属性的名字,小写的),如果是文本–&gt;(#text)</li>
+<li>element.nodeValue;   //检测元素，标签–&gt;null,属性–&gt;属性的值,文本–&gt;文本内容</li>
+<li>element.innerText=’’;    //修改元素的文本内容</li>
 <li></li>
 <li><ul>
 <li>var 克隆体名字 = element.cloneNode(true);  // 克隆某个元素包括其内的所有成员生成一个新的元素</li>
@@ -904,24 +904,24 @@
 <li>创建元素的三种方式：<ul>
 <li>document.write();</li>
 <li>element.innerHTML=’’; //拼接字符串创建元素</li>
-<li>document.createElement(‘标签名字’);//创建元素</li>
+<li>document.createElement(‘name’);//创建元素</li>
 </ul>
 </li>
 </ul>
 <h3 id="操作样式"><a href="#操作样式" class="headerlink" title="操作样式"></a>操作样式</h3><ul>
 <li>element.style.属性名=’属性值’;//注意属性名要用驼峰命名法</li>
-<li>element.offsetWidth   //获取元素的宽(数字类型)有边框</li>
-<li>element.offsetHeight  //获取元素的高(数字类型)有边框</li>
-<li>element.offsetLeft    //获取元素距离左边位置的距离</li>
-<li><p>element.offsetTop     //获取元素距离右边位置的距离</p>
+<li>element.offsetWidth;   //获取元素的宽(数字类型)有边框</li>
+<li>element.offsetHeight;  //获取元素的高(数字类型)有边框</li>
+<li>element.offsetLeft;    //获取元素距离左边位置的距离</li>
+<li><p>element.offsetTop ;    //获取元素距离右边位置的距离</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">如果父级元素脱离文档流,子级元素此时的offsetLeft获取的是相对父级元素的值</div><div class="line">如果父级元素没有脱离文档流,此时的子级元素的offsetLeft获取的是父级元素的margin+父级元素padding+父级元素的border+子级元素自己的margin</div><div class="line">如果元素自己脱离文档流,此时的offsetLeft:自己的left+自己的margin</div></pre></td></tr></table></figure>
 </li>
-<li><p>scrollWidth         //元素内容实际的宽,没有边框,如果没有内容,是元素的宽</p>
+<li><p>scrollWidth;         //元素内容实际的宽,没有边框,如果没有内容,是元素的宽</p>
 </li>
-<li>scrollHeight        //元素内容实际的高,没有边框,如果没有内容,是元素的高 </li>
-<li>scrollLeft          //向左卷曲出去的距离（兼容问题）<br>scrollTop           //向上卷曲出去的距离（兼容问题）</li>
-<li>clientWidth         //可视区域的宽</li>
-<li>clientHeight        //可视区域的高</li>
+<li>scrollHeight;        //元素内容实际的高,没有边框,如果没有内容,是元素的高 </li>
+<li>scrollLeft;          //向左卷曲出去的距离（兼容问题）<br>scrollTop;           //向上卷曲出去的距离（兼容问题）</li>
+<li>clientWidth;         //可视区域的宽</li>
+<li>clientHeight;        //可视区域的高</li>
 <li>兼容问题 pageX:页面的横坐标,谷歌和火狐支持,IE8不支持–相当于:clientX+scrollLeft</li>
 <li>兼容问题 pageY:页面的纵坐标,谷歌和火狐支持,IE8不支持–相当于:clientY+scrollTop</li>
 </ul>
@@ -956,29 +956,29 @@
 </li>
 </ul>
 <h3 id="jQuery-操作样式"><a href="#jQuery-操作样式" class="headerlink" title="jQuery 操作样式"></a>jQuery 操作样式</h3><ul>
-<li>$(element).css(“属性名”:”属性值”,”属性名”:”属性值”);//设置多项属性</li>
-<li>$(element).css(“属性”,”值”).css(“属性”,”值”);//链式编程</li>
-<li>对象.css({键值对});</li>
+<li>$(element).css(“propertyname”:”value”,”propertyname”:”value”);//设置多项属性</li>
+<li>$(element).css(“propertyname”,”value”).css(“propertyname”,”value”);//链式编程</li>
+<li>对象.css({propertyname:value});</li>
 <li></li>
 </ul>
 <h3 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h3><ul>
-<li>$(“#id名”);    //id选择器</li>
-<li>$(“标签名”);   //标签选择器</li>
-<li>$(“.类样名”);  //类选择器</li>
-<li>$(“标签名.类名”); //多条件选择器(多标签条件)</li>
+<li>$(“#id”);    //id选择器</li>
+<li>$(“tagname”);   //标签选择器</li>
+<li>$(“.classname”);  //类选择器</li>
+<li>$(“tagname.classname”); //多条件选择器(多标签条件)</li>
 <li>层级选择器<ul>
-<li>$(“父元素 子元素”);  //父元素 里面所有的 子元素 元素</li>
-<li>$(“父元素&gt;子元素”);  //里面直接的 子元素</li>
-<li>$(“父元素+子元素”);  //当前元素后面的第一个 兄弟元素</li>
-<li>$(“父元素~子元素”);  //当前元素后面所有的 兄弟元素</li>
+<li>$(“parent child”);  //父元素 里面所有的 子元素 元素</li>
+<li>$(“parent&gt;child”);  //里面直接的 子元素</li>
+<li>$(“parent+child”);  //当前元素后面的第一个 兄弟元素</li>
+<li>$(“parent~child”);  //当前元素后面所有的 兄弟元素</li>
 </ul>
 </li>
 <li>$(“eles:odd”);    //奇数选择器</li>
 <li>$(“eles:even”);   //偶数选择器</li>
 <li>索引选择器：<ul>
-<li>:eq(索引);    //等于这个索引的元素</li>
-<li>:gt(索引);    //大于这个索引的所有元素</li>
-<li>:lt(索引);    //小于这个索引的所有元素</li>
+<li>:eq(index);    //等于这个索引的元素</li>
+<li>:gt(index);    //大于这个索引的所有元素</li>
+<li>:lt(index);    //小于这个索引的所有元素</li>
 </ul>
 </li>
 </ul>
@@ -987,16 +987,16 @@
 <li>.html();  //方法,同上,设置或者获取元素中的html标签及内容</li>
 <li>.text();  //方法,同上.,设置或者获取元素中文本内容</li>
 <li>添加类名<ul>
-<li>.addClass(“class的值”); //给class设值–&gt;添加类名</li>
-<li>.addClass(“类样式的名字”).addClass(“类样式的名字”);</li>
-<li>.addClass(“类样式名字 类样式名字”);</li>
+<li>.addClass(“classvalue”); //给class设值–&gt;添加类名</li>
+<li>.addClass(“classname”).addClass(“类样式的名字”);</li>
+<li>.addClass(“classname classname”);</li>
 </ul>
 </li>
-<li>.removeClass(“类样式的名字”);//移除类名</li>
-<li>.toggleClass(“类样式的名字”);//切换类样式</li>
+<li>.removeClass(“classname”);//移除类名</li>
+<li>.toggleClass(“classname”);//切换类样式</li>
 <li>创建标签：</li>
-<li>$(“html标签”); //返回的是对象</li>
-<li>对象.html(“html标签”);//html()方法相当于DOM中的innerHTML</li>
+<li>$(“name”); //创建标签返回的是对象</li>
+<li>$(“selector”).html(“content”);//html()方法相当于DOM中的innerHTML</li>
 <li>将标签添加到页面指定元素内：</li>
 <li>.append();    //方法:父级元素.append(子级元素);注意:有可能发生剪切的效果</li>
 <li>.appendTo();  //方法:子级元素.appendTo(父级元素);</li>
@@ -1011,22 +1011,22 @@
 <li>.prev();      //获取的是当前元素的上一个兄弟元素</li>
 <li>.prevAll();   //获取的是当前元素的前面的所有的兄弟元素</li>
 <li></li>
-<li>.attr(“属性”,”值”);  //设置某个元素的自定义属性及值</li>
-<li>.attr(“属性”);       //获取该元素的这个自定义属性的值</li>
-<li>.removeAttr(“属性的名字”); //移除该属性和值</li>
-<li>.prop(“属性”,值);    //可以设置元素的选中的属性及值</li>
-<li>.prop(“属性”);       //获取该属性的值<br>注意:一般非选中的属性使用attr方法，否则建议使用.prop方法</li>
+<li>.attr(“attrname”,”attrvalue”);  //设置某个元素的自定义属性及值</li>
+<li>.attr(“attrname”);       //获取该元素的这个自定义属性的值</li>
+<li>.removeAttr(“attrname”); //移除该属性和值</li>
+<li>.prop(“attrname”,attrvalue);    //可以设置元素的选中的属性及值</li>
+<li>.prop(“attrname”);       //获取该属性的值<br>注意:一般非选中的属性使用attr方法，否则建议使用.prop方法</li>
 <li>.width();   //设置元素的宽</li>
 <li>.height();  //设置元素的高</li>
 <li>设置和获取元素left和top推荐使用.offset()方法：<ul>
-<li>.offset({“left”:值,”top”:值});  //设置</li>
+<li>.offset({“left”:value,”top”:value});  //设置</li>
 </ul>
 </li>
 <li>设置和获取元素的卷曲出去的距离left和top：<ul>
 <li>.scrollLeft()方法或者是.scrollTop()方法</li>
 </ul>
 </li>
-<li>$elements.each(function(i,item){遍历做事情});  遍历</li>
+<li>$elements.each(function(i,item){tudo});  //遍历数组做事情</li>
 </ul>
 <h3 id="jQuery-animate动画函数和其他动画效果"><a href="#jQuery-animate动画函数和其他动画效果" class="headerlink" title="jQuery animate动画函数和其他动画效果"></a>jQuery animate动画函数和其他动画效果</h3><ul>
 <li>.animate({style},speed,easing,callback);<ul>
@@ -1047,13 +1047,13 @@
 <li>fadeTo(); //设置在多长的时间把透明度降低或者设置为多少</li>
 </ul>
 <h2 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h2><h3 id="html5-新增选择器"><a href="#html5-新增选择器" class="headerlink" title="html5 新增选择器"></a>html5 新增选择器</h3><ul>
-<li>document.getElementsByClassName(‘类名’);  //类名选择器</li>
+<li>document.getElementsByClassName(‘ClassName’);  //类名选择器</li>
 <li>document.querySelector(‘selector’); //通过CSS选择器获取元素，符合匹配条件的第1个元素。</li>
 <li>document.querySelectorAll(‘selector’);  //通过CSS选择器获取元素，以伪数组形式存在</li>
-<li>Node.classList.add(‘类样式名字’);    //移除类样式</li>
-<li>Node.classList.remove(‘类样式名字’);  //移除类样式</li>
-<li>Node.classList.toggle(‘类样式名字’); //切换类样式，有则移除，无则添加</li>
-<li>Node.classList.contains(‘类样式名字’); //检测是否存在类样式</li>
+<li>Node.classList.add(‘ClassName’);    //移除类样式</li>
+<li>Node.classList.remove(‘ClassName’);  //移除类样式</li>
+<li>Node.classList.toggle(‘ClassName’); //切换类样式，有则移除，无则添加</li>
+<li>Node.classList.contains(‘ClassName’); //检测是否存在类样式</li>
 <li>自定义属性操作：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;p data-name-dec=&quot;小三&quot; data-sex=&quot;男&quot;&gt;这是p&lt;/p&gt;</div><div class="line">p.dataset---&gt;&#123;name:&quot;小三&quot;,sex:&quot;男&quot;&#125;</div><div class="line">获取：</div><div class="line">对象.dataset.name---&gt;该属性的值</div><div class="line">对象.dataset[&quot;name&quot;]---&gt;该属性的值</div><div class="line">设置:</div><div class="line">对象.dataset[&quot;name&quot;]=&quot;新的值&quot;;</div><div class="line">对象.dataset.name=&quot;新的值&quot;;</div><div class="line">注意:获取和设置的时候属性名字遵循驼峰命名法,最终在标签中才能形成如下形式:</div><div class="line">data-名字-名字-名字=&quot;值&quot;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -1069,9 +1069,9 @@
 <h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><ul>
 <li>li:first-child{color:red} 第一个：找到li父元素中的第一个li</li>
 <li>li:last-child{color:red}  最后一个：找到li父元素中最后一个li</li>
-<li>li:empty{做啥}      空选择器：如果li里面没有内容，则设置的样式才会生效</li>
-<li>li:target{做啥}     目标选择器：当跳转到当前目标时，样式才会生效</li>
-<li>li:not(.two){做啥}    排除选择器：排除类名为.two的li，剩下的li应用样式<br>li:before,        在li里面元素的前面设置伪类<br>li:after{       在li里面元素的后面设置伪类<br>content:””;  display:block;<br>}</li>
+<li>li:empty{to do}      空选择器：如果li里面没有内容，则设置的样式才会生效</li>
+<li>li:target{to do}     目标选择器：当跳转到当前目标时，样式才会生效</li>
+<li>li:not(.two){to do}    排除选择器：排除类名为.two的li，剩下的li应用样式<br>li:before,        在li里面元素的前面设置伪类<br>li:after{       在li里面元素的后面设置伪类<br>content:””;  display:block;<br>}</li>
 </ul>
 <h3 id="结构选择器"><a href="#结构选择器" class="headerlink" title="结构选择器"></a>结构选择器</h3><ul>
 <li>li:nth-child(n){color:red}  第几个：找到li父元素中第n个li</li>
