@@ -1,4 +1,4 @@
-(function (fb) {
+define(function (require, exports, module) {
   var Sky = function (ctx, skyImg, x, y) {
     this.ctx = ctx;
     //天空图片
@@ -18,5 +18,5 @@
       this.x += 2 * this.ctx.canvas.width;
     };
   };
-  fb.Sky = Sky;
-})(fb);
+  module.exports = Sky;
+});

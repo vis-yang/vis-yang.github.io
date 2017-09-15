@@ -1,4 +1,4 @@
-(function(fb){
+define(function (require, exports, module) {
   var Pipe = function (ctx, topImg, botImg, x) {
     this.ctx = ctx;
     this.topImg = topImg;
@@ -41,5 +41,5 @@
       this.initHeight();
     };
   };
-  fb.Pipe = Pipe;
-})(fb);
+  module.exports = Pipe;
+});

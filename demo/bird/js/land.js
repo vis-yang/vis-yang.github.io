@@ -1,4 +1,4 @@
-(function (fb) {
+define(function (require, exports, module) {
   var Land = function (ctx, landImg, x) {
     this.ctx = ctx;
     this.landImg = landImg;
@@ -14,5 +14,5 @@
       this.x += 4 * this.landImg.width;
     };
   };
-  fb.Land = Land;
-})(fb);
+  module.exports = Land;
+});

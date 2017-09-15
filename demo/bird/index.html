@@ -2,54 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>小鸟游戏</title>
     <style>
-        /*canvas{
-            border: 1px solid #ccc;
-            display: block;
-            margin: 0 auto;
-        }*/
-        * {
+    * {
         margin: 0;
         padding: 0;
-        }
-        /*html,body{
-        width: 100%;
-        height: 100%;
-        }
-        canvas{
+    }
+
+    canvas {
         display: block;
-        width: 100%;
-        height: 100%;
-        }*/
-        canvas{
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+        margin: 0 auto;
+    }
+</style>
 </head>
 <body>
-<!--
-模块化：amd  require.js    cmd   seajs
-amd 预加载
-cmd 按需加载
 
-js语句 -> 函数  -> 对象 -> 模块 ->  系统
--->
+    <canvas width="800" height="600"></canvas>
+    <!-- 引入 seajs  -->
+    <script src="lib/sea.js"></script>
+    <script>
+        seajs.use('./js/main.js')
+    </script>
 
-<canvas width="800" height="600"></canvas>
-
-<script src="js/fb.js"></script>
-<script src="js/sky.js"></script>
-<script src="js/pipe.js"></script>
-<script src="js/land.js"></script>
-<script src="js/birds.js"></script>
-<script src="js/score.js"></script>
-<script src="js/game.js"></script>
-<script>
-    var game = new fb.Game();
-    game.init();
-</script>
 </body>
 </html>
