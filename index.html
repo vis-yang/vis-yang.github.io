@@ -145,6 +145,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-node未整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/29/node未整理/">未整理</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/29/node未整理/" class="archive-article-date">
+  	<time datetime="2017-11-29T14:55:52.753Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">node原生</div><div class="line"><span class="keyword">const</span> cookie = querystring.parse(cookieStr, <span class="string">'; '</span>, <span class="string">'='</span>)</div><div class="line"></div><div class="line"> 向客户端写入Cookie</div><div class="line">   res.writeHeader(<span class="number">200</span>, &#123;</div><div class="line">     <span class="string">'Content-Type'</span>: <span class="string">'text/html; charset=utf-8'</span>,</div><div class="line">     <span class="string">'Set-Cookie'</span>: [<span class="string">'isvisit=yes'</span>, <span class="string">'hhh=ooo'</span>]</div><div class="line">   &#125;)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// 尝试从 请求头中获取 客户端 附带过来的 Cookie 数据</span></div><div class="line">    <span class="comment">// console.log(req.headers)</span></div><div class="line">    <span class="keyword">const</span> cookieStr = req.headers.cookie || <span class="string">''</span></div><div class="line">    <span class="comment">// isvisit=yes; hhh=ooo         如何把得到的 CookieStr解析成一个对象   querystring     id=10&amp;name=zs</span></div><div class="line">    <span class="keyword">const</span> cookie = querystring.parse(cookieStr, <span class="string">'; '</span>, <span class="string">'='</span>)</div><div class="line">    <span class="comment">// console.log(cookie)</span></div><div class="line"></div><div class="line">    moment模块</div><div class="line">    <span class="keyword">var</span> dtnowStr = moment(dt).format(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>)</div><div class="line"></div><div class="line">    template模块</div><div class="line">    <span class="keyword">var</span> htmlStr = template(__dirname + <span class="string">'/views/tmpl1.html'</span>, &#123; <span class="attr">name</span>: <span class="string">'zs'</span>, <span class="attr">country</span>: <span class="string">'美国'</span>, <span class="attr">age</span>: <span class="number">40</span> &#125;)</div><div class="line">    res.end(htmlStr)</div><div class="line"></div><div class="line">    path模块</div><div class="line">    fs.readdir(path.join(__dirname, <span class="string">'../'</span>), (err, filenames) =&gt; &#123;</div><div class="line">      <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'报错了！！！'</span>)</div><div class="line">      <span class="built_in">console</span>.log(filenames)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    ejs模块</div><div class="line">    app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>) </div><div class="line">    app.set(<span class="string">'views'</span>, <span class="string">'./views2'</span>)</div><div class="line"></div><div class="line">    <span class="comment">//app.use('虚拟路径',express.static('./入口文件同级的需要托管静态资源的物理路径'))</span></div><div class="line"></div><div class="line">    <span class="comment">// 2. 创建数据库的链接对象,connection连接</span></div><div class="line">    <span class="keyword">const</span> conn = mysql.createConnection(&#123;</div><div class="line">      host: <span class="string">'127.0.0.1'</span>,</div><div class="line">      user: <span class="string">'root'</span>,</div><div class="line">      database: <span class="string">'heima_35'</span></div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    select * <span class="keyword">from</span> heros where id=? and isdel=<span class="number">0</span></div><div class="line"></div><div class="line">    <span class="keyword">const</span> sqlStr = <span class="string">'insert into users set ?'</span></div><div class="line">    <span class="comment">//conn.query(sql语句，需要写入数据，成功回调)</span></div><div class="line">    conn.query(sqlStr,&#123;<span class="attr">name</span>:zs&#125;,(err,results)=&gt;&#123;</div><div class="line">        <span class="built_in">console</span>.log(results);</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    update heros set ? where id=?</div><div class="line"></div><div class="line">    <span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>)</div><div class="line">    app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</div><div class="line"></div><div class="line">    <span class="comment">// 通过安装 一个第三方模块 cors 来解决 跨域问题</span></div><div class="line">    <span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">'cors'</span>)</div><div class="line">    <span class="comment">// 为 express 服务器，启用 cors 中间件</span></div><div class="line">    dataServer.use(cors())</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/29/node未整理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-node总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -212,69 +275,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/29/node总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node相关api等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/28/node相关api等/">δ����</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/28/node相关api等/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:44:37.290Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">nodeԭ��</div><div class="line">const cookie = querystring.parse(cookieStr, &apos;; &apos;, &apos;=&apos;)</div><div class="line"></div><div class="line"> ��ͻ���д��Cookie</div><div class="line">   res.writeHeader(200, &#123;</div><div class="line">     &apos;Content-Type&apos;: &apos;text/html; charset=utf-8&apos;,</div><div class="line">     &apos;Set-Cookie&apos;: [&apos;isvisit=yes&apos;, &apos;hhh=ooo&apos;]</div><div class="line">   &#125;)</div><div class="line"></div><div class="line"></div><div class="line">    // ���Դ� ����ͷ�л�ȡ �ͻ��� ���������� Cookie ����</div><div class="line">    // console.log(req.headers)</div><div class="line">    const cookieStr = req.headers.cookie || &apos;&apos;</div><div class="line">    // isvisit=yes; hhh=ooo         ��ΰѵõ��� CookieStr������һ������   querystring     id=10&amp;name=zs</div><div class="line">    const cookie = querystring.parse(cookieStr, &apos;; &apos;, &apos;=&apos;)</div><div class="line">    // console.log(cookie)</div><div class="line"></div><div class="line">    momentģ��</div><div class="line">    var dtnowStr = moment(dt).format(&apos;YYYY-MM-DD HH:mm:ss&apos;)</div><div class="line"></div><div class="line">    templateģ��</div><div class="line">    var htmlStr = template(__dirname + &apos;/views/tmpl1.html&apos;, &#123; name: &apos;zs&apos;, country: &apos;����&apos;, age: 40 &#125;)</div><div class="line">    res.end(htmlStr)</div><div class="line"></div><div class="line">    pathģ��</div><div class="line">    fs.readdir(path.join(__dirname, &apos;../&apos;), (err, filenames) =&gt; &#123;</div><div class="line">      if (err) return console.log(&apos;�����ˣ�����&apos;)</div><div class="line">      console.log(filenames)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    ejsģ��</div><div class="line">    app.set(&apos;view engine&apos;, &apos;ejs&apos;) </div><div class="line">    app.set(&apos;views&apos;, &apos;./views2&apos;)</div><div class="line"></div><div class="line">    //app.use(&apos;����·��&apos;,express.static(&apos;./����ļ�ͬ������Ҫ�йܾ�̬��Դ������·��&apos;))</div><div class="line"></div><div class="line">    // 2. �������ݿ�����Ӷ���,connection����</div><div class="line">    const conn = mysql.createConnection(&#123;</div><div class="line">      host: &apos;127.0.0.1&apos;,</div><div class="line">      user: &apos;root&apos;,</div><div class="line">      database: &apos;heima_35&apos;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    select * from heros where id=? and isdel=0</div><div class="line"></div><div class="line">    const sqlStr = &apos;insert into users set ?&apos;</div><div class="line">    //conn.query(sql��䣬��Ҫд�����ݣ��ɹ��ص�)</div><div class="line">    conn.query(sqlStr,&#123;name:zs&#125;,(err,results)=&gt;&#123;</div><div class="line">        console.log(results);</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    update heros set ? where id=?</div><div class="line"></div><div class="line">    const bodyParser = require(&apos;body-parser&apos;)</div><div class="line">    app.use(bodyParser.urlencoded(&#123; extended: false &#125;))</div><div class="line"></div><div class="line">    // ͨ����װ һ��������ģ�� cors ����� ��������</div><div class="line">    const cors = require(&apos;cors&apos;)</div><div class="line">    // Ϊ express ������������ cors �м��</div><div class="line">    dataServer.use(cors())</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/28/node相关api等/">展开全文 >></a>
         </p>
       
 
