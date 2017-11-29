@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等 | VisYang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原生 js 相关js 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组 document.createElement(“nam">
+  <meta name="description" content="原生 js 相关DOM 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等">
 <meta property="og:url" content="http://yoursite.com/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/index.html">
 <meta property="og:site_name" content="VisYang">
-<meta property="og:description" content="原生 js 相关js 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组 document.createElement(“nam">
-<meta property="og:updated_time" content="2017-09-14T02:38:49.044Z">
+<meta property="og:description" content="原生 js 相关DOM 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组">
+<meta property="og:updated_time" content="2017-11-23T13:55:21.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等">
-<meta name="twitter:description" content="原生 js 相关js 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组 document.createElement(“nam">
+<meta name="twitter:description" content="原生 js 相关DOM 选择器 document.getElementById(“#id”); //id选择器 document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组 document.getElementsByName(“name”); //返回一个特定name值的伪数组">
   
     <link rel="alternative" href="/atom.xml" title="VisYang" type="application/atom+xml">
   
@@ -167,19 +167,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="原生-js-相关"><a href="#原生-js-相关" class="headerlink" title="原生 js 相关"></a>原生 js 相关</h2><h3 id="js-选择器"><a href="#js-选择器" class="headerlink" title="js 选择器"></a>js 选择器</h3><ul>
+        <h2 id="原生-js-相关"><a href="#原生-js-相关" class="headerlink" title="原生 js 相关"></a>原生 js 相关</h2><h3 id="DOM-选择器"><a href="#DOM-选择器" class="headerlink" title="DOM 选择器"></a>DOM 选择器</h3><ul>
 <li>document.getElementById(“#id”); //id选择器</li>
 <li>document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组</li>
-<li>document.getElementsByName(“name”); //返回一个特定name值的伪数组</li>
-<li>document.createElement(“name”); //在页面创建一个标签</li>
-<li>parent.appendChild(“ChildEle”);   //将元素添加到父级元素中</li>
+<li>document.getElementsByName(“name”); //返回一个特定name值的伪数组<a id="more"></a></li>
+<li>document.getElementsByClassName(‘name’)</li>
+<li>document.querySelector()</li>
+<li>document.querySelectorAll()</li>
 <li>element.parentNode;    //获取父级节点</li>
 <li>element.parentElement;   //获取父级元素</li>
 <li>element.childNodes;    //元素中所有子级节点</li>
 <li>element.children;    //元素中所有子级元素</li>
-<li>兼容问题element.firstChild;    //元素中第一个子级节点<br>兼容问题element.firstElementChild; //元素中所有子级元素<br>兼容问题element.lastChild;   //元素中最有一个子级节点<br>兼容问题element.lastEleemntChild;  //元素中最后一个子级元素<br>兼容问题element.previousSibling;   //元素的前一个兄弟节点<br>兼容问题element.previousEleemntSibling; //元素的前一个兄弟元素<br>兼容问题element.nextSibling;   //元素的后一个兄弟节点<br>兼容问题element.nextElementSibling;  //元素的后一个兄弟元素<br>兼容问题element.lastEleemntChild;  //获取某个元素中最后一个子元素</li>
+<li><p>兼容问题element.firstChild;    //元素中第一个子级节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">element</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(element.firstElementChild)&#123;</div><div class="line">    <span class="keyword">return</span> element.firstElementChild;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">var</span> node = element.firstChild;</div><div class="line">    <span class="keyword">while</span>(node &amp;&amp; node.nodeType != <span class="number">1</span>)&#123;</div><div class="line">      node = node.nextSibling;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> node;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>兼容问题element.firstElementChild; //元素中所有子级元素<br>兼容问题element.lastChild;   //元素中最有一个子级节点<br>兼容问题element.lastEleemntChild;  //元素中最后一个子级元素<br>兼容问题element.previousSibling;   //元素的前一个兄弟节点<br>兼容问题element.previousEleemntSibling; //元素的前一个兄弟元素<br>兼容问题element.nextSibling;   //元素的后一个兄弟节点<br>兼容问题element.nextElementSibling;  //元素的后一个兄弟元素<br>兼容问题element.lastEleemntChild;  //获取某个元素中最后一个子元素</p>
+</li>
 </ul>
-<h3 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h3><ul>
+<h3 id="DOM-方法-属性"><a href="#DOM-方法-属性" class="headerlink" title="DOM 方法/属性"></a>DOM 方法/属性</h3><ul>
+<li>document.createElement(“name”); //在页面创建一个标签</li>
+<li>parent.appendChild(“ChildEle”);   //将元素添加到父级元素中</li>
 <li>element.getAttribute(“attributename”);    //返回该属性的值</li>
 <li>element.setAttribute(“attributename”,attributevalue);  //设置自定义属性名和值</li>
 <li>element.removeAttribute(“attributename”); //移除特定属性名的属性</li>
@@ -188,24 +194,20 @@
 <li>element.nodeName;    //检测元素，如果是标签–&gt;(标签的名字,大写的),如果是属性–&gt;(属性的名字,小写的),如果是文本–&gt;(#text)</li>
 <li>element.nodeValue;   //检测元素，标签–&gt;null,属性–&gt;属性的值,文本–&gt;文本内容</li>
 <li>element.innerText=’’;    //修改元素的文本内容</li>
-<li></li>
-<li><ul>
 <li>var 克隆体名字 = element.cloneNode(true);  // 克隆某个元素包括其内的所有成员生成一个新的元素</li>
-</ul>
-</li>
-<li>创建元素的三种方式：<ul>
+<li><p>创建元素的三种方式：</p>
+<ul>
 <li>document.write();</li>
 <li>element.innerHTML=’’; //拼接字符串创建元素</li>
 <li>document.createElement(‘name’);//创建元素</li>
 </ul>
 </li>
-</ul>
-<h3 id="操作样式"><a href="#操作样式" class="headerlink" title="操作样式"></a>操作样式</h3><ul>
-<li>element.style.属性名=’属性值’;//注意属性名要用驼峰命名法</li>
+<li><p>element.style.属性名=’属性值’;//注意属性名要用驼峰命名法</p>
+</li>
 <li>element.offsetWidth;   //获取元素的宽(数字类型)有边框</li>
 <li>element.offsetHeight;  //获取元素的高(数字类型)有边框</li>
 <li>element.offsetLeft;    //获取元素距离左边位置的距离</li>
-<li><p>element.offsetTop ;    //获取元素距离右边位置的距离</p>
+<li><p>element.offsetTop ;    //获取元素距离上边位置的距离</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">如果父级元素脱离文档流,子级元素此时的offsetLeft获取的是相对父级元素的值</div><div class="line">如果父级元素没有脱离文档流,此时的子级元素的offsetLeft获取的是父级元素的margin+父级元素padding+父级元素的border+子级元素自己的margin</div><div class="line">如果元素自己脱离文档流,此时的offsetLeft:自己的left+自己的margin</div></pre></td></tr></table></figure>
 </li>
 <li><p>scrollWidth;         //元素内容实际的宽,没有边框,如果没有内容,是元素的宽</p>
@@ -482,11 +484,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/07/22/template 简单原理/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          artTemplate 简单实现原理
+          模板引擎 artTemplate 介绍 和 简单封装
         
       </div>
     </a>

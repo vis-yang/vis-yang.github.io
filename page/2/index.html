@@ -145,6 +145,333 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于代码风格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/08/关于代码风格/">关于代码风格</a>
+    </h1>
+  
+
+        
+        <a href="/2015/10/08/关于代码风格/" class="archive-article-date">
+  	<time datetime="2015-10-08T02:15:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  当你的代码中以 “(“, “[“, or “`” 开头时，请一定要在之前加上”;”以免出现问题！<br>  代码风格：</p>
+<ul>
+<li>无分号风格<br><a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="external">https://standardjs.com/readme-zhcn.html</a></li>
+<li>有分号风格<br><a href="https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md" target="_blank" rel="external">https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md</a><br>不用纠结，选择适合自己的规范的代码风格，当然，在团队协作时要以团队风格为准。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/10/08/关于代码风格/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-函数内部this指向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/20/函数内部this指向/">函数内部 this 指向 &amp; 改变指向的方法</a>
+    </h1>
+  
+
+        
+        <a href="/2015/09/20/函数内部this指向/" class="archive-article-date">
+  	<time datetime="2015-09-20T02:15:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
+</code></pre>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/09/20/函数内部this指向/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ajax 相关 和 使用简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/29/ajax 相关 和 使用简介/">ajax 相关 和 使用简介</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/29/ajax 相关 和 使用简介/" class="archive-article-date">
+  	<time datetime="2015-08-29T09:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="AJAX编程"><a href="#AJAX编程" class="headerlink" title="AJAX编程"></a>AJAX编程</h2><p>ajax:即 Asynchronous Javascript And XML，AJAX 不是一门的新的语言，而是对现有技术的综合利用。<br>本质是在HTTP协议的基础上以异步的方式与服务器进行通信。</p>
+<h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>异步:指某段程序执行时不会阻塞其它程序执行，其表现形式为程序的执行顺序不依赖程序本身的书写顺序，相反则为同步。<br>其优势在于不阻塞程序的执行，从而提升整体执行效率。<br>XMLHttpRequest可以以异步方式的处理程序。</p>
+<h4 id="XMLHttpRequest可以以异步方式的处理程序。"><a href="#XMLHttpRequest可以以异步方式的处理程序。" class="headerlink" title="XMLHttpRequest可以以异步方式的处理程序。"></a>XMLHttpRequest可以以异步方式的处理程序。</h4><p>XMLHttpRequest:浏览器内建对象，用于在后台与服务器通信(交换数据) ,<br>由此我们便可实现对网页的部分更新，而不是刷新整个页面。<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/29/ajax 相关 和 使用简介/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-模板引擎 artTemplate 介绍 和 简单封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/">模板引擎 artTemplate 介绍 和 简单封装</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" class="archive-article-date">
+  	<time datetime="2015-07-22T06:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="模版引擎"><a href="#模版引擎" class="headerlink" title="模版引擎"></a>模版引擎</h2><h3 id="artTemplate-简洁语法模板"><a href="#artTemplate-简洁语法模板" class="headerlink" title="artTemplate 简洁语法模板"></a>artTemplate 简洁语法模板</h3><p>下载(<a href="https://raw.github.com/aui/artTemplate/master/dist/template.js" target="_blank" rel="external">https://raw.github.com/aui/artTemplate/master/dist/template.js</a>)<br>引入<script src="template/template.js"></script><br>编写模版<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"test"</span> <span class="attr">type</span>=<span class="string">"text/html"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="javascript">    &#123;&#123;each list <span class="keyword">as</span> value i&#125;&#125;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>索引 &#123;&#123;i + 1&#125;&#125; ：&#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"><span class="undefined">    &#123;&#123;/each&#125;&#125;</span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>渲染数据<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123;</div><div class="line">    title: <span class="string">'标签'</span>,</div><div class="line">    list: [<span class="string">'文艺'</span>, <span class="string">'博客'</span>, <span class="string">'摄影'</span>, <span class="string">'电影'</span>, <span class="string">'民谣'</span>, <span class="string">'旅行'</span>, <span class="string">'吉他'</span>]</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> html = template(<span class="string">'test'</span>, data);</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'content'</span>).innerHTML = html;</div></pre></td></tr></table></figure></p>
+<p>简洁语法<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;if admin&#125;&#125;</div><div class="line">    &#123;&#123;include 'admin_content'&#125;&#125;</div><div class="line"></div><div class="line">    &#123;&#123;each list&#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;$index&#125;&#125;. &#123;&#123;$value.user&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    &#123;&#123;/each&#125;&#125;</div><div class="line">&#123;&#123;/if&#125;&#125;</div></pre></td></tr></table></figure></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/">原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等</a>
+    </h1>
+  
+
+        
+        <a href="/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/" class="archive-article-date">
+  	<time datetime="2015-06-15T08:24:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="原生-js-相关"><a href="#原生-js-相关" class="headerlink" title="原生 js 相关"></a>原生 js 相关</h2><h3 id="DOM-选择器"><a href="#DOM-选择器" class="headerlink" title="DOM 选择器"></a>DOM 选择器</h3><ul>
+<li>document.getElementById(“#id”); //id选择器</li>
+<li>document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组</li>
+<li>document.getElementsByName(“name”); //返回一个特定name值的伪数组
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-一些常用数组、字符串方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -166,79 +493,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><ul>
-<li><p>arr.join(‘separator’);  //将数组转换成字符串。separator可选–连接符,忽略以”,”连接</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">'-'</span>));<span class="comment">//1-2-3-4</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.reverse(null);  //数组翻转，返回值反转后的数组，原数组会发生改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.reverse());<span class="comment">// [4, 3, 2, 1]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">// [4, 3, 2, 1]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.sort(null);   //数组排序，返回值排序改变后的数组，同上（只按照每项的第一个数字比较）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">22</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.sort());<span class="comment">// [1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 22, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.concat(arrs/eles);    //连接数组或元素，返回连接后的新数组，原数组不会改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.concat(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//[1, 2, 3, 4, 1, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.concat([<span class="number">1</span>,<span class="number">2</span>]));<span class="comment">//[1, 2, 3, 4, 1, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.slice(start,end);  //截取数组，第一个参数表示截取开始的位置，  第二个参数表示截取结束之前位置（不包含结束位置），如果不写第二个参数默认截取到  最后，返回值是截取后的新数组，原数组不会发生改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.slice(<span class="number">1</span>));<span class="comment">//[2, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.slice(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//[2]</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.splice(start,length,addEles);  // 删除数组的方法（可以实现添加 删除 修改），第一个参数是开始删除的位置，第二个参数是删除元素的个数，第三个参数和之后的参数是需要添加的元素，添加到删除的位置，返回值是删除元素组成的一个 新数组，原数组会发生改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.splice(<span class="number">1</span>));<span class="comment">//[2, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.splice(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//[2, 3]</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">// [1, 4]</span></div><div class="line"><span class="keyword">var</span> arr3 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr3.splice(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>));<span class="comment">// [2, 3]</span></div><div class="line"><span class="built_in">console</span>.log(arr3);<span class="comment">//[1, 3, 4, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.push(eles);  //将一个或多个元素往数组的末尾添加进去，返回值是改变后的数组长度，原数组改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.push(<span class="number">1</span>));<span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4, 1]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.push(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//6</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1, 2, 3, 4, 1, 2]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.unshift(eles); //将一个或多个元素从数组的前面添加进去，同上</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unshift(<span class="number">1</span>));<span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 1, 2, 3, 4]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.unshift(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//6</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1, 2, 1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.pop(null);  //从数组后面删除一项，返回值是删除的那一项，原数组会发生改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.pop());<span class="comment">//4</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.shift(null);  //从数组前面删除一项，返回值是删除的那一项，原数组会发生改变</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.shift());<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[2, 3, 4]</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>arr.forEach(fucntion(item,i,array));//forEach()数组遍历方法，参数为回调函数，函数内参数1是数组遍历的当前项内容，参数2是对应索引，参数3是数组本身(参数3可不传)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">12</span>,<span class="number">34</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [];</div><div class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,i,array</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(item,i);</div><div class="line">  <span class="built_in">console</span>.log(array[i] == item)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//12 0//true//34 1//true</span></div></pre></td></tr></table></figure>
+<li>arr.join(‘separator’);  //将数组转换成字符串。separator可选–连接符,忽略以”,”连接<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">'-'</span>));<span class="comment">//1-2-3-4</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="字符串方法："><a href="#字符串方法：" class="headerlink" title="字符串方法："></a>字符串方法：</h2><ul>
-<li><p>str.charAt(index); //在字符串中根据下标去找对应的字符</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.charAt(<span class="number">1</span>));<span class="comment">//m</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.charCodeAt(index);  //根据下标找对应字符的字符编码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.charCodeAt(<span class="number">1</span>));<span class="comment">//109</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.indexOf(searchvalue,fromindex);//searchvalue(必须)必需。规定需检索的字符串值。fromindex可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">'s'</span>));<span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.lastIndexOf(searchvalue,fromindex);同上，从后往前找</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.lastIndexOf(<span class="string">'s'</span>));<span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.toUpperCase(null)将小写字符转换成大写</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.toUpperCase());<span class="comment">//IMSOHUNGRY</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.toLowerCase(null)将大写转换小写</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'IMSOHUNGRY'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.toUpperCase());<span class="comment">//IMSOHUNGRY</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//IMSOHUNGRY</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.slice(start，end（不包含结束位置）);//start(开始截取的位置)end(结束截取的位置，但不包含此位置)如果 start 比 end 大，那么该方法在提取子串之前会先交换这两个参数，如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">1</span>));<span class="comment">//msohungry</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'imnothungryatall'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.slice(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//m</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imnothungryatall</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.substring(start,end); //start(开始截取的位置)end(结束截取的位置，但不包含此位置)如果 start 比 end 大，那么该方法在提取子串之前会先交换这两个参数。 如果 start 或 end 为负数，那么它将被替换为 0。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">1</span>));<span class="comment">//msohungry</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'imnothungryatall'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.substring(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//m</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imnothungryatall</span></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'imnothungryatall'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.substring(<span class="number">-500</span>,<span class="number">2</span>));<span class="comment">//im</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imnothungryatall</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.substr(start,length);//start   必需。所需的子字符串的起始位置。字符串中的第一个字符的索引为 0。 length 可选。在返回的子字符串中应包括的字符个数。  如果 length 为 0 或负数，将返回一个空字符串。如果start为负数，则start=str.length+start。如果没有指定该参数，则子字符串将延续到str的最后</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">1</span>));<span class="comment">//msohungry</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//imsohungry</span></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.substr(<span class="number">4</span>,<span class="number">2</span>));<span class="comment">//hu</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imsohungry</span></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.substr(<span class="number">-4</span>,<span class="number">2</span>));<span class="comment">//ng</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imsohungry</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.split(separator);//将字符串转换成数组，将连接符separator变为”,”</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'im-so-hungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.split(<span class="string">'-'</span>));<span class="comment">//["im", "so", "hungry"]</span></div><div class="line"><span class="built_in">console</span>.log(str);<span class="comment">//im-so-hungry</span></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'imnothungryatall'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2.split(<span class="string">'a'</span>));<span class="comment">//["imnothungry", "t", "ll"]</span></div><div class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//imnothungryatall</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.trim(null); //去除字符串两端空格,返回改变的数组，不改变原数组</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'   new String   '</span>;</div><div class="line"><span class="built_in">console</span>.log(str.length);<span class="comment">//16</span></div><div class="line"><span class="built_in">console</span>.log(str.trim().length);<span class="comment">//10</span></div><div class="line"><span class="built_in">console</span>.log(str.length);<span class="comment">//16</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>str.replace(string/regexp,replacement);//替换文本或正则匹配项。参数1必需。规定子字符串或要替换的模式的 RegExp 对象。如果该值是一个字符串，则将它作为要检索的直接量文本模式，而不是首先被转换为 RegExp 对象。参数2必需。一个字符串值。规定了替换文本或生成替换文本的函数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'imsohungry'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.replace(<span class="string">'so'</span>,<span class="string">''</span>));<span class="comment">//imhungry</span></div><div class="line"><span class="built_in">console</span>.log(str.replace(<span class="regexp">/so/</span>,<span class="string">''</span>));<span class="comment">//imhungry</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
+        
       
 
       
@@ -280,19 +538,19 @@
 
 
   
-    <article id="post-get" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/get/">git 的安装与使用相关</a>
+      <a class="article-title" href="/2015/04/29/git/">git 的安装与使用相关</a>
     </h1>
   
 
         
-        <a href="/2015/04/29/get/" class="archive-article-date">
+        <a href="/2015/04/29/git/" class="archive-article-date">
   	<time datetime="2015-04-29T09:33:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-29</time>
 </a>
         
@@ -300,147 +558,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  首先，介绍Git–分布式版本控制系统工具，他的作用：<br>  1、方便团队开发过程中进行代码的合并<br>  2、能够保留所有的历史记录，方便随时回滚</p>
+        <p>  首先，介绍Git–分布式版本控制系统工具，他的作用：<br>  1、方便团队开发过程中进行代码的合并<br>  2、能够保留所有的历史记录，方便随时回滚<br>  下面来看看 git 的安装与使用</p>
 <h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><ul>
 <li>Window安装<br><a href="http://git-scm.com/download/win下载Git客户端软件，和普通软件安装方式一样。" target="_blank" rel="external">http://git-scm.com/download/win下载Git客户端软件，和普通软件安装方式一样。</a></li>
 <li>Linux安装<br>CentOS发行版：sudo yum install git<br>Ubuntu发行版：sudo apt-get install git</li>
 <li>Mac安装<br>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可。<br>Git管理文件的4种状态分别为:未追踪（untracked）、已提交（committed）、已修改（modified）和已暂存（staged）.<br>Git 项目的3个工作区域的概念：Git 仓库、工作目录以及暂存区域<br>Git仓库目录是Git用来保存项目的元数据和对象数据库的地方。 这是Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。<br>工作目录是对项目的某个版本独立提取出来的内容。这些从Git仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。<br>暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在Git仓库目录中。有时候也被称作“索引”（Index），不过一般说法还是叫暂存区域。</li>
 </ul>
 <ul>
-<li>基本的Git工作流程如下：<br>1、在工作目录中修改文件。<br>2、暂存文件，将文件的快照放入暂存区域。<br>3、提交文件，找到暂存区域的文件，将快照永久性存储到Git仓库目录。</li>
-</ul>
-<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><p>命令行方式：任意目录（建议开发根目录）右键 &gt; Git Bash Here</p>
-<h3 id="命令行常用命令："><a href="#命令行常用命令：" class="headerlink" title="命令行常用命令："></a>命令行常用命令：</h3><ul>
-<li>pwd (Print Working Directory) 查看当前目录</li>
-<li>cd (Change Directory) 切换目录，如 cd /etc</li>
-<li>ls (List) 查看当前目录下内容，如 ls -al</li>
-<li>mkdir (Make Directory) 创建目录，如 mkdir blog</li>
-<li>touch 创建文件，如 touch index.html</li>
-<li>cat 查看文件全部内容，如 cat index.html</li>
-<li>less 查看文件，如more /etc/passwd、less /etc/passwd</li>
-<li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li>
-<li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li>
-<li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li>
-<li>cp (copy) 复制文件，cp index.html ./demo/index.html</li>
-<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
-<li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
-<li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
-<li>grep 匹配内容，一般结合管道符使用</li>
-</ul>
-<h3 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h3><blockquote>
-<p>linux操作系统标配，相当于windows下的记事本。</p>
-</blockquote>
-<h4 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h4><blockquote>
-<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。<br><img src="/imgs/git1.jpg" alt=""></p>
-<h4 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h4><ul>
-<li>a) 打开/创建文件， vi 文件路径</li>
-<li>b) 底行模式 :w保存，:w filenme另存为</li>
-<li>c) 底行模式 :q退出</li>
-<li>d) 底行模式 :wq保存并退出</li>
-<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
-<li>f) 底行模式 :q! 不保存强制退出</li>
-<li>g) 底行模式 :set nu 设置行号</li>
-<li>h) 命令模式 ZZ（大写）保存并退出</li>
-<li>i) 命令模式 u辙销操作，可多次使用</li>
-<li>j) 命令模式 dd删除当前行</li>
-<li>k) 命令模式 yy复制当前行</li>
-<li>l) 命令模式 p 粘贴内容</li>
-<li>m) 命令模式 ctrl+f向前翻页</li>
-<li>n) 命令模式 ctrl+b向后翻页</li>
-<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
-<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
-<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
-<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
-<li>s) 命令模式 O进入编辑模式，当前行上面插入新行<h3 id="新项目："><a href="#新项目：" class="headerlink" title="新项目："></a>新项目：</h3><ul>
-<li>1、配置用户<br>git config –global user.name “自已的名字”<br>git config –global user.email “自已的邮箱地址”<br>–global 配置当前用户所有仓库<br>注：配置用户只需要执行1次，可以重复使用。</li>
-<li>2、初始化仓库<br>我们如果想要利用git进行版本控制，需要将现有项目初始化为一个仓库，或者将一个已有的使用git进行版本控制的仓库克隆到本地。<br>git init<br>git init会在当前项目目录中创建一个名为.git的隐藏目录，这个目录包含了暂存区和仓库两个区域，有了这个隐藏目录就可以使用git来管理项目了，通过ls  -al 可以查看。</li>
-<li>3、查看文件状态<br>通过git status可以检测当前仓库文件的状态（未追踪untracked）。<br>注：git会忽略空的目录</li>
-<li>4、添加文件到暂存区<br>假设经过一段时间的开发后，需要把已开发的部分暂存起来等待提交，使用git add 添加到暂存区。<br>git add 文件名/ 文件路径 “*”或-A代表所有<br>通过git status再次查看文件状态，放到暂存区的文件被标记成了绿色，等待提交。<br>注：颜色是工具给添加的，目的是增加可读性并不是git统一的。</li>
-<li>5、撤销更改<br>继续我们的开发，再次git status可以再次查看仓库状态</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<p>被标记了红色，说明index.html被再次修改了。<br>又经过一段时间后发现新开发的部分有Bug，想要回到之前状态，可以使用git checkout 文件名，将上次暂存的文件还原到工作区。</p>
-<ul>
-<li>6、提交文件<br>经过一个相对较长阶段开发或者一个功能开发完成了，就可以提交到本地仓库了，永久保存了。</li>
-</ul>
-<ul>
-<li>git commit -m ‘备注信息’<br>将暂存区被标记成绿色的文件，全部提交到本地仓库存储。</li>
-<li>git log<br>查看所有提交快照</li>
-</ul>
-<h3 id="已有项目："><a href="#已有项目：" class="headerlink" title="已有项目："></a>已有项目：</h3><ul>
-<li>git log<br>查看所有的提交快照</li>
-</ul>
-<ul>
-<li>回滚操作：</li>
-</ul>
-<ul>
-<li>git reset<br>–hard 回滚本地仓库的快照，使用本地仓库的快照覆盖暂存区；使用本地仓库的快照覆盖工作目录<br>–soft 只回滚本地仓库的快照<br>–mixed(默认) 回滚本地仓库的快照并且覆盖暂存区，但是不覆盖工作目录</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">HEAD表示本地仓库的最新快照</div><div class="line">^表示上一次快照</div><div class="line"></div><div class="line">回滚最后一次提交（取消最后一次提交）</div><div class="line">git reset --hard HEAD^  等价于  git reset --hard 倒数第二个commitID</div></pre></td></tr></table></figure>
-<ul>
-<li>git add 的逆操作：</li>
-</ul>
-<ul>
-<li>git reset –mixed HEAD<br>本地仓库不变，将本地仓库覆盖暂存区，但不覆盖工作目录</li>
-<li>git reset –hard HEAD<br>本地仓库不变，将本地仓库覆盖暂存区，使用本地仓库的快照覆盖工作目录</li>
-<li>git reset soft HEAD<br>本地仓库不变，将本地仓库覆盖暂存区，但不覆盖工作目录</li>
-<li>git rm –cached 文件列表<br>移除暂存区指定文件</li>
-</ul>
-<ul>
-<li>回滚所有的修改操作（用暂存区覆盖工作目录）</li>
-</ul>
-<ul>
-<li>git checkout 文件列表</li>
-<li>git checkout .</li>
-</ul>
-<ul>
-<li>分支</li>
-</ul>
-<ul>
-<li><p>查看分支<br>git branch</p>
-</li>
-<li><p>创建分支<br>git branch 分支名称</p>
-</li>
-<li><p>切换分支<br>git checkout 分支名称</p>
-</li>
-<li><p>创建并切换分支<br>git checkout -b 分支名称</p>
-</li>
-<li><p>合并分支<br>git merge 分支名称（来源分支）</p>
-</li>
-<li><p>删除分支<br>git branch -d 分支名称（分支必须被合并过之后才能删除，否则删不掉）<br>git branch -D 分支名称（强制删除分支）</p>
-</li>
-</ul>
-<ul>
-<li>获取远程仓库代码</li>
-</ul>
-<ul>
-<li>第一次获取代码一般使用如下命令：<br>git clone 远程仓库的地址 项目名称（可选的）</li>
-</ul>
-<ul>
-<li>远程仓库操作</li>
-</ul>
-<ul>
-<li><p>上传代码<br>git push 远程仓库的地址 本地分支名称:远程分支的名称<br>git push 远程仓库的地址 本地分支名称</p>
-</li>
-<li><p>下载代码<br>git pull 远程仓库的地址 远程分支的名称:本地分支的名称<br>git pull 远程仓库的地址 远程分支的名称</p>
-</li>
-<li><p>保存当前状态<br> git stash</p>
-</li>
-<li>恢复当前状态<br> git stash pop<br>相关资料 <a href="http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx" target="_blank" rel="external">http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx</a></li>
-</ul>
-<h2 id="github-git事例"><a href="#github-git事例" class="headerlink" title="github git事例"></a>github git事例</h2><ul>
-<li>1、创建 github 账号 <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>2、创建仓库</li>
-<li>3、上传 ssh 密匙<ul>
-<li>创建本地密匙<br>Git Bash Here 中键入 ssh-keygen</li>
-<li>根据提示找到密匙文件 id_rsa.pub 复制内部代码</li>
-<li>找到github –&gt; settings –&gt; SSH and GPG keys –&gt; New SSH key 将代码复制到 key 中点击 Add SSH key<br>之后就可以在本地进行代码推送、下载到 github 仓库的操作了</li>
-</ul>
-</li>
-</ul>
-
+<li>基本的Git工作流程如下：<br>1、在工作目录中修改文件。<br>2、暂存文件，将文件的快照放入暂存区域。<br>3、提交文件，找到暂存区域的文件，将快照永久性存储到Git仓库目录。
+        
       
 
       
@@ -452,7 +578,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2015/04/29/get/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/29/git/">展开全文 >></a>
         </p>
       
 
@@ -507,24 +633,7 @@
 <p>安装完成后，可以确认机器上是否有 node 环境：</p>
 <p>打开 cmd：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入 node -v</div><div class="line">返回一个版本号，则安装成功</div></pre></td></tr></table></figure>
-<h2 id="2-安装-git"><a href="#2-安装-git" class="headerlink" title="2. 安装 git"></a>2. 安装 git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://git-for-windows.github.io/</div><div class="line">下载安装</div></pre></td></tr></table></figure>
-<h2 id="3-安装-hexo"><a href="#3-安装-hexo" class="headerlink" title="3. 安装 hexo"></a>3. 安装 hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">命令窗口键入：</div><div class="line">npm install hexo-cli --global</div><div class="line"></div><div class="line">接下来可以通过 `hexo --version` 命令查看是否安装成功：</div></pre></td></tr></table></figure>
-<h2 id="4-生成博客"><a href="#4-生成博客" class="headerlink" title="4. 生成博客"></a>4. 生成博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">键入：hexo init 博客目录名称</div><div class="line"><span class="comment"># hexo 会帮你在执行该命名所处的目录生成一个指定名称的目录文件</span></div></pre></td></tr></table></figure>
-<h2 id="5-启动预览博客"><a href="#5-启动预览博客" class="headerlink" title="5. 启动预览博客"></a>5. 启动预览博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">在你创建的目录下按住<span class="built_in">shift</span>点击右键运行命令窗口</div><div class="line">键入命令   hexo server</div><div class="line">可在本地预览博客 http://localhost:4000/</div></pre></td></tr></table></figure>
-<h2 id="6-注册-github-账号"><a href="#6-注册-github-账号" class="headerlink" title="6. 注册 github 账号"></a>6. 注册 github 账号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- https://github.com/</div><div class="line">- 注册页面：https://github.com/join</div><div class="line">- 填入用户名、密码、邮箱</div><div class="line">- 然后在自己的邮箱中收取邮件激活验证</div></pre></td></tr></table></figure>
-<h2 id="7-创建一个具名的仓库"><a href="#7-创建一个具名的仓库" class="headerlink" title="7. 创建一个具名的仓库"></a>7. 创建一个具名的仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">到这里一定要确保你的邮箱经过验证了。</div><div class="line"></div><div class="line">点击右上角的：+ 选择 -&gt; New repository 创建一个仓库</div><div class="line"></div><div class="line">起名：注册github时候的用户名.github.io</div><div class="line">得到你的仓库地址  例如：  https://github.com/vis-yang/vis-yang.github.io.git</div></pre></td></tr></table></figure>
-<h2 id="8-把博客发布托管到-github-上"><a href="#8-把博客发布托管到-github-上" class="headerlink" title="8. 把博客发布托管到 github 上"></a>8. 把博客发布托管到 github 上</h2><p>本地操作准备：<br>在 <code>_config.yml</code> 文件最后 加入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">以我的为例，我的仓库地址是https://github.com/vis-yang/vis-yang.github.io.git，则</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://你的用户名:你的密码@github.com/vis-yang/vis-yang.github.io.git</div></pre></td></tr></table></figure>
-<p>然后安装一个用来快速发布的工具：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>然后：在所在目录执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hexo deploy --generate</div><div class="line">同步更新到博客</div></pre></td></tr></table></figure>
-<p>推送成功之后，来到线上github仓库，找到  Pages -&gt; 开启服务</p>
-<p>然后他会告诉你访问地址，以后访问这个地址就可以了。</p>
-<p>接下来你只需要在你写完文章，每次发布的时候敲一个命令就会同步到博客：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在根目录命令窗口键入：hexo new 文章名称    来创建一篇新文章</div><div class="line">在你创建的本地仓库中的 <span class="built_in">source</span> -&gt; _posts 内就有你创建的文章md文件了，选择编译</div><div class="line">编译完成后在根目录命令窗口键入：</div><div class="line">Hexo deploy --generate</div><div class="line">就会同步到你的博客了</div></pre></td></tr></table></figure>
-<p>到此为止我们的个人博客就搭建成功了</p>
-
+        
       
 
       

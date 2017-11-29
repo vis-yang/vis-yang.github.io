@@ -6,18 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>函数内部 this 指向 &amp; 改变指向的方法 | VisYang</title>
+  <title>Archives: 2016/8 | VisYang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="函数内部 this 指向 &amp; 改变指向的方法">
-<meta property="og:url" content="http://yoursite.com/2015/09/20/函数内部this指向/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="VisYang">
+<meta property="og:url" content="http://yoursite.com/archives/2016/08/index.html">
 <meta property="og:site_name" content="VisYang">
-<meta property="og:description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。">
-<meta property="og:updated_time" content="2017-10-08T04:38:11.205Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="函数内部 this 指向 &amp; 改变指向的方法">
-<meta name="twitter:description" content="this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。">
+<meta name="twitter:title" content="VisYang">
   
     <link rel="alternative" href="/atom.xml" title="VisYang" type="application/atom+xml">
   
@@ -147,181 +143,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-函数内部this指向" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      函数内部 this 指向 &amp; 改变指向的方法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/08/15/跨域解决方案 和 jQuery ajax 简单封装/" class="archive-article-date">
+  	<time datetime="2016-08-15T06:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-15</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/08/15/跨域解决方案 和 jQuery ajax 简单封装/">跨域解决方案 和 jQuery ajax 简单封装</a>
     </h1>
   
 
-        
-        <a href="/2015/09/20/函数内部this指向/" class="archive-article-date">
-  	<time datetime="2015-09-20T02:15:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
-</code></pre><a id="more"></a>
-<h3 id="事件处理函数内部的-this"><a href="#事件处理函数内部的-this" class="headerlink" title="事件处理函数内部的 this"></a>事件处理函数内部的 this</h3><p>  事件处理函数内部 this 指向 事件源 DOM 对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</div><div class="line"><span class="comment">//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象</span></div><div class="line">lis.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">li</span>) </span>&#123;</div><div class="line">  li.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);        <span class="comment">// 事件源 DOM 对象</span></div><div class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line"></div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>, that); <span class="comment">// this--Window</span></div><div class="line">    &#125;, <span class="number">1000</span>);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h3 id="定时器函数内部的-this-amp-普通函数内部的-this"><a href="#定时器函数内部的-this-amp-普通函数内部的-this" class="headerlink" title="定时器函数内部的 this &amp; 普通函数内部的 this"></a>定时器函数内部的 this &amp; 普通函数内部的 this</h3><p>  定时器函数内部 this 指向 window<br>  普通函数内部 this 指向 window<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定时器函数内部的 this 都是 window</span></div><div class="line"> setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>);   <span class="comment">//window</span></div><div class="line"> &#125;, <span class="number">1000</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 如果在函数内部调用一个普通函数，该函数内部的 this 指向的是 window</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// 指向 window</span></div><div class="line">  <span class="keyword">var</span> handle = <span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// window</span></div><div class="line">  &#125;;</div><div class="line">  </div><div class="line">  <span class="comment">// 数组遍历方法内部的 this 都指向 window</span></div><div class="line">  ;[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].forEach(handle);</div><div class="line">&#125;;</div><div class="line">fn();</div></pre></td></tr></table></figure></p>
-<h3 id="构造函数中-this"><a href="#构造函数中-this" class="headerlink" title="构造函数中 this"></a>构造函数中 this</h3><p>  构造函数中 this 指向实例对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"> fn.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line"> &#125;;</div><div class="line"></div><div class="line"> <span class="comment">//谁来点儿这个 sayHello 则内部 this 就指向谁</span></div><div class="line"> fn.prototype.sayHello(); <span class="comment">//指向原形对象</span></div><div class="line"></div><div class="line"> <span class="keyword">var</span> instance = <span class="keyword">new</span> fn();</div><div class="line"> instance.sayHello();     <span class="comment">// 指向实例对象</span></div></pre></td></tr></table></figure></p>
-<h3 id="对象中函数-this"><a href="#对象中函数-this" class="headerlink" title="对象中函数 this"></a>对象中函数 this</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">var</span> obj = &#123;</div><div class="line">    foo: <span class="string">'hello'</span>,</div><div class="line">    sayFoo: fn,</div><div class="line">    sub: &#123;</div><div class="line">      foo: <span class="string">'world'</span>,</div><div class="line">      sayFoo: fn</div><div class="line">    &#125;;</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="comment">// 指向 obj 自己</span></div><div class="line">  obj.sayFoo();</div><div class="line"></div><div class="line">  <span class="comment">// 这里指向的 sub 谁来点儿 sayFoo 则 this 就指向谁</span></div><div class="line">  obj.sub.sayFoo();</div><div class="line"></div><div class="line">  fn(); <span class="comment">//window</span></div><div class="line">  <span class="keyword">new</span> fn(); <span class="comment">//实例对象</span></div><div class="line">  <span class="comment">// 对象.fn() 谁来点儿就指向谁</span></div></pre></td></tr></table></figure>
-<h2 id="当然，还有其他情况可以改变函数内部-this-指向–-gt-函数的call、apply、bind方法"><a href="#当然，还有其他情况可以改变函数内部-this-指向–-gt-函数的call、apply、bind方法" class="headerlink" title="当然，还有其他情况可以改变函数内部 this 指向–&gt;函数的call、apply、bind方法"></a>当然，还有其他情况可以改变函数内部 this 指向–&gt;函数的call、apply、bind方法</h2><h3 id="函数的call方法"><a href="#函数的call方法" class="headerlink" title="函数的call方法"></a>函数的call方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> obj=&#123;<span class="attr">foo</span>:<span class="string">'bar'</span>&#125;;</div><div class="line">fn.call(<span class="keyword">this</span>); <span class="comment">//window</span></div><div class="line"><span class="comment">//函数的call方法可以改变内部this指向然后调用该函数</span></div><div class="line">fn.call(obj);  <span class="comment">//obj=&#123;foo:'bar'&#125; </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  fn.call(<span class="keyword">this</span>);</div><div class="line">&#125;;</div><div class="line">Person();  <span class="comment">//window</span></div><div class="line"><span class="keyword">new</span> Person();  <span class="comment">//Person实例对象</span></div><div class="line"></div><div class="line"><span class="comment">//借用数组方法</span></div><div class="line"><span class="comment">//把伪数组转为数组：</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</div><div class="line">  <span class="keyword">var</span> args=[].slice.call(<span class="built_in">arguments</span>,<span class="number">0</span>); <span class="comment">//借用数组的slice方法</span></div><div class="line">  args.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;  </div><div class="line">    <span class="built_in">console</span>.log(item,index);</div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line">fn(<span class="number">21</span>,<span class="number">41</span>,<span class="number">56</span>,<span class="number">62</span>,<span class="number">2</span>,<span class="number">5</span>);</div></pre></td></tr></table></figure>
-<h3 id="函数的apply方法"><a href="#函数的apply方法" class="headerlink" title="函数的apply方法"></a>函数的apply方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apply方法和call方法作用一样，区别在于call传入的参数是单个元素，而apply传入的参数是一个数组。</div></pre></td></tr></table></figure>
-<h3 id="函数的bind方法"><a href="#函数的bind方法" class="headerlink" title="函数的bind方法"></a>函数的bind方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//bind也是用来改变函数内部this的指向，但是它不调用，而是返回一个指定了this环境的新函数。</span></div><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">foo</span>:<span class="string">'bar'</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">x,y,z</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>,x,y,z);</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> newFn=fn.bind(obj,<span class="number">1</span>);</div><div class="line">newFn(<span class="number">4</span>,<span class="number">5</span>);</div><div class="line"><span class="comment">//bind 可以传参数但是不调用，得到bind之后的新函数在调用的时候也可以传参数</span></div><div class="line"><span class="comment">//当你在调用通过bind得到的新函数的时候，实际上会把你在bind时传递的参数和你调用的新函数传递的参数合并，然后作为函数的参数</span></div></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃红烧肉<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/zfbewm.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wxewm.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/09/20/函数内部this指向/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2015/10/08/关于代码风格/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于代码风格
-        
-      </div>
-    </a>
   
   
-    <a href="/2015/08/29/ajax 相关 和 使用简介/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ajax 相关 和 使用简介</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -344,8 +208,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
