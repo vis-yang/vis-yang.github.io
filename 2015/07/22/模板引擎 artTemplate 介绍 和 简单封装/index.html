@@ -100,6 +100,12 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = artTemplate>artTemplate</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
                 <span class="post-intro-time">2015/07/22</span>
@@ -176,7 +182,6 @@
         <h2 id="模版引擎"><a href="#模版引擎" class="headerlink" title="模版引擎"></a>模版引擎</h2><h3 id="artTemplate-简洁语法模板"><a href="#artTemplate-简洁语法模板" class="headerlink" title="artTemplate 简洁语法模板"></a>artTemplate 简洁语法模板</h3><p>下载(<a href="https://raw.github.com/aui/artTemplate/master/dist/template.js" target="_blank" rel="external">https://raw.github.com/aui/artTemplate/master/dist/template.js</a>)<br>引入<script src="template/template.js"></script><br>编写模版<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"test"</span> <span class="attr">type</span>=<span class="string">"text/html"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="javascript">    &#123;&#123;each list <span class="keyword">as</span> value i&#125;&#125;</span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>索引 &#123;&#123;i + 1&#125;&#125; ：&#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"><span class="undefined">    &#123;&#123;/each&#125;&#125;</span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>渲染数据<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123;</div><div class="line">    title: <span class="string">'标签'</span>,</div><div class="line">    list: [<span class="string">'文艺'</span>, <span class="string">'博客'</span>, <span class="string">'摄影'</span>, <span class="string">'电影'</span>, <span class="string">'民谣'</span>, <span class="string">'旅行'</span>, <span class="string">'吉他'</span>]</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> html = template(<span class="string">'test'</span>, data);</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'content'</span>).innerHTML = html;</div></pre></td></tr></table></figure></p>
 <p>简洁语法<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;if admin&#125;&#125;</div><div class="line">    &#123;&#123;include 'admin_content'&#125;&#125;</div><div class="line"></div><div class="line">    &#123;&#123;each list&#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;$index&#125;&#125;. &#123;&#123;$value.user&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    &#123;&#123;/each&#125;&#125;</div><div class="line">&#123;&#123;/if&#125;&#125;</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <h3 id="artTemplate-原生-js-模板语法"><a href="#artTemplate-原生-js-模板语法" class="headerlink" title="artTemplate 原生 js 模板语法"></a>artTemplate 原生 js 模板语法</h3><p>下载(<a href="https://raw.github.com/aui/artTemplate/master/dist/template-native.js" target="_blank" rel="external">https://raw.github.com/aui/artTemplate/master/dist/template-native.js</a>)<br>引入<script src="template/template-native.js"></script><br>表达式<br>&lt;% 与 %&gt; 符号包裹起来的语句则为模板的逻辑表达式。<br>输出表达式<br>对内容编码输出：<br>&lt;%=content%&gt;<br>不编码输出：<br>&lt;%=#content%&gt;<br>编码可以防止数据中含有 HTML 字符串，避免引起 XSS 攻击。</p>
 <p>支持使用 js 原生语法<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">%=title%</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span>  </div><div class="line">    &lt;%for(i = 0; i &lt; list.length; i ++) &#123;%&gt;      </div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>条目内容 <span class="tag">&lt;<span class="name">%=i</span> + <span class="attr">1</span>%&gt;</span> ：<span class="tag">&lt;<span class="name">%=list[i]%</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%&#125;%</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h2 id="模拟封装-artTemplate"><a href="#模拟封装-artTemplate" class="headerlink" title="模拟封装 artTemplate"></a>模拟封装 artTemplate</h2><h3 id="artTemplate-原生语法封装"><a href="#artTemplate-原生语法封装" class="headerlink" title="artTemplate 原生语法封装"></a>artTemplate 原生语法封装</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/myTemplate"</span> <span class="attr">id</span>=<span class="string">"myTemplate"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    &lt;p&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=name1%</span>&gt;</span><span class="tag">&lt;<span class="name">%=name2%</span>&gt;</span><span class="tag">&lt;<span class="name">%=name3%</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="comment">//模拟一个从服务器端响应回来的数据  </span></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> data = &#123;</span></div><div class="line"><span class="javascript">        haha: <span class="string">"哈哈"</span>,</span></div><div class="line"><span class="javascript">        hehe: <span class="string">"呵呵"</span>,</span></div><div class="line"><span class="javascript">        heihei: <span class="string">'嘿嘿'</span></span></div><div class="line"><span class="undefined">    &#125;;</span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span></div><div class="line"><span class="javascript">    <span class="comment">//在template第一个参数代表的是模板ID ，第二个参数代表的是数据</span></span></div><div class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">mytemplate</span>(<span class="params">templateid, data</span>) </span>&#123;</span></div><div class="line"><span class="javascript">        <span class="comment">//拿到模板</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> templateTpl = <span class="built_in">document</span>.querySelector(<span class="string">'#'</span> + templateid);</span></div><div class="line"><span class="javascript">        <span class="comment">//拿到模板内容</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> strTpl = templateTpl.innerHTML;</span></div><div class="line"><span class="javascript">        <span class="comment">//利用正则验证模板是否匹配</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> reg = <span class="regexp">/&lt;%=\s*([^%&gt;]+\S)\s*%&gt;/</span>;</span></div><div class="line"><span class="undefined">        /**</span></div><div class="line"><span class="undefined">         reg.exec() 方法</span></div><div class="line"><span class="undefined">         功能:用正则调用,通过该方法查找匹配的内容</span></div><div class="line"><span class="undefined">         参数:字符串</span></div><div class="line"><span class="javascript">         返回值: 返回结果数组,找不到就会返回<span class="literal">null</span></span></div><div class="line"><span class="undefined">         */</span></div><div class="line"><span class="javascript">         <span class="comment">//拿到匹配项</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> result = reg.exec(strTpl);</span></div><div class="line"><span class="javascript">        <span class="comment">//当模板中有匹配项存在时，循环执行替换，不存在则中断</span></span></div><div class="line"><span class="javascript">        <span class="keyword">while</span> (result = reg.exec(strTpl)) &#123;</span></div><div class="line"><span class="javascript">            <span class="comment">//拿到匹配项的模板字符串</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> resultstr = result[<span class="number">0</span>];<span class="comment">//&lt;%=name%&gt;</span></span></div><div class="line"><span class="javascript">            <span class="comment">//拿到匹配项需要修改的目标</span></span></div><div class="line"><span class="javascript">            <span class="keyword">var</span> resultWord = result[<span class="number">1</span>];<span class="comment">//name</span></span></div><div class="line"><span class="javascript">            <span class="comment">//用数据替换掉该处模板</span></span></div><div class="line"><span class="undefined">            strTpl = strTpl.replace(resultstr, data[resultWord]);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="javascript">        <span class="comment">//返回结果</span></span></div><div class="line"><span class="javascript">        <span class="keyword">return</span> strTpl;</span></div><div class="line"><span class="undefined">    &#125;;</span></div><div class="line"><span class="javascript">    <span class="comment">//将其写入到网页中</span></span></div><div class="line"><span class="javascript">    div.innerHTML = mytemplate(<span class="string">'myTemplate'</span>, data);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -547,6 +552,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -619,29 +629,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -665,6 +652,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

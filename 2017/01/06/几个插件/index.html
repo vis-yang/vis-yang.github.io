@@ -100,6 +100,14 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 插件>插件</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 表单>表单</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
                 <span class="post-intro-time">2017/01/06</span>
@@ -184,7 +192,6 @@
 <li>jcrop (图片裁切插件(基于jQuery))</li>
 <li>echarts(图表插件)</li>
 </ul>
-<a id="more"></a>
 <h3 id="bootstrap-datepicker-时间插件"><a href="#bootstrap-datepicker-时间插件" class="headerlink" title="bootstrap-datepicker(时间插件)"></a>bootstrap-datepicker(时间插件)</h3><p><a href="http://bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank" rel="external">http://bootstrap-datepicker.readthedocs.io/en/latest/</a>  官网<br>  引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/boostrap-datepicker.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/boostrap-datepicker.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/boostrap-datepicker.zh-CN.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>  使用方式：<br>  1、直接使用(更多api请看官方文档)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- data-provide='detepicker' 自定义属性实现选择日期效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-language='zh-CN' 自定义属性实现修改语言效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-format='yyyy-mm-dd' 自定义属性实现选择日期后显示格式效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-end-date='0d' 自定义属性设置截止可选择日期，0d代表最多选到今天,当然可以可以1d，2d，-1d等--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">data-provide</span>=<span class="string">'detepicker'</span> <span class="attr">data-date-language</span>=<span class="string">'zh-CN'</span> <span class="attr">data-date-format</span>=<span class="string">'yyyy-mm-dd'</span> <span class="attr">data-date-end-date</span>=<span class="string">'0d'</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>  2、JS控制<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"datepicker"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  $(<span class="string">'#datepicker'</span>).datepicker(&#123;</span></div><div class="line"><span class="javascript">    language=<span class="string">'zh-CN'</span>,</span></div><div class="line"><span class="javascript">    format=<span class="string">'yyyy-mm-dd'</span></span></div><div class="line"><span class="undefined">  &#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -227,7 +234,7 @@
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2017/11/29/node总结/" title= node总结 >
+                <a href= "/2017/03/21/node总结/" title= node总结 >
                     <span>Next Post</span>
                     <span>node总结</span>
                 </a>
@@ -587,6 +594,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -659,29 +671,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -705,6 +694,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

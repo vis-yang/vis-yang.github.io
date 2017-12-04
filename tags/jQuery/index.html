@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        node总结 · VisYang&#39;s Studio
+        VisYang&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -50,22 +50,11 @@
     
 </head>
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >VisYang&#39;s Studio.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">node总结</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>VisYang's Studio.</a>
 </header>
@@ -73,37 +62,21 @@
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            node总结
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/11/29</span>
-            </div>
         
     </div>
 </div>
@@ -171,74 +144,83 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <ol>
-<li><p>总结</p>
-<ul>
-<li><p>哪些是node.js原生的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">   </div><div class="line">   </div><div class="line"></div><div class="line">server.on(&apos;request&apos;, (req, res)=&gt;&#123;&#125;)</div><div class="line"></div><div class="line">   res.write()</div><div class="line">   res.end()</div><div class="line"></div><div class="line">   req.on(&apos;data&apos;)</div><div class="line">   req.on(&apos;end&apos;)</div><div class="line">   req.url</div><div class="line"></div><div class="line">   res.writeHeader(200, &#123;</div><div class="line">   &apos;Content-Type&apos;: &apos;text/html; charset=utf-8&apos;,</div><div class="line">   &apos;Set-Cookie&apos;: [&apos;isvisit=yes; expires=&apos; + UTCTimeStr, &apos;h=o&apos;]</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>哪些是express的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">app.use</div><div class="line">app.get</div><div class="line">app.post</div><div class="line">app.set</div><div class="line"></div><div class="line">const router = express.Router()</div><div class="line">router.get</div><div class="line">router.post</div><div class="line">router.use</div><div class="line"></div><div class="line">express.static() // 内置中间件</div><div class="line"></div><div class="line">res.send()</div><div class="line">res.sendFile()</div><div class="line">res.json()</div><div class="line">res.jsonp()</div><div class="line">res.render()</div><div class="line">res.redirect(&apos;/login.html&apos;) // 重定向</div><div class="line"></div><div class="line">req.query</div><div class="line">req.params</div></pre></td></tr></table></figure>
-</li>
-<li><p>第三方模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    req.body【这是属于 body-parser 中间件的属性】</div><div class="line">    req.session【这是属于 express-session中间件的】</div><div class="line"></div><div class="line"></div><div class="line">5. 思路流程。</div></pre></td></tr></table></figure>
-<ol>
-<li>搭建项目基本的文件夹和文件结构  views文件夹、assets文件夹、app.js、 npm init -y 初始化一下</li>
-<li>在 app.js 中，从上到下，依次去配置如下这6步：</li>
-</ol>
-<ul>
-<li>创建express服务器并启动</li>
-<li>配置模板引擎</li>
-<li>托管静态资源</li>
-<li>配置body-parser</li>
-<li>配置express-session</li>
-<li>配置路由</li>
-</ul>
-<ol>
-<li>先尝试着，去渲染一个 index 页面出来；</li>
-<li>尝试着，先做一个功能出来，比如，先把 首页上的列表给渲染好；再去完成数据的增删改查（CRDU）c: create   r：read   u：update   d： delete</li>
-<li>比如，要开发注册功能了，先绘制注册的流程图，再设计注册的 API接口文档，然后，根据 流程图 写后台接口，根据 API接口文档 写前端页面调用接口；<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 路径问题</div><div class="line">1. 对于后端来说，前端发起的任何资源请求，在触发 服务器的 `request` 事件之后，通过 `req.url` 获取到的资源路径，都是以 `/` 根路径开头的！</div><div class="line"></div><div class="line">2. 资源请求路径（html,css,js,image），对于后端来说，**只一个标识符而已**，**并不一定**非要对应实际的文件物理路径</div><div class="line"></div><div class="line">3. 但是，为了开发方便（说白了就是为了写HTML的时候有路径只能提示），我们一般都期望把资源的请求路径和实际文件的物理路径对应上</div><div class="line"></div><div class="line">4. 一定要区分html中书写的路径标识符 `../`    `./`  和 `/` **在浏览器中**代表含义！</div><div class="line"> + `/` 表示直接从端口号后面，开始资源请求</div><div class="line"> + `./` 表示，在发起资源请求之前，浏览器需要先 把 URL 地址 ，和 资源路径做一层拼接</div><div class="line"> + `../` 表示，在发起资源请求之前，浏览器需要先 把 URL 地址 ，和 资源路径做一层拼接</div><div class="line"></div><div class="line">5. 在浏览器的眼中，只要是地址栏中的地址，浏览器永远把 最后一个 `/` 后面的符号，认为是文件名</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<p><a href="http://127.0.0.1:3000/a.html【a.html】" target="_blank" rel="external">http://127.0.0.1:3000/a.html【a.html】</a><br><a href="http://127.0.0.1:3000/a【a】" target="_blank" rel="external">http://127.0.0.1:3000/a【a】</a><br><a href="http://127.0.0.1:3000/a/b【b】" target="_blank" rel="external">http://127.0.0.1:3000/a/b【b】</a><br>```</p>
-
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2017/11/29/node未整理/" title= 未整理 >
-                    <span>Next Post</span>
-                    <span>未整理</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2017/01/06/几个插件/" title= 几个表单相关插件 >
-                    <span>Previous Post</span>
-                    <span>几个表单相关插件</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
+            <main class="main index-page">
     
     
-    <!--PC版-->
-
-    <!--PC版-->
-
-
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/08/15/跨域解决方案 和 jQuery ajax 简单封装/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>跨域解决方案 和 jQuery ajax 简单封装</span>
+                    </h2>
+                <div class="abstract-content">
+                    同源&amp;跨域同源同源策略是浏览器的一种安全策略(ajax 不允许跨域获取数据)，所谓同源是指，域名，协议，端口完全相同。
+跨域1234567http://api.example.com/detail.html  不同源 域名不同https//www.example.com/detail.html   不同源 协议不同http://www.example.com:8080/detail.html 不同源 端口不同  http://api.example.com:8080/detail.html 不同源 域名、端口不同  https://api.example.com/detail.h...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = jQuery>jQuery</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 跨域>跨域</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = ajax>ajax</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/08/15</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>原生 js &amp; jQuery &amp; H5 &amp; CSS3 操作元素和绑定事件方式等</span>
+                    </h2>
+                <div class="abstract-content">
+                    原生 js 相关DOM 选择器
+document.getElementById(“#id”); //id选择器
+document.getElementsByTagName(“TagName”); //返回一个包含所有这个标签名的一个伪数组
+document.getElementsByName(“name”); //返回一个特定name值的伪数组
+document.getElementsByClassName(‘name’)
+document.querySelector()
+document.querySelectorAll()
+element.parentNode;    //获取父级节...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = js>js</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = jQuery>jQuery</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = h5>h5</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = css3>css3</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/06/15</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
     
 </main>
             <!-- profile -->
@@ -268,13 +250,6 @@
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
@@ -573,6 +548,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -645,29 +625,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -691,6 +648,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

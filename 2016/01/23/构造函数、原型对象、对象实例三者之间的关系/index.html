@@ -100,6 +100,12 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 构造函数>构造函数</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
                 <span class="post-intro-time">2016/01/23</span>
@@ -176,7 +182,6 @@
         <h2 id="构造函数、原型对象、对象实例三者之间的关系"><a href="#构造函数、原型对象、对象实例三者之间的关系" class="headerlink" title="构造函数、原型对象、对象实例三者之间的关系"></a>构造函数、原型对象、对象实例三者之间的关系</h2><p>  构造函数有一个属性是prototype,prototype是原形对象-是一个对象它里面有一个constructor属性指向构造函数，prototype上所有成员都可以被实例对象所访问到，实例对象由构造函数产生，当你访问实例对象上的某个成员的时候，会先在自己身上找，若自己身上没有则（沿着<em>proto</em>）在原型对象prototype上查找；</p>
 <p><img src="/imgs/prototype1.png" alt="prototype1"><br>  costructor是系统默认为构造函数提供的一个属性，它等价于构造函数本身，要注意的是–&gt;如果重新赋值prototype则需要手动添加constructor:构造函数,否则，constructor属性就丢失了，为了程序的严谨性constructor最好补上，例子：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Person.prototype = &#123;</div><div class="line"><span class="keyword">constructor</span>: Person,</div><div class="line">f1: function () &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'f1'</span>)</div><div class="line">&#125;,</div><div class="line">f2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;做事情&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
 <p> 构造函数：把普通数据定义到构造函数上</p>
 <p> 原型对象：把公用方法定义到原型对象上</p>
 <p> 实例对象：每一个实例对象都有一个指向构造函数.prototype的指向；</p>
@@ -548,6 +553,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -620,29 +630,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -666,6 +653,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

@@ -100,6 +100,12 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = ajax>ajax</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
                 <span class="post-intro-time">2015/08/29</span>
@@ -175,7 +181,7 @@
     <article class="article-entry">
         <h2 id="AJAX编程"><a href="#AJAX编程" class="headerlink" title="AJAX编程"></a>AJAX编程</h2><p>ajax:即 Asynchronous Javascript And XML，AJAX 不是一门的新的语言，而是对现有技术的综合利用。<br>本质是在HTTP协议的基础上以异步的方式与服务器进行通信。</p>
 <h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>异步:指某段程序执行时不会阻塞其它程序执行，其表现形式为程序的执行顺序不依赖程序本身的书写顺序，相反则为同步。<br>其优势在于不阻塞程序的执行，从而提升整体执行效率。<br>XMLHttpRequest可以以异步方式的处理程序。</p>
-<h4 id="XMLHttpRequest可以以异步方式的处理程序。"><a href="#XMLHttpRequest可以以异步方式的处理程序。" class="headerlink" title="XMLHttpRequest可以以异步方式的处理程序。"></a>XMLHttpRequest可以以异步方式的处理程序。</h4><p>XMLHttpRequest:浏览器内建对象，用于在后台与服务器通信(交换数据) ,<br>由此我们便可实现对网页的部分更新，而不是刷新整个页面。<br><a id="more"></a></p>
+<h4 id="XMLHttpRequest可以以异步方式的处理程序。"><a href="#XMLHttpRequest可以以异步方式的处理程序。" class="headerlink" title="XMLHttpRequest可以以异步方式的处理程序。"></a>XMLHttpRequest可以以异步方式的处理程序。</h4><p>XMLHttpRequest:浏览器内建对象，用于在后台与服务器通信(交换数据) ,<br>由此我们便可实现对网页的部分更新，而不是刷新整个页面。</p>
 <h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><p>HTTP请求3个组成部分：请求行、请求头、请求主体<br>1.利用 js 内置对象 XMLHttpRequest<br>2.初始化 XMLHttpRequest<br>var xml = new XMLHttpRequest();<br>3.遵循 http 协议</p>
 <ul>
 <li>请求报文 get<br>请求行<br>xhr.open(‘get’,’00.ajax.php?name=zs&amp;age=18’);<br>请求头 (默认信息不用传)<br>请求主体<br>xhr.send(null);</li>
@@ -577,6 +583,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -649,29 +660,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -695,6 +683,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

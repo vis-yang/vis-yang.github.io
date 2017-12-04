@@ -100,6 +100,12 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = this>this</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
                 <span class="post-intro-time">2015/09/20</span>
@@ -175,7 +181,6 @@
     <article class="article-entry">
         <pre><code>this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
 </code></pre><h3 id="事件处理函数内部的-this"><a href="#事件处理函数内部的-this" class="headerlink" title="事件处理函数内部的 this"></a>事件处理函数内部的 this</h3><p>  事件处理函数内部 this 指向 事件源 DOM 对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</div><div class="line"><span class="comment">//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象</span></div><div class="line">lis.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">li</span>) </span>&#123;</div><div class="line">  li.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);        <span class="comment">// 事件源 DOM 对象</span></div><div class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line"></div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>, that); <span class="comment">// this--Window</span></div><div class="line">    &#125;, <span class="number">1000</span>);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <h3 id="定时器函数内部的-this-amp-普通函数内部的-this"><a href="#定时器函数内部的-this-amp-普通函数内部的-this" class="headerlink" title="定时器函数内部的 this &amp; 普通函数内部的 this"></a>定时器函数内部的 this &amp; 普通函数内部的 this</h3><p>  定时器函数内部 this 指向 window<br>  普通函数内部 this 指向 window<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定时器函数内部的 this 都是 window</span></div><div class="line"> setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(<span class="keyword">this</span>);   <span class="comment">//window</span></div><div class="line"> &#125;, <span class="number">1000</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 如果在函数内部调用一个普通函数，该函数内部的 this 指向的是 window</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// 指向 window</span></div><div class="line">  <span class="keyword">var</span> handle = <span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// window</span></div><div class="line">  &#125;;</div><div class="line">  </div><div class="line">  <span class="comment">// 数组遍历方法内部的 this 都指向 window</span></div><div class="line">  ;[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].forEach(handle);</div><div class="line">&#125;;</div><div class="line">fn();</div></pre></td></tr></table></figure></p>
 <h3 id="构造函数中-this"><a href="#构造函数中-this" class="headerlink" title="构造函数中 this"></a>构造函数中 this</h3><p>  构造函数中 this 指向实例对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"> fn.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line"> &#125;;</div><div class="line"></div><div class="line"> <span class="comment">//谁来点儿这个 sayHello 则内部 this 就指向谁</span></div><div class="line"> fn.prototype.sayHello(); <span class="comment">//指向原形对象</span></div><div class="line"></div><div class="line"> <span class="keyword">var</span> instance = <span class="keyword">new</span> fn();</div><div class="line"> instance.sayHello();     <span class="comment">// 指向实例对象</span></div></pre></td></tr></table></figure></p>
 <h3 id="对象中函数-this"><a href="#对象中函数-this" class="headerlink" title="对象中函数 this"></a>对象中函数 this</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">var</span> obj = &#123;</div><div class="line">    foo: <span class="string">'hello'</span>,</div><div class="line">    sayFoo: fn,</div><div class="line">    sub: &#123;</div><div class="line">      foo: <span class="string">'world'</span>,</div><div class="line">      sayFoo: fn</div><div class="line">    &#125;;</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="comment">// 指向 obj 自己</span></div><div class="line">  obj.sayFoo();</div><div class="line"></div><div class="line">  <span class="comment">// 这里指向的 sub 谁来点儿 sayFoo 则 this 就指向谁</span></div><div class="line">  obj.sub.sayFoo();</div><div class="line"></div><div class="line">  fn(); <span class="comment">//window</span></div><div class="line">  <span class="keyword">new</span> fn(); <span class="comment">//实例对象</span></div><div class="line">  <span class="comment">// 对象.fn() 谁来点儿就指向谁</span></div></pre></td></tr></table></figure>
@@ -548,6 +553,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
         </li>
     
@@ -620,29 +630,6 @@
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node总结/" >node总结</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
         </li>
@@ -666,6 +653,48 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
