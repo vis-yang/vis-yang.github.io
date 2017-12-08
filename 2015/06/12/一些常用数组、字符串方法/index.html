@@ -186,7 +186,7 @@
 <li><p>arr.reverse(null);  //数组翻转，返回值反转后的数组，原数组会发生改变</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.reverse());<span class="comment">// [4, 3, 2, 1]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">// [4, 3, 2, 1]</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>arr.sort(null/fn);   //数组排序，返回值排序改变后的数组，同上（只按照每项的第一个数字比较）</p>
+<li><p>arr.sort(null/fn);   //数组排序，返回值排序改变后的数组，原数组发生改变（只按照每项的第一个数字比较）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">22</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.sort());<span class="comment">// [1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">f1,f2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> f1-f2</div><div class="line">  &#125;))<span class="comment">//[22,4,3,1]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>arr.concat(arrs/eles);    //连接数组或元素，返回连接后的新数组，原数组不会改变</p>
@@ -276,7 +276,7 @@
     <!-- 评论插件 -->
     <!-- 来必力City版安装代码 -->
 
-    <div id="lv-container" data-id="city" data-uid= MTAyMC8yODg4MC81NDUw>
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMjIzNC84Nzk4>
         <script type="text/javascript">
             (function (d, s) {
                 var j, e = d.getElementsByTagName(s)[0];
