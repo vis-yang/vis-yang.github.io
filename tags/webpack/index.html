@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        setTimeout、setInterval、requestAnimationFrame 三者的区别 · VisYang&#39;s Studio
+        VisYang&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -50,22 +50,11 @@
     
 </head>
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >VisYang&#39;s Studio.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">setTimeout、setInterval、requestAnimationFrame 三者的区别</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>VisYang's Studio.</a>
 </header>
@@ -73,45 +62,21 @@
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            setTimeout、setInterval、requestAnimationFrame 三者的区别
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 定时器>定时器</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = js>js</a>
-    
-</div>
-            
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2015/11/11</span>
-            </div>
         
     </div>
 </div>
@@ -179,57 +144,49 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*1. setTimeout*/</span> </div><div class="line"><span class="comment">//setTimeout--&gt;一次性定时器，想要控制动画则需要递归，每次运行完毕一次定时器后，再次运行</span></div><div class="line">    <span class="keyword">var</span> box1 = <span class="built_in">document</span>.querySelector(<span class="string">'.box1'</span>);</div><div class="line">    <span class="keyword">var</span> index1 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> animate = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            index1 ++;</div><div class="line">            box1.style.left = index1 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">            animate();</div><div class="line">        &#125;,<span class="number">10</span>);</div><div class="line">    &#125;;</div><div class="line">    animate();</div><div class="line">    <span class="comment">//clearTimeout(定时器名);//清理定时器</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*2. setInterval*/</span></div><div class="line"><span class="comment">//setinterval--&gt;定时器，每次到达指定时间再次执行，不管本次动画是否执行完毕</span></div><div class="line">    <span class="keyword">var</span> box2 = <span class="built_in">document</span>.querySelector(<span class="string">'.box2'</span>);</div><div class="line">    <span class="keyword">var</span> index2 = <span class="number">0</span>;</div><div class="line">    setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index2 ++;</div><div class="line">        box2.style.left = index2 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">    &#125;,<span class="number">10</span>);</div><div class="line">    <span class="comment">//clearInterval(定时器名);//清理定时器</span></div><div class="line"></div><div class="line"><span class="comment">/*3. requestAnimationFrame*/</span></div><div class="line"><span class="comment">// requestAnimationFrame 根据浏览器每次渲染页面时间自动渲染</span></div><div class="line">    <span class="keyword">var</span> box3 = <span class="built_in">document</span>.querySelector(<span class="string">'.box3'</span>);</div><div class="line">    <span class="keyword">var</span> index3 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> action = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index3 ++;</div><div class="line">        box3.style.left = index3 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">        <span class="comment">/*浏览器有自己的绘制频率  到了渲染时间就通知来执行 action */</span></div><div class="line">        requestAnimationFrame(action);</div><div class="line">    &#125;;</div><div class="line">    action();</div><div class="line">    <span class="comment">//详见下图</span></div></pre></td></tr></table></figure>
-<p><img src="/imgs/timer.gif" alt="prototype1"></p>
-
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2016/01/23/构造函数、原型对象、对象实例三者之间的关系/" title= 构造函数、原型对象、对象实例三者之间的关系 & 原型链 >
-                    <span>Next Post</span>
-                    <span>构造函数、原型对象、对象实例三者之间的关系 & 原型链</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2015/10/08/关于代码风格/" title= 关于代码风格 >
-                    <span>Previous Post</span>
-                    <span>关于代码风格</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMjIzNC84Nzk4>
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
+            <main class="main index-page">
     
     
-    <!--PC版-->
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/10/01/webpack使用/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>webpack简单使用</span>
+                    </h2>
+                <div class="abstract-content">
+                    webpack 介绍
+webpack 下载 npm install webpack -g 全局安装webpack
+webpack官网=&gt;戳我！
+webpack是现代JavaScript应用程序的模块打包器，他会递归的构建一个依赖关系图，其中包括应用程序需要的每个模块，然后将这些模块打包成一个或多个 bundle
+它是高度可配置的，但是在开始前需要先理解四个核心概念：
+入口(entry) 所有的依赖项
+输出(output) 打包后的结果
+loader：webpack默认只能打包js,如果需要打包其他文件需要使用相应的loder
+插件(plugins) 热启动等
 
-    <!--PC版-->
 
 
+webpack ...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = webpack>webpack</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/10/01</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
     
 </main>
             <!-- profile -->
@@ -259,13 +216,6 @@
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">

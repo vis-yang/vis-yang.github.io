@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        setTimeout、setInterval、requestAnimationFrame 三者的区别 · VisYang&#39;s Studio
+        webpack简单使用 · VisYang&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -63,7 +63,7 @@
                 <a href="/" >VisYang&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">setTimeout、setInterval、requestAnimationFrame 三者的区别</a>
+                <a href="#" class="post-name">webpack简单使用</a>
             </div>
     </div>
     
@@ -84,7 +84,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            setTimeout、setInterval、requestAnimationFrame 三者的区别
+            webpack简单使用
             <!-- 404 -->
             
         </h1>
@@ -102,15 +102,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 定时器>定时器</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = js>js</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = webpack>webpack</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2015/11/11</span>
+                <span class="post-intro-time">2016/10/01</span>
             </div>
         
     </div>
@@ -181,25 +179,50 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*1. setTimeout*/</span> </div><div class="line"><span class="comment">//setTimeout--&gt;一次性定时器，想要控制动画则需要递归，每次运行完毕一次定时器后，再次运行</span></div><div class="line">    <span class="keyword">var</span> box1 = <span class="built_in">document</span>.querySelector(<span class="string">'.box1'</span>);</div><div class="line">    <span class="keyword">var</span> index1 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> animate = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            index1 ++;</div><div class="line">            box1.style.left = index1 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">            animate();</div><div class="line">        &#125;,<span class="number">10</span>);</div><div class="line">    &#125;;</div><div class="line">    animate();</div><div class="line">    <span class="comment">//clearTimeout(定时器名);//清理定时器</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*2. setInterval*/</span></div><div class="line"><span class="comment">//setinterval--&gt;定时器，每次到达指定时间再次执行，不管本次动画是否执行完毕</span></div><div class="line">    <span class="keyword">var</span> box2 = <span class="built_in">document</span>.querySelector(<span class="string">'.box2'</span>);</div><div class="line">    <span class="keyword">var</span> index2 = <span class="number">0</span>;</div><div class="line">    setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index2 ++;</div><div class="line">        box2.style.left = index2 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">    &#125;,<span class="number">10</span>);</div><div class="line">    <span class="comment">//clearInterval(定时器名);//清理定时器</span></div><div class="line"></div><div class="line"><span class="comment">/*3. requestAnimationFrame*/</span></div><div class="line"><span class="comment">// requestAnimationFrame 根据浏览器每次渲染页面时间自动渲染</span></div><div class="line">    <span class="keyword">var</span> box3 = <span class="built_in">document</span>.querySelector(<span class="string">'.box3'</span>);</div><div class="line">    <span class="keyword">var</span> index3 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> action = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        index3 ++;</div><div class="line">        box3.style.left = index3 * <span class="number">1</span> + <span class="string">'px'</span>;</div><div class="line">        <span class="comment">/*浏览器有自己的绘制频率  到了渲染时间就通知来执行 action */</span></div><div class="line">        requestAnimationFrame(action);</div><div class="line">    &#125;;</div><div class="line">    action();</div><div class="line">    <span class="comment">//详见下图</span></div></pre></td></tr></table></figure>
-<p><img src="/imgs/timer.gif" alt="prototype1"></p>
+        <h3 id="webpack-介绍"><a href="#webpack-介绍" class="headerlink" title="webpack 介绍"></a>webpack 介绍</h3><ul>
+<li>webpack 下载 <code>npm install webpack -g</code> 全局安装webpack</li>
+<li><a href="https://doc.webpack-china.org/" target="_blank" rel="external">webpack官网=&gt;戳我！</a></li>
+<li>webpack是现代JavaScript应用程序的模块打包器，他会递归的构建一个依赖关系图，其中包括应用程序需要的每个模块，然后将这些模块打包成一个或多个 bundle</li>
+<li>它是高度可配置的，但是在开始前需要先理解四个核心概念：<ul>
+<li>入口(entry) 所有的依赖项</li>
+<li>输出(output) 打包后的结果</li>
+<li>loader：webpack默认只能打包js,如果需要打包其他文件需要使用相应的loder</li>
+<li>插件(plugins) 热启动等</li>
+</ul>
+</li>
+</ul>
+<h3 id="webpack-基本使用"><a href="#webpack-基本使用" class="headerlink" title="webpack 基本使用"></a>webpack 基本使用</h3><p>  首先，我们可以使用vue-cli工具，直接创建项目文件并配置模块，让以下步骤一步完成，但下面步骤可以使我们更好的了解webpack的各项配置</p>
+<ul>
+<li><p>初始化npm，在本地安装webpack</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir webpack-demo &amp;&amp; cd webpack-demo</div><div class="line">npm init -y</div><div class="line">npm install --save-dev webpack</div></pre></td></tr></table></figure>
+</li>
+<li><p>其他js模块导出到app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// add.js</span></div><div class="line"><span class="comment">// 简单演示，这里不处理数据了</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  add: <span class="function"><span class="keyword">function</span> (<span class="params">n1, n2</span>) </span>&#123;</div><div class="line">    n1 = n1<span class="number">-0</span></div><div class="line">    n2 = n2<span class="number">-0</span></div><div class="line">    <span class="keyword">return</span> n1 + n2</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// app.js</span></div><div class="line"><span class="keyword">const</span> addObj = <span class="built_in">require</span>(<span class="string">'./add'</span>)</div><div class="line"><span class="comment">// 引入css模块</span></div><div class="line"><span class="comment">// require('../style/main.css');</span></div><div class="line"><span class="built_in">require</span>(<span class="string">'../style/main.less'</span>);</div><div class="line"></div><div class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> num1 = <span class="built_in">document</span>.getElementById(<span class="string">'num1'</span>).value;</div><div class="line">  <span class="keyword">let</span> num2 = <span class="built_in">document</span>.getElementById(<span class="string">'num2'</span>).value;</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'num3'</span>).value = addObj.add(num1, num2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- html --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"num1"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"num2"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"+"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">index</span>=<span class="string">"num3"</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>webpack.config.js配置文件<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 引入path模块</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="comment">// 自动在output的path目录中生成html文件</span></div><div class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</div><div class="line"><span class="comment">// 清理指定的文件夹</span></div><div class="line"><span class="keyword">const</span> CleanWebpackPlugin = <span class="built_in">require</span>(<span class="string">'clean-webpack-plugin'</span>);</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  entry: <span class="string">'./src/app.js'</span>,</div><div class="line">  output:&#123;</div><div class="line">    <span class="comment">// 给输出文件一个名字</span></div><div class="line">    filename: <span class="string">'build.js'</span>,</div><div class="line">    <span class="comment">// 输出文件的路径，路径必须是绝对路径,拼接路径， resolve会处理./</span></div><div class="line">    path: path.resolve(__dirname,<span class="string">'./dist'</span>)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 当我们需要打包其他资源时候，找到官方文档对应的loader下载并按照说明配置好就可以了</span></div><div class="line">  <span class="comment">// 以添加css loader为例 ，npm输入`npm install --save-dev style-loader css-loader` 安装到dev本地开发环境中</span></div><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">    rules: [</div><div class="line">      &#123;</div><div class="line">        test: <span class="regexp">/\.js$/</span>,</div><div class="line">        <span class="comment">// 排除文件</span></div><div class="line">        exclude: <span class="regexp">/(node_modules|bower_components)/</span>,</div><div class="line">        use: [&#123;</div><div class="line">          loader: <span class="string">'babel-loader'</span>,</div><div class="line">          options: &#123;</div><div class="line">            presets: [<span class="string">'@babel/preset-env'</span>]</div><div class="line">          &#125;</div><div class="line">        &#125;]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        test: <span class="regexp">/\.css$/</span>,</div><div class="line">        <span class="comment">// 把css当做模块来处理</span></div><div class="line">        <span class="comment">// 执行从右到左</span></div><div class="line">        <span class="comment">// autoprefixer-loader  自动给样式属性加前缀</span></div><div class="line">        <span class="comment">// css-loader 把css作为模块来处理</span></div><div class="line">        <span class="comment">// style-loader 把样式插入到页面的head中</span></div><div class="line">        use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>, <span class="string">'autoprefixer-loader'</span>]  <span class="comment">// 执行顺序从右到左</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        test: <span class="regexp">/\.less$/</span>,</div><div class="line">        <span class="comment">// 处理less</span></div><div class="line">        use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>, <span class="string">'autoprefixer-loader'</span>, <span class="string">'less-loader'</span>]</div><div class="line">      &#125;,</div><div class="line">      &#123;    </div><div class="line">        test: <span class="regexp">/\.scss$/</span>,</div><div class="line">        <span class="comment">// 处理sass</span></div><div class="line">        use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>, <span class="string">'autoprefixer-loader'</span>, <span class="string">'sass-loader'</span>]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="comment">// 处理图片和字体</span></div><div class="line">        <span class="comment">// 当文件小于limit （limit单位是字节）会把文件转换成base64编码的字符串</span></div><div class="line">        <span class="comment">// 当文件大于limit 会使用file-loader来处理</span></div><div class="line"></div><div class="line">        <span class="comment">// url-loader 和 file-loader会处理任何类型的文件</span></div><div class="line">        <span class="comment">// url-loader 可以把文件转成base64编码的字符串</span></div><div class="line">        test: <span class="regexp">/\.(png|jpg|gif|woff|woff2|eot|ttf|otf|svg)$/</span>,</div><div class="line">        <span class="comment">// use: ['url-loader']</span></div><div class="line">        use: [&#123;</div><div class="line">          loader: <span class="string">'url-loader'</span>,</div><div class="line">          options: &#123;</div><div class="line">            limit: <span class="number">10240</span></div><div class="line">          &#125;</div><div class="line">        &#125;]</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// npm安装，然后在配置文件中引入插件，再在模块配置中进行配置</span></div><div class="line">  plugins: [</div><div class="line">    <span class="comment">// 引入之后在插件模块中 new一个对象</span></div><div class="line">    <span class="keyword">new</span> CleanWebpackPlugin([<span class="string">'dist'</span>]),</div><div class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</div><div class="line">      title: <span class="string">'Output Management'</span>,</div><div class="line">      template: <span class="string">'index.html'</span>, <span class="comment">// 自动以哪个模板生成文件</span></div><div class="line">      filename: <span class="string">'index.html'</span>  <span class="comment">// 设置生成的html的文件名</span></div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>loader:<br>babel-loader es6语法降级等<br>安装<code>npm install babel-loader babel-core babel-preset-env webpack</code> 安装到dev中<br>插件：<br>CleanWebpackPlugin清理指定文件夹<br>HtmlWebpackPlugin自动生成html文件<br>工具：<br>webpack-dev-server热启动<br>在package.json中scripts中配置<code>&quot;dev&quot;: &quot;webpack-dev-server --inline --hot --open --port 3000&quot;</code> 之后只要在npm中键入<code>npm run dev</code>就可以打开网页并热启动</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2016/01/23/构造函数、原型对象、对象实例三者之间的关系/" title= 构造函数、原型对象、对象实例三者之间的关系 & 原型链 >
+                <a href= "/2016/11/24/bird/" title= seajs 模块化 简单小鸟游戏 >
                     <span>Next Post</span>
-                    <span>构造函数、原型对象、对象实例三者之间的关系 & 原型链</span>
+                    <span>seajs 模块化 简单小鸟游戏</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2015/10/08/关于代码风格/" title= 关于代码风格 >
+                <a href= "/2016/08/15/跨域解决方案 和 jQuery ajax 简单封装/" title= 跨域解决方案 和 jQuery ajax 简单封装 >
                     <span>Previous Post</span>
-                    <span>关于代码风格</span>
+                    <span>跨域解决方案 和 jQuery ajax 简单封装</span>
                 </a>
             </li>
         
@@ -264,7 +287,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack-介绍"><span class="toc-number">1.</span> <span class="toc-text">webpack 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack-基本使用"><span class="toc-number">2.</span> <span class="toc-text">webpack 基本使用</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>

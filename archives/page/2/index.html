@@ -149,6 +149,35 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2015/09/20/函数内部this指向/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>函数内部 this 指向 &amp; 改变指向的方法</span>
+                    </h2>
+                <div class="abstract-content">
+                    this是函数内部的一个自动生成的对象，随着使用场景的不同，this的指向也不同，下面列举一些this指向的事例。
+事件处理函数内部的 this  事件处理函数内部 this 指向 事件源 DOM 对象123456789101112var lis = document.querySelectorAll('li');//事件处理函数内部的 this 始终都是点击的事件源 DOM 对象lis.forEach(function (li) &#123;  li.addEventListener('click', function () &#123;    console.log(this);  ...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = this>this</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/09/20</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2015/08/29/ajax 相关 和 使用简介/" >
                     <h2 class="abstract-title">
                         
@@ -579,7 +608,34 @@ Mac安装打开Terminal直接输入git命令，会自动提示，按提示引导
     
     
     
-    <div class="total-archive"> Total : 16 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 17 </div>
     
     <div class="post-archive">
     
@@ -597,6 +653,11 @@ Mac安装打开Terminal直接输入git命令，会自动提示，按提示引导
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/24</span><a class="archive-post-title" href= "/2016/11/24/bird/" >seajs 模块化 简单小鸟游戏</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2016/10/01/webpack使用/" >webpack简单使用</a>
         </li>
     
     
@@ -724,6 +785,8 @@ Mac安装打开Terminal直接输入git命令，会自动提示，按提示引导
         <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">Vue</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">webpack</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
