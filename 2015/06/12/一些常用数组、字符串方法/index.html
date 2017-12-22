@@ -187,7 +187,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.reverse());<span class="comment">// [4, 3, 2, 1]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">// [4, 3, 2, 1]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>arr.sort(null/fn);   //数组排序，返回值排序改变后的数组，原数组发生改变（只按照每项的第一个数字比较）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">22</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.sort());<span class="comment">// [1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">f1,f2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> f1-f2</div><div class="line">  &#125;))<span class="comment">//[22,4,3,1]</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">22</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.sort());<span class="comment">// [1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 22, 3, 4]</span></div><div class="line"><span class="built_in">console</span>.log(arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">f1,f2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> f1-f2</div><div class="line">&#125;))<span class="comment">//[22,4,3,1]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>arr.concat(arrs/eles);    //连接数组或元素，返回连接后的新数组，原数组不会改变</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.concat(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//[1, 2, 3, 4, 1, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 2, 3, 4]</span></div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr2.concat([<span class="number">1</span>,<span class="number">2</span>]));<span class="comment">//[1, 2, 3, 4, 1, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1, 2, 3, 4]</span></div></pre></td></tr></table></figure>
@@ -533,76 +533,20 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 18 </div>
+    <div class="total-archive"> Total : 16 </div>
     
     <div class="post-archive">
     
     
     
     
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href= "/2017/03/21/node总结/" >node总结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2017/01/06/几个插件/" >几个表单相关插件</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2016 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/13</span><a class="archive-post-title" href= "/2016/12/13/简单Vue使用方法/" >Vue简单使用</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -626,7 +570,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span><a class="archive-post-title" href= "/2016/04/29/魔方/" >魔方 demo</a>
+            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2016/03/06/几个插件/" >几个表单相关插件</a>
         </li>
     
     
@@ -647,29 +591,6 @@
         <li class="archive-post-item">
             <span class="archive-post-date">11/11</span><a class="archive-post-title" href= "/2015/11/11/requestAnimationFrame三者的区别/" >setTimeout、setInterval、requestAnimationFrame 三者的区别</a>
         </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/11/29/node未整理/" >未整理</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -716,35 +637,33 @@
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">session</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">node</a></span>
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">js</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">git</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">插件</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">表单</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">博客</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
     
@@ -757,6 +676,8 @@
         <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Vue</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

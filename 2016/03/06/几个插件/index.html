@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        几个表单相关插件 · VisYang&#39;s Studio
+        
+    </title>
+    <link rel="icon" href= /assests/favicon.ico>
+    <!-- TODO: 在font-face加载完毕后改变字体  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <!-- 提前加载place holder  -->
+    <style type="text/css">
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url(/font/Oswald-Regular.ttf);
+        }
+    </style>
+    <style type="text/css">
+        .site-intro-placeholder {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0px;
+            width: calc(100% + 300px);
+            height: 100%;
+            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+            background-position: center center;
+            transform: translate3d(-226px, 0, 0);
+            animation: gradient-move 2.5s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+    <link rel="stylesheet" href = /css/style.css?v=20171020 />
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >VisYang&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">几个表单相关插件</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>VisYang's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            几个表单相关插件
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 插件>插件</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 表单>表单</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2016/03/06</span>
+            </div>
+        
+    </div>
+</div>
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <script>
+            var browser = {
+                    versions: function () {
+                        var u = window.navigator.userAgent;
+                        return {
+                            userAgent: u,
+                            trident: u.indexOf('Trident') > -1, //IE内核
+                            presto: u.indexOf('Presto') > -1, //opera内核
+                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+                            iPad: u.indexOf('iPad') > -1, //是否为iPad
+                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+                        };
+                    }()
+                }
+
+            function fontLoaded(){
+                console.log('font loaded');
+                if (document.getElementsByClassName('site-intro-meta')) {
+                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
+                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
+                        if (postIntroTags) {
+                            postIntroTags.classList.add('post-fade-in');
+                        }
+                        if (postIntroMeat) {
+                            postIntroMeat.classList.add('post-fade-in');
+                        }
+                    }
+                }
+                
+            console.log("userAgent:" + browser.versions.userAgent);
+            // UC不支持跨域，所以直接显示
+            if (browser.versions.uc) {
+                console.log("UCBrowser");
+                fontLoaded();
+            } else {
+                WebFont.load({
+                    custom: {
+                        families: ['Oswald-Regular']
+                    },
+                    loading: function () {  //所有字体开始加载
+                        // console.log('loading');
+                    },
+                    active: function () {  //所有字体已渲染
+                        fontLoaded();
+                    },
+                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+                        console.log('inactive: timeout');
+                        fontLoaded();
+                    },
+                    timeout: 7000 // Set the timeout to two seconds
+                });
+            }
+        </script>
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>简单介绍几个常用的表单插件：</p>
+<ul>
+<li>bootstrap-datepicker(时间插件) </li>
+<li>validate （表单验证插件）</li>
+<li>form-master （表单提交插件）</li>
+<li>uploadify(文件上传插件)</li>
+<li>jquery-region(省级联动插件)</li>
+<li>ckeditor(富文本工具)</li>
+<li>jcrop (图片裁切插件(基于jQuery))</li>
+<li>echarts(图表插件)</li>
+</ul>
+<h3 id="bootstrap-datepicker-时间插件"><a href="#bootstrap-datepicker-时间插件" class="headerlink" title="bootstrap-datepicker(时间插件)"></a>bootstrap-datepicker(时间插件)</h3><p><a href="http://bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank" rel="external">http://bootstrap-datepicker.readthedocs.io/en/latest/</a>  官网<br>  引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/boostrap-datepicker.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/boostrap-datepicker.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/boostrap-datepicker.zh-CN.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  使用方式：<br>  1、直接使用(更多api请看官方文档)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- data-provide='detepicker' 自定义属性实现选择日期效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-language='zh-CN' 自定义属性实现修改语言效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-format='yyyy-mm-dd' 自定义属性实现选择日期后显示格式效果--&gt;</span></div><div class="line"><span class="comment">&lt;!-- data-date-end-date='0d' 自定义属性设置截止可选择日期，0d代表最多选到今天,当然可以可以1d，2d，-1d等--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">data-provide</span>=<span class="string">'detepicker'</span> <span class="attr">data-date-language</span>=<span class="string">'zh-CN'</span> <span class="attr">data-date-format</span>=<span class="string">'yyyy-mm-dd'</span> <span class="attr">data-date-end-date</span>=<span class="string">'0d'</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、JS控制<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"datepicker"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  $(<span class="string">'#datepicker'</span>).datepicker(&#123;</span></div><div class="line"><span class="javascript">    language=<span class="string">'zh-CN'</span>,</span></div><div class="line"><span class="javascript">    format=<span class="string">'yyyy-mm-dd'</span></span></div><div class="line"><span class="undefined">  &#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="validate-（表单验证插件）"><a href="#validate-（表单验证插件）" class="headerlink" title="validate （表单验证插件）"></a>validate （表单验证插件）</h3><p>引入：需要依赖jquery 引入jquery.js然后引入jquery.vlidate.js<br>下面列举常用属性和方法<br>表单内属性：</p>
+<ul>
+<li>data-required=”true” 或 data-required  //表示表单必须填写 </li>
+<li>data-pattern = “正则表达式”  //表单验证模式</li>
+<li>data-conditional = “confirm” //自定义验证规则，以js定义的方法名指向js定义验证规则</li>
+<li>data-description=”age”  //此表单的描述信息，以js定义描述名称指向js所定义的描述信息</li>
+<li>data-describedby=”描述框id名”  //指定被那个元素描述，可以控制描述信息的位置</li>
+<li>data-validate=”age2”  //整合多个验证条件进行验证，以js定义的方法名指向js定义验证规则<br><strong>表单内提交按钮必须是submit</strong></li>
+</ul>
+<p>javascript 使用方法<br>  $(‘form’).validate({<br>    sendForm : false, //阻止submit按钮默认提交行为<br>    onKeyup : true, //表示当键盘抬起时进行该表单验证<br>    //有效的验证将会触发其中的方法，显示输入信息是否正确状态<br>    eachValidField : function(){<br>      $(this).closest(‘div’).removeClass(‘error’).addClass(‘success’);<br>    },<br>    //无效的验证将会触发其中的方法，显示输入信息是否正确状态<br>    eachInvalidField : function(){<br>      $(this).closest(‘div’).removeClass(‘success’).addClass(‘error’);<br>    },<br>    //所有验证都通过，会触发该方法<br>    valid : function(){<br>      console.log(‘success’);<br>    }<br>    //定义验证规则<br>    conditional : {<br>    confirm : function(){<br>      return $(this).val() == $(‘#password’).val();<br>    },<br>    //提示内容描述<br>    description : {<br>      //例如验证描述年龄表单<br>      age : {<br>        required : ‘<div class="alert alert-error">内容不能为空</div>‘,<br>        pattern : ‘<div class="alert alert-error">格式不正确</div>‘,<br>        conditional : ‘<div class="alert alert-error">不符合条件</div>‘,<br>        valid : ‘<div class="alert alert-error">有效</div>‘<br>      }<br>    },<br>    //验证条件集合同时满足时才会通过<br>    $.validateExtend({<br>      age : {<br>        required : true,<br>        conditional : function(value){<br>          return Number(value) &gt; 17;<br>        },<br>        pattern : /^[0-9]+$/<br>      }<br>    });<br>  }<br>});</p>
+<h3 id="form-master-（表单提交插件）"><a href="#form-master-（表单提交插件）" class="headerlink" title="form-master （表单提交插件）"></a>form-master （表单提交插件）</h3><p><a href="https://github.com/jquery-form/form" target="_blank" rel="external">https://github.com/jquery-form/form</a><br>引入：需要依赖jquery 引入jquery.js然后引入jquery.form.js<br>使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'form'</span>).ajaxSubmit(&#123;  <span class="comment">//注意form提校按钮要用button否则会跳转</span></div><div class="line">  type : <span class="string">'post'</span>,</div><div class="line">  url : url,</div><div class="line">  target : <span class="string">'#div'</span>,  <span class="comment">//指定响应内容显示在哪个目标位置</span></div><div class="line">  data : &#123;<span class="attr">flag</span> : <span class="number">123</span>, <span class="attr">abc</span> : <span class="string">'hello'</span>&#125;,  <span class="comment">//可以额外添加数据，数据会添加到data中一起提校</span></div><div class="line">  success : <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>一般验证和提交都会一起使用，生死契阔与子成说执子之手与子偕老</p>
+<h3 id="uploadify-文件上传插件"><a href="#uploadify-文件上传插件" class="headerlink" title="uploadify(文件上传插件)"></a>uploadify(文件上传插件)</h3><p><a href="http://www.uploadify.com" target="_blank" rel="external">http://www.uploadify.com</a> 官网<br>  1、引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.uploadify.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、文件提交按钮定义id<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"myfile"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"imgId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  3、对应id调用方法（列举几个属性）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#myfile"</span>).uploadify(&#123;</div><div class="line">  height : <span class="number">30</span>,  <span class="comment">//图片高</span></div><div class="line">  buttonText : <span class="string">'选择文件'</span>, <span class="comment">//上传提示文字</span></div><div class="line">  fileObjName : <span class="string">'myfile'</span>,  <span class="comment">//后台根据哪个id接收</span></div><div class="line">  itemTemplate : <span class="string">'&lt;span&gt;&lt;/span&gt;'</span>, <span class="comment">//清空文件上传进度条</span></div><div class="line">  swf : <span class="string">'./uploadify.swf'</span>, <span class="comment">//引入插件中falsh文件</span></div><div class="line">  uploader : <span class="string">'file.php'</span>,  <span class="comment">//文件处理接口（你的文件上传给谁）</span></div><div class="line">  width : <span class="number">120</span>, <span class="comment">//图片宽</span></div><div class="line">  onUploadSuccess : <span class="function"><span class="keyword">function</span>(<span class="params">a,b,c</span>)</span>&#123;  <span class="comment">//我们需要第二个参数</span></div><div class="line">    <span class="built_in">console</span>.log(b);<span class="comment">//&lt;img src="123.png" alt=""&gt;</span></div><div class="line">    $(<span class="string">"#imgId"</span>).html(b);<span class="comment">//填充渲染</span></div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="jquery-region-省级联动插件"><a href="#jquery-region-省级联动插件" class="headerlink" title="jquery-region(省级联动插件)"></a>jquery-region(省级联动插件)</h3><p>  1、引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.region.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、页面省级联动 id<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"pcd"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"p"</span> <span class="attr">class</span>=<span class="string">"form-control input-sm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择省...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"c"</span> <span class="attr">class</span>=<span class="string">"form-control input-sm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择省...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"d"</span> <span class="attr">class</span>=<span class="string">"form-control input-sm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择省...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  3、对应id调用方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#pcd'</span>).region(&#123;</div><div class="line">  url : <span class="string">'public/assets/jquery-region/region.json'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="ckeditor-富文本工具"><a href="#ckeditor-富文本工具" class="headerlink" title="ckeditor(富文本工具)"></a>ckeditor(富文本工具)</h3><p><a href="https://ckeditor.com" target="_blank" rel="external">https://ckeditor.com</a> 官网<br>  1、引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"ckeditor.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、定义id<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"editor"</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  3、使用全局变量 CKEDITOR 调用方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CKEDITOR.replace(<span class="string">'editor'</span>);</div></pre></td></tr></table></figure></p>
+<p>  4、定制富文本<br>  找到下载文档中的samples–&gt;index.html<br>  选定内容后生成配置<br>  修改有两种方法：<br>  1）找到下载文档中的skins–&gt;config.js写到配置文件中<br>  2）在使用全局变量CKEDITOR时这样做：<br>    CKEDITOR.replace(‘editor’,{<br>      toolbarGroups : [<br>        {},{}…<br>      ]<br>    }); //对象中写入配置</p>
+<p>  **注意：页面中的富文本是一个子页面（iframe)，提交时要将子页面内容更新到提交内容区域<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> instance <span class="keyword">in</span> CKEDITOR.instances)&#123;</div><div class="line">  CKEDITOR.instances[instance].updateElemenet();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="jcrop-图片裁切插件-基于jQuery"><a href="#jcrop-图片裁切插件-基于jQuery" class="headerlink" title="jcrop (图片裁切插件(基于jQuery))"></a>jcrop (图片裁切插件(基于jQuery))</h3><p><a href="http://jcrop.org" target="_blank" rel="external">http://jcrop.org</a><br>  1、引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/Jcrop.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/Jcrop.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、使用方法(列举几个)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 将要裁切的图片 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"a.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"target"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//调用方法就可以实现裁切选框</span></div><div class="line">$(<span class="string">'#target'</span>).Jcrop(&#123;</div><div class="line">    <span class="comment">//前两个参数是左上角坐标，后两个是选取的宽高</span></div><div class="line">    setSelect : [<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">300</span>],  <span class="comment">//若要自定义选区大小这里可以不写，在下面调用 newSelection();方法setSelect([x,y,w,h]);设置选区位置和大小</span></div><div class="line">    <span class="comment">//宽高比例为2:1</span></div><div class="line">    aspectRatio : <span class="number">2</span>,</div><div class="line">    <span class="comment">//裁切选框以外的背景色</span></div><div class="line">    bgColor : <span class="string">'red'</span>,</div><div class="line">    <span class="comment">//裁切以外背景色的透明度</span></div><div class="line">    bgOpacity : <span class="number">0.3</span>,</div><div class="line">  &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//启用缩略图预览，设置缩略图宽高</span></div><div class="line">    <span class="keyword">this</span>.initComponent(<span class="string">'Thumbnailer'</span>, &#123;<span class="attr">width</span> : <span class="number">100</span>, height <span class="number">100</span>&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>  3、定制Jcrop源码(定位缩略图任意位置)<br>  源码缩略图位置是相对于图片的相对定位，我们的目标是把缩略图定位到页面的任意位置：<br>  找到Jcrop.js源码，搜索jcrop-thumb，定位到缩略图代码<br>  找到.appendTo(this.core.container)修改为.appendTo($(this.mythumb)||this.core.container);<br>  在我们的页面中添加一个div控制这个div的大小和位置：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"selftar"</span> <span class="attr">style</span>=<span class="string">"opsition: absolute;bottom: 0;right: 0;height : 200px;width : 200px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  然后在之前我们设置缩略图传参的位置添加一个键值对,把div的类名传进去，源码就可以找到这个div把缩略图加进去<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.initComponent(<span class="string">'Thumbnailer'</span>, &#123;<span class="attr">width</span> : <span class="number">200</span>, height <span class="number">200</span>, <span class="attr">mythumb</span> : <span class="string">'.selftar'</span>&#125;);</div></pre></td></tr></table></figure></p>
+<p>  4、实现裁切功能<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监控选取变化,拿到目标的父元素绑定事件，参数c是选区的左上角的横纵坐标，选区宽高，右下角的横纵坐标</span></div><div class="line">$(<span class="string">'#target'</span>).parent().on(<span class="string">'cropstart cropmove cropend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">a,b,c</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(c);<span class="comment">//拿到c就可以得到选区大小和位置了，然后就可以做裁切功能</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="echarts-图表插件"><a href="#echarts-图表插件" class="headerlink" title="echarts(图表插件)"></a>echarts(图表插件)</h3><p>官网 ： <a href="http://echarts.baidu.com/" target="_blank" rel="external">http://echarts.baidu.com/</a><br> 1、引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"echarts.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2、使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chart"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"main"</span> <span class="attr">style</span>=<span class="string">"width:600px;height:400px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//基于准备好的dom，初始化echarts实例</span></div><div class="line"><span class="keyword">var</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">'main'</span>));</div><div class="line"><span class="comment">// 指定图表的配置项和数据</span></div><div class="line"><span class="keyword">var</span> option = &#123;</div><div class="line">    <span class="comment">//标题</span></div><div class="line">    title: &#123;</div><div class="line">        text: <span class="string">'ECharts 入门示例'</span></div><div class="line">    &#125;,</div><div class="line">    tooltip: &#123;&#125;,</div><div class="line">    legend: &#123;</div><div class="line">        data:[<span class="string">'销量'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">//分类</span></div><div class="line">    xAxis: &#123;</div><div class="line">        data: [<span class="string">"衬衫"</span>,<span class="string">"羊毛衫"</span>,<span class="string">"雪纺衫"</span>,<span class="string">"裤子"</span>,<span class="string">"高跟鞋"</span>,<span class="string">"袜子"</span>]</div><div class="line">    &#125;,</div><div class="line">    yAxis: &#123;&#125;,</div><div class="line">    series: [&#123;</div><div class="line">        name: <span class="string">'销量'</span>,</div><div class="line">        type: <span class="string">'bar'</span>,</div><div class="line">        data: [<span class="number">5</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">20</span>]</div><div class="line">    &#125;]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="next">
+                <a href= "/2016/05/23/canvas/" title= Canvas 简单介绍和小案例 >
+                    <span>Next Post</span>
+                    <span>Canvas 简单介绍和小案例</span>
+                </a>
+            </li>
+        
+        
+            <li class="previous">
+                <a href= "/2016/01/23/构造函数、原型对象、对象实例三者之间的关系/" title= 构造函数、原型对象、对象实例三者之间的关系 & 原型链 >
+                    <span>Previous Post</span>
+                    <span>构造函数、原型对象、对象实例三者之间的关系 & 原型链</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMjIzNC84Nzk4>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:visyang@126.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bootstrap-datepicker-时间插件"><span class="toc-number">1.</span> <span class="toc-text">bootstrap-datepicker(时间插件)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#validate-（表单验证插件）"><span class="toc-number">2.</span> <span class="toc-text">validate （表单验证插件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#form-master-（表单提交插件）"><span class="toc-number">3.</span> <span class="toc-text">form-master （表单提交插件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uploadify-文件上传插件"><span class="toc-number">4.</span> <span class="toc-text">uploadify(文件上传插件)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jquery-region-省级联动插件"><span class="toc-number">5.</span> <span class="toc-text">jquery-region(省级联动插件)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ckeditor-富文本工具"><span class="toc-number">6.</span> <span class="toc-text">ckeditor(富文本工具)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jcrop-图片裁切插件-基于jQuery"><span class="toc-number">7.</span> <span class="toc-text">jcrop (图片裁切插件(基于jQuery))</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echarts-图表插件"><span class="toc-number">8.</span> <span class="toc-text">echarts(图表插件)</span></a></li></ol>
+    </div>
+    
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header sidebar-header-show-archive">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 16 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2016 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/13</span><a class="archive-post-title" href= "/2016/12/13/简单Vue使用方法/" >Vue简单使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/24</span><a class="archive-post-title" href= "/2016/11/24/bird/" >seajs 模块化 简单小鸟游戏</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2016/08/15/跨域解决方案 和 jQuery ajax 简单封装/" >跨域解决方案 和 jQuery ajax 简单封装</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/18</span><a class="archive-post-title" href= "/2016/07/18/cookie 与 session 的异同/" >cookie 与 session 的关系</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/23</span><a class="archive-post-title" href= "/2016/05/23/canvas/" >Canvas 简单介绍和小案例</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2016/03/06/几个插件/" >几个表单相关插件</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2016/01/23/构造函数、原型对象、对象实例三者之间的关系/" >构造函数、原型对象、对象实例三者之间的关系 & 原型链</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2015 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/11</span><a class="archive-post-title" href= "/2015/11/11/requestAnimationFrame三者的区别/" >setTimeout、setInterval、requestAnimationFrame 三者的区别</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2015/10/08/关于代码风格/" >关于代码风格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/20</span><a class="archive-post-title" href= "/2015/09/20/函数内部this指向/" >函数内部 this 指向 & 改变指向的方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2015/08/29/ajax 相关 和 使用简介/" >ajax 相关 和 使用简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2015/07/22/模板引擎 artTemplate 介绍 和 简单封装/" >模板引擎 artTemplate 介绍 和 简单封装</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2015/06/15/原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等/" >原生 js & jQuery & H5 & CSS3 操作元素和绑定事件方式等</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2015/06/12/一些常用数组、字符串方法/" >一些常用数组、字符串方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href= "/2015/04/29/git/" >git 的安装与使用相关</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2015/02/03/创建博客方法/" >利用hexo搭建博客</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">demo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">ajax</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">cookie</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">session</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Canvas</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">git</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">定时器</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">js</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">插件</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">表单</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">this</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">博客</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">代码风格</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">jQuery</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">h5</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">css3</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">构造函数</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">artTemplate</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">跨域</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Vue</a></span>
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
+</html>
+
+
