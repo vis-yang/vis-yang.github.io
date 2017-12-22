@@ -1,0 +1,90 @@
+/*清除边距*/
+body,div,span,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,input,img,a,select,textarea,button{
+    margin:0;
+    padding:0;
+}
+/*初始化字体大小*/
+body{
+    font:400 14px/14px "仿宋";
+    /*max-width:1366px;*/
+    min-width:1366px;
+    height:768px;
+    overflow: hidden;
+	/*不被选中*/
+    user-select: none;
+}
+/* 初始化2：清除列表前的默认的点或序号 */
+ul,ol {
+    list-style:none;
+}
+/* 初始化3：清除默认的边框 */
+input {
+    border:none;
+    outline:none;
+}
+textarea{
+    text-outline: none;
+    border-style: none;
+}
+/* 初始化5： 设置a标签的字体颜色以及去掉下划线 */
+a {
+    color:#000;
+    text-decoration:none;
+}
+a:hover {
+    color:green;
+}
+/* 初始化6:清除浮动的样式代码 */
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+    height:0;
+    line-height:0;
+    visibility:hidden;
+}
+.clearfix {
+    zoom:1;   /*兼容ie低版本浏览器  */
+}
+/* 初始化7：设置浮动 */
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+/*隐藏div*/
+.hide{
+    display: none;
+}
+/*显示*/
+.show{
+    display: block;
+}
+/*设置版心*/
+.w{
+    width: 1266px;
+    margin: 0 auto;
+}
+
+/*设置最小宽度*/
+
+
+/*背景颜色变黑*/
+.opaMax{
+    opacity:1;
+}
+.opaMin{
+    opacity:.2;
+}
+.hide{
+    opacity:0;
+}
+.dotShow{
+    width: 8px;
+    height: 8px;
+}
+.dotHide{
+    width: 0px;
+    height: 0px;
+}
